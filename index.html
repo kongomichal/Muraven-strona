@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muraven | Generalne Wykonawstwo, Elewacje Klinkierowe, Brukarstwo i Remonty</title>
+  <meta name="description" content="Kompleksowe usługi budowlane i wykończeniowe dla klientów biznesowych i indywidualnych. Elewacje klinkierowe, brukarstwo, remonty wnętrz i obsługa sieci handlowych.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= TOPBAR ================= -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-contact">
+        <span><i class="fa-solid fa-phone"></i> +48 789 270 299</span>
+        <span><i class="fa-solid fa-envelope"></i> biuro@muraven.pl</span>
+        <span><i class="fa-solid fa-location-dot"></i> Poznań i cała Polska</span>
+      </div>
+      <div class="topbar-badge">
+        <i class="fa-solid fa-shield-halved"></i> Gwarancja jakości i terminowości
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVIGATION ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="brand-logo" id="brand-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 40 40" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 22L20 8L36 22" stroke="#e05638" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 18V32H31V18" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="16" y="24" width="8" height="8" fill="#e05638" rx="1.5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="logo-title">MURAVEN</span>
+          <span class="logo-sub">BUDOWNICTWO & WYKOŃCZENIA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-item active">Strona główna</a>
+        <a href="#about" class="nav-item">O nas</a>
+        <a href="#services" class="nav-item">Usługi</a>
+        <a href="#portfolio" class="nav-item">Realizacje</a>
+        <a href="#comparison" class="nav-item">Przed & Po</a>
+        <a href="#stats" class="nav-item">Klienci B2B</a>
+        <a href="#contact" class="nav-item nav-btn-primary">Darmowa Wycena</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          Generalne wykonawstwo i prace specjalistyczne
+        </div>
+        <h1 class="hero-title">
+          Precyzja inżynieryjna.<br>
+          <span class="gradient-text">Solidność bez kompromisów.</span>
+        </h1>
+        <p class="hero-description">
+          Specjalizujemy się w nowoczesnych <strong>elewacjach z cegły klinkierowej</strong>, kompleksowym <strong>brukarstwie</strong>, remontach wykończeniowych oraz obsłudze technicznej ogólnopolskich sieci handlowych i inwestycji B2B.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">
+            <span>Zobacz Realizacje</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Poproś o wycenę</span>
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Obsługa sieci handlowych (Dino, Biedronka)</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Własny park maszynowy i doświadczona kadra</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Certyfikowane materiały i precyzyjne fugowanie</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Fast Quote Card -->
+      <div class="hero-card-wrapper">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <h3>Szybka konsultacja</h3>
+            <p>Odpowiadamy w ciągu maksymalnie 24 godzin</p>
+          </div>
+          <form class="hero-mini-form" id="hero-quick-form">
+            <div class="form-group">
+              <label for="hero-name">Imię i nazwisko / Firma</label>
+              <input type="text" id="hero-name" placeholder="np. Jan Kowalski" required>
+            </div>
+            <div class="form-group">
+              <label for="hero-phone">Numer telefonu</label>
+              <input type="tel" id="hero-phone" placeholder="np. +48 600 000 000" required>
+            </div>
+            <div class="form-group">
+              <label for="hero-type">Zakres prac</label>
+              <select id="hero-type">
+                <option value="klinkier">Elewacje klinkierowe i fasady</option>
+                <option value="brukarstwo">Kostka brukowa i podbudowy</option>
+                <option value="remont">Wykończenie wnętrz / Remont</option>
+                <option value="b2b">Obsługa sieci handlowej / B2B</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Zamów bezpłatną wycenę
+            </button>
+            <p class="form-micro-text"><i class="fa-solid fa-lock"></i> Bez żadnych zobowiązań. Szanujemy Twoją prywatność.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST LOGO CLOUD (PARTNERS) ================= -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="partners-title-wrapper">
+        <p class="partners-subtitle">ZAUFALI NAM LIDERZY BRANŻY I NAJWIĘKSZE SIECI W POLSCE</p>
+      </div>
+      <div class="logos-track">
+        <div class="logo-badge"><span>DINO POLSKA</span></div>
+        <div class="logo-badge"><span>BIEDRONKA</span></div>
+        <div class="logo-badge"><span>ERSTE BANK</span></div>
+        <div class="logo-badge"><span>GAZ-SYSTEM S.A.</span></div>
+        <div class="logo-badge"><span>BOOKINGHOST</span></div>
+        <div class="logo-badge"><span>TEFRA KONCEPT</span></div>
+        <div class="logo-badge"><span>DEICHMANN</span></div>
+        <div class="logo-badge"><span>SMYK</span></div>
+        <div class="logo-badge"><span>MAX POLSKA</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KEY STATS / NUMBERS ================= -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-store"></i></div>
+          <div class="stat-number" data-target="27">0</div>
+          <div class="stat-suffix">+</div>
+          <p class="stat-label">Punktów sieci handlowych</p>
+          <span class="stat-sub">Dino i Biedronka pod recyklomaty</span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-suffix"></div>
+          <p class="stat-label">Oddziałów bankowych</p>
+          <span class="stat-sub">Rebranding dla Erste Bank</span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-key"></i></div>
+          <div class="stat-number" data-target="150">0</div>
+          <div class="stat-suffix">+</div>
+          <p class="stat-label">Zrealizowanych zleceń</p>
+          <span class="stat-sub">Stała obsługa apartamentów BookingHost</span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="stat-number" data-target="1300">0</div>
+          <div class="stat-suffix"> m²</div>
+          <p class="stat-label">Wykończonych powierzchni</p>
+          <span class="stat-sub">W ramach pojedynczych kontraktów</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT US ================= -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-text-content">
+        <div class="section-tag">O FIRMIE MURAVEN</div>
+        <h2 class="section-heading">Partner wykonawczy, na którym możesz polegać w 100%</h2>
+        <p class="lead-text">
+          Łączymy rzemieślniczą dokładność z inżynieryjnym podejściem do harmonogramu i norm technicznych.
+        </p>
+        <p>
+          Działamy zarówno dla klientów indywidualnych szukających ponadczasowej elewacji klinkierowej czy trwałego podjazdu, jak i dla potężnych korporacji, które wymagają pracy w ściśle określonych oknach czasowych bez zakłócania ciągłości sprzedaży.
+        </p>
+        
+        <div class="about-features-list">
+          <div class="feature-bullet">
+            <div class="f-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+            <div>
+              <h4>Precyzja i rygor technologiczny</h4>
+              <p>Trzymamy się wytycznych producentów materiałów, zapewniając trwałość konstrukcji na dziesięciolecia.</p>
+            </div>
+          </div>
+          <div class="feature-bullet">
+            <div class="f-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Pewny harmonogram</h4>
+              <p>Pracujemy na jasnych umowach z gwarancją terminu zakończenia robót.</p>
+            </div>
+          </div>
+          <div class="feature-bullet">
+            <div class="f-icon"><i class="fa-solid fa-toolbox"></i></div>
+            <div>
+              <h4>Własny sprzęt i zaplecze</h4>
+              <p>Nie jesteśmy pośrednikami. Dysponujemy wykwalifikowaną brygadą montażową i własnymi maszynami.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-banner-visual">
+        <div class="about-glass-card">
+          <div class="glass-header">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong>Dlaczego Muraven?</strong>
+              <span>Doświadczenie potwierdzone referencjami</span>
+            </div>
+          </div>
+          <ul class="glass-list">
+            <li><i class="fa-solid fa-check"></i> Kompleksowe korytowanie i podbudowy pod obciążenia kołowe</li>
+            <li><i class="fa-solid fa-check"></i> Mistrzowskie fugowanie elewacji z cegły i płytek klinkierowych</li>
+            <li><i class="fa-solid fa-check"></i> Wykończenia wnętrz pod klucz z tapetami wielkoformatowymi</li>
+            <li><i class="fa-solid fa-check"></i> Usuwanie graffiti i precyzyjne odtwarzanie powłok tynkarskich</li>
+            <li><i class="fa-solid fa-check"></i> Gotowość do realizacji zleceń na terenie całego kraju</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-tag">NASZA OFERTA</div>
+        <h2 class="section-heading">Zakres usług wykonawczych</h2>
+        <p class="section-subtext">Oferujemy specjalistyczne wsparcie w czterech kluczowych obszarach budownictwa i renowacji.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+            <span class="service-num">01</span>
+          </div>
+          <h3 class="service-title">Elewacje Klinkierowe i Fasady</h3>
+          <p class="service-desc">
+            Murowanie z cegły klinkierowej, montaż płytek elewacyjnych, fugowanie maszynowe i ręczne, docieplenia oraz renowacja fasad.
+          </p>
+          <ul class="service-list">
+            <li>Cegła ręcznie formowana i klinkier</li>
+            <li>Montaż płytek na budynkach mieszkalnych</li>
+            <li>Precyzyjne fugowanie odporne na wykwity</li>
+            <li>Mycie ciśnieniowe i hydrofobizacja</li>
+          </ul>
+          <a href="#portfolio" class="service-link" data-filter="klinkier">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon"><i class="fa-solid fa-road"></i></div>
+            <span class="service-num">02</span>
+          </div>
+          <h3 class="service-title">Brukarstwo i Roboty Ziemne</h3>
+          <p class="service-desc">
+            Profesjonalne podbudowy i nawierzchnie brukowe pod obciążenia kołowe, ciągi piesze, recyklomaty oraz posesje prywatne.
+          </p>
+          <ul class="service-list">
+            <li>Nawierzchnie pod recyklomaty dla marketów</li>
+            <li>Podjazdy, parkingi i opaski odwadniające</li>
+            <li>Chodniki techniczne i alejki osiedlowe</li>
+            <li>Korytowanie i zagęszczanie podbudowy</li>
+          </ul>
+          <a href="#portfolio" class="service-link" data-filter="brukarstwo">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+            <span class="service-num">03</span>
+          </div>
+          <h3 class="service-title">Wykończenia Wnętrz i Remonty</h3>
+          <p class="service-desc">
+            Kompleksowe remonty pod klucz domów, mieszkań i apartamentów inwestycyjnych z dbałością o detale wykończeniowe.
+          </p>
+          <ul class="service-list">
+            <li>Gładzie bezpyłowe i precyzyjne malowanie</li>
+            <li>Montaż tapet wielkoformatowych</li>
+            <li>Układanie płytek, gresu i paneli/parkietu</li>
+            <li>Zabudowy G-K i adaptacja pomieszczeń</li>
+          </ul>
+          <a href="#portfolio" class="service-link" data-filter="wnetrza">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <span class="service-num">04</span>
+          </div>
+          <h3 class="service-title">Inwestycje B2B i Rebrandingi</h3>
+          <p class="service-desc">
+            Dedykowana obsługa sieci retail, instytucji finansowych, wspólnot mieszkaniowych oraz zarządców nieruchomości.
+          </p>
+          <ul class="service-list">
+            <li>Ogólnopolskie rebrandingi placówek (banki)</li>
+            <li>Stała obsługa techniczna apartamentów</li>
+            <li>Remonty i wymiana okładzin w windach</li>
+            <li>Usuwanie graffiti i naprawy po dewastacji</li>
+          </ul>
+          <a href="#portfolio" class="service-link" data-filter="b2b">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTFOLIO SECTION (INTERACTIVE) ================= -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-tag">PORTFOLIO REALIZACJI</div>
+        <h2 class="section-heading">Przegląd naszych projektów</h2>
+        <p class="section-subtext">Wybierz kategorię lub wyszukaj konkretny projekt, aby poznać szczegóły technologiczne.</p>
+      </div>
+
+      <!-- Portfolio Filter Controls & Search -->
+      <div class="portfolio-controls">
+        <div class="filter-buttons-group" id="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i> Wszystkie (<span id="count-all">14</span>)
+          </button>
+          <button class="filter-btn" data-filter="klinkier">
+            <i class="fa-solid fa-cubes"></i> Elewacje i Klinkier
+          </button>
+          <button class="filter-btn" data-filter="brukarstwo">
+            <i class="fa-solid fa-road"></i> Brukarstwo i Nawierzchnie
+          </button>
+          <button class="filter-btn" data-filter="wnetrza">
+            <i class="fa-solid fa-paint-roller"></i> Wnętrza i Remonty
+          </button>
+          <button class="filter-btn" data-filter="b2b">
+            <i class="fa-solid fa-building"></i> Dla Biznesu (B2B)
+          </button>
+        </div>
+
+        <div class="portfolio-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="portfolio-search" placeholder="Szukaj projektu (np. Dino, klinkier, tapety)...">
+          <button class="search-clear-btn" id="search-clear" title="Wyczyść">&times;</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- PROJECT 1: Dino Polska -->
+        <article class="project-card" data-category="brukarstwo b2b" data-keywords="dino polska recyklomaty roboty ziemne kostka brukowa wielkopolska">
+          <div class="project-thumb">
+            <img src="images/dino-polska-recyklomaty.jpg" alt="Dino Polska - roboty ziemne pod recyklomaty" loading="lazy">
+            <div class="project-category-badge b2b">B2B & Brukarstwo</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-dino"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Wielkopolska (27 lokalizacji)</span>
+              <span><i class="fa-solid fa-calendar"></i> 2026</span>
+            </div>
+            <h3 class="project-title">Dino Polska: Podbudowy pod recyklomaty w 27 punktach</h3>
+            <p class="project-snippet">
+              Kompleksowe roboty ziemne oraz wykonanie stabilnych podbudów z kostki brukowej pod instalację nowoczesnych recyklomatów przy marketach Dino.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Roboty ziemne</span>
+              <span class="tag">Kostka brukowa</span>
+              <span class="tag">27 punktów</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: Erste Bank -->
+        <article class="project-card" data-category="wnetrza b2b" data-keywords="erste bank rebranding oddzialy bankowe malowanie wykonczenia">
+          <div class="project-thumb">
+            <img src="images/erste-bank-oddzialy.png" alt="Erste Bank prace wykończeniowe" loading="lazy">
+            <div class="project-category-badge b2b">Rebranding B2B</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-erste"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Polska (15 oddziałów)</span>
+              <span><i class="fa-solid fa-chart-area"></i> > 1 300 m²</span>
+            </div>
+            <h3 class="project-title">Erste Bank: Prace malarsko-wykończeniowe w 15 oddziałach</h3>
+            <p class="project-snippet">
+              Ogólnopolski rebranding placówek bankowych – kompleksowe prace szpachlarskie, malarskie i montażowe z zachowaniem standardów identyfikacji wizualnej.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Rebranding</span>
+              <span class="tag">15 oddziałów</span>
+              <span class="tag">Ponad 1300 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: Tefra Koncept -->
+        <article class="project-card" data-category="klinkier b2b" data-keywords="tefra koncept klinkier plytka elewacyjna fugowanie budynki mieszkalne">
+          <div class="project-thumb">
+            <img src="images/tefra-koncept.png" alt="Tefra Koncept płytka elewacyjna" loading="lazy">
+            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-tefra"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-building"></i> 6 budynków mieszkalnych</span>
+              <span><i class="fa-solid fa-chart-area"></i> > 470 m²</span>
+            </div>
+            <h3 class="project-title">Tefra Koncept: Płytka elewacyjna na 6 budynkach</h3>
+            <p class="project-snippet">
+              Precyzyjny montaż oraz fugowanie płytki elewacyjnej na elewacjach i ogrodzeniach osiedla nowoczesnych domów jednorodzinnych.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Płytka elewacyjna</span>
+              <span class="tag">Precyzyjne fugowanie</span>
+              <span class="tag">Osiedle domów</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: Klinkier szary willa -->
+        <article class="project-card" data-category="klinkier" data-keywords="klinkier willa nowoczesna bryla cegla klinkierowa szary">
+          <div class="project-thumb">
+            <img src="images/klinkier-szary-bryla.png" alt="Elewacja z cegły klinkierowej willa szara" loading="lazy">
+            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-klinkier-szary"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-home"></i> Dom jednorodzinny</span>
+              <span><i class="fa-solid fa-gem"></i> Klinkier nowoczesny</span>
+            </div>
+            <h3 class="project-title">Nowoczesna willa: Elewacja z jasnej cegły klinkierowej</h3>
+            <p class="project-snippet">
+              Kompleksowa realizacja elewacji klinkierowej w awangardowej bryle budynku z geometrycznymi podcięciami i wielkoformatowymi oknami.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Cegła klinkierowa</span>
+              <span class="tag">Nowoczesna architektura</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 5: Klinkier czerwony dom z dachem dwuspadowym -->
+        <article class="project-card" data-category="klinkier" data-keywords="klinkier cegla recznie formowana dom dwuspadowy czerwona cegla">
+          <div class="project-thumb">
+            <img src="images/klinkier-dom-skosny.png" alt="Elewacja z cegły klinkierowej czerwona dom dwuspadowy" loading="lazy">
+            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-klinkier-skos"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-home"></i> Dom dwukondygnacyjny</span>
+              <span><i class="fa-solid fa-fire"></i> Klinkier tradycyjny</span>
+            </div>
+            <h3 class="project-title">Rezydencja podmiejska: Tradycyjny klinkier palony</h3>
+            <p class="project-snippet">
+              Pełne wykonanie fasady ceglanej z tradycyjnej cegły klinkierowej w domu o klasycznej bryle z dachem dwuspadowym.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Cegła palona</span>
+              <span class="tag">Tradycyjny klinkier</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 6: Klinkier czerwony nowoczesny sześcian -->
+        <article class="project-card" data-category="klinkier" data-keywords="klinkier nowoczesny kubik czerwona cegla wiazanie dzikie">
+          <div class="project-thumb">
+            <img src="images/klinkier-czerwony-modern.png" alt="Elewacja klinkierowa nowoczesna bryła" loading="lazy">
+            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-home"></i> Bryła modernistyczna</span>
+              <span><i class="fa-solid fa-layer-group"></i> Wiązanie precyzyjne</span>
+            </div>
+            <h3 class="project-title">Dom modernistyczny: Cegła klinkierowa cieniowana</h3>
+            <p class="project-snippet">
+              Murowanie elewacji na piętrze i parterze nowoczesnego domu jednorodzinnego z perfekcyjnym spasowaniem narożników i nadproży.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Cegła cieniowana</span>
+              <span class="tag">Modernizm</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 7: Dom parterowy klinkier -->
+        <article class="project-card" data-category="klinkier" data-keywords="dom parterowy klinkier piaskowy elewacja klinkierowa">
+          <div class="project-thumb">
+            <img src="images/klinkier-dom-parterowy.png" alt="Dom parterowy elewacja klinkierowa" loading="lazy">
+            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-klinkier-parter"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-home"></i> Bungalow parterowy</span>
+              <span><i class="fa-solid fa-sun"></i> Klinkier piaskowy</span>
+            </div>
+            <h3 class="project-title">Bungalow parterowy: Elewacja z piaskowej cegły klinkierowej</h3>
+            <p class="project-snippet">
+              Kompleksowe prace murarskie na elewacji parterowego domu jednorodzinnego wraz z wykonaniem cokołów i obróbki otworów okiennych.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Dom parterowy</span>
+              <span class="tag">Jasny klinkier</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 8: Biedronka Recyklomaty -->
+        <article class="project-card" data-category="brukarstwo b2b" data-keywords="biedronka recyklomaty podbudowy kostka brukowa parking">
+          <div class="project-thumb">
+            <img src="images/biedronka-recyklomaty.png" alt="Biedronka nawierzchnie pod recyklomaty" loading="lazy">
+            <div class="project-category-badge b2b">B2B & Brukarstwo</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-biedronka"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-shop"></i> Sieć Biedronka</span>
+              <span><i class="fa-solid fa-recycle"></i> Punkty recyklingu</span>
+            </div>
+            <h3 class="project-title">Biedronka: Utwardzone podbudowy pod recyklomaty</h3>
+            <p class="project-snippet">
+              Przygotowanie terenu, montaż obrzeży i ułożenie kostki pod automaty do zbiórki opakowań przy marketach Biedronka.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Podbudowa techniczna</span>
+              <span class="tag">Kostka przemysłowa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 9: BookingHost Poznań -->
+        <article class="project-card" data-category="wnetrza b2b" data-keywords="bookinghost poznan apartamenty remont serwis wykonczenia panele podlogi">
+          <div class="project-thumb">
+            <img src="images/bookinghost-poznan.png" alt="BookingHost obsługa apartamentów" loading="lazy">
+            <div class="project-category-badge b2b">Obsługa B2B</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-bookinghost"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-city"></i> Poznań</span>
+              <span><i class="fa-solid fa-wrench"></i> Ponad 150 zleceń</span>
+            </div>
+            <h3 class="project-title">BookingHost: Stała obsługa techniczna apartamentów</h3>
+            <p class="project-snippet">
+              Bieżący serwis i kapitalne remonty lokali na wynajem krótkoterminowy – malowanie, naprawy podłóg, wymiana paneli w jodełkę i usuwanie awarii.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Serwis techniczny</span>
+              <span class="tag">Podłogi w jodełkę</span>
+              <span class="tag">>150 realizacji</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 10: Gaz-System S.A. -->
+        <article class="project-card" data-category="brukarstwo b2b" data-keywords="gaz system ciagi piesze chodniki kostka betonowa obiekty strategiczne">
+          <div class="project-thumb">
+            <img src="images/gaz-system-chodniki.png" alt="Gaz-System chodniki techniczne" loading="lazy">
+            <div class="project-category-badge b2b">Inwestycja Strategiczna</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-gaz-system"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-industry"></i> Gaz-System S.A.</span>
+              <span><i class="fa-solid fa-person-walking"></i> Chodniki techniczne</span>
+            </div>
+            <h3 class="project-title">Gaz-System S.A.: Ciągi piesze i chodniki techniczne</h3>
+            <p class="project-snippet">
+              Budowa ciągów pieszych oraz dróg technicznych z kostki betonowej na terenie obiektów infrastruktury przesyłowej.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Infrastruktura techniczna</span>
+              <span class="tag">Kostka Holland/Behaton</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 11: Generalny remont mieszkania pod klucz -->
+        <article class="project-card" data-category="wnetrza" data-keywords="remont mieszkania pod klucz lazienka kuchnia salon plytki g-k">
+          <div class="project-thumb">
+            <img src="images/remont-mieszkania-pod-klucz.png" alt="Generalny remont mieszkania pod klucz" loading="lazy">
+            <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-remont-klucz"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-door-open"></i> Mieszkanie pod klucz</span>
+              <span><i class="fa-solid fa-bath"></i> Łazienka, kuchnia, salon</span>
+            </div>
+            <h3 class="project-title">Generalny remont mieszkania „pod klucz”</h3>
+            <p class="project-snippet">
+              Kompleksowa modernizacja lokalu: adaptacja ścian, zabudowy G-K, gładzie, malowanie, montaż armatury oraz ułożenie dekoracyjnych płytek podłogowych.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Remont pod klucz</span>
+              <span class="tag">Łazienka i kuchnia</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 12: Wykończenie wnętrz z tapetami wielkoformatowymi -->
+        <article class="project-card" data-category="wnetrza" data-keywords="wykonczenie wnetrz tapety wielkoformatowe malowanie szpachlowanie">
+          <div class="project-thumb">
+            <img src="images/wykonczenie-wnetrz-tapety.png" alt="Tapety wielkoformatowe wykończenie wnętrz" loading="lazy">
+            <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-tapety"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-paint-roller"></i> Dom jednorodzinny</span>
+              <span><i class="fa-solid fa-image"></i> Tapety artystyczne</span>
+            </div>
+            <h3 class="project-title">Wykończenie wnętrz: Tapety wielkoformatowe i malowanie</h3>
+            <p class="project-snippet">
+              Artystyczne i precyzyjne wykończenie wnętrz: szpachlowanie na gładko, akcenty geometryczne oraz bezspoinowy montaż tapet panoramicznych.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Tapety wielkoformatowe</span>
+              <span class="tag">Prace malarskie</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 13: Podjazd z kostki i wiata garażowa -->
+        <article class="project-card" data-category="brukarstwo" data-keywords="podjazd kostka brukowa wiata obciazenia kolowe obrzeza korytowanie">
+          <div class="project-thumb">
+            <img src="images/podjazd-kostka-wiata.png" alt="Podjazd z kostki brukowej pod wiatą" loading="lazy">
+            <div class="project-category-badge brukarstwo">Brukarstwo i Teren</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-podjazd-wiata"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-car"></i> Podjazd samochodowy</span>
+              <span><i class="fa-solid fa-weight-hanging"></i> Podbudowa kołowa</span>
+            </div>
+            <h3 class="project-title">Podjazd z kostki brukowej pod wiatą garażową</h3>
+            <p class="project-snippet">
+              Głębokie korytowanie, solidna podbudowa pod nacisk pojazdów, ułożenie szlachetnej kostki płukanej oraz oprawa obrzeży.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Podjazd kołowy</span>
+              <span class="tag">Wiata garażowa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 14: Rewitalizacja terenu posesji prywatnej -->
+        <article class="project-card" data-category="brukarstwo" data-keywords="aranzacja nawierzchni posesja prywatna opaski odwadniajace sciezki taras">
+          <div class="project-thumb">
+            <img src="images/aranzacja-nawierzchni-taras.png" alt="Aranżacja nawierzchni posesji prywatnej" loading="lazy">
+            <div class="project-category-badge brukarstwo">Brukarstwo i Teren</div>
+            <div class="project-overlay">
+              <button class="btn-quick-view" data-project-id="p-posesja-taras"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span><i class="fa-solid fa-tree"></i> Posesja prywatna</span>
+              <span><i class="fa-solid fa-droplet"></i> Opaski odwadniające</span>
+            </div>
+            <h3 class="project-title">Aranżacja nawierzchni posesji: Taras, opaski i parking</h3>
+            <p class="project-snippet">
+              Utwardzenie terenu wokół nowo powstałego domu: opaski odwadniające ze spadkiem, ścieżki ogrodowe, schody wejściowe oraz taras.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Taras z kostki</span>
+              <span class="tag">Odwodnienie</span>
+              <span class="tag">Schody wejściowe</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEFORE / AFTER COMPARISON SECTION ================= -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-tag">METAMORFOZY I NAPRAWY</div>
+        <h2 class="section-heading">Zobacz efekt przed i po realizacji</h2>
+        <p class="section-subtext">Przywracamy idealny stan techniczny i wizualny nawet po poważnych zniszczeniach.</p>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Metamorfoza 1: Usuwanie graffiti Głogowska -->
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <h3>Usuwanie graffiti i renowacja elewacji po dewastacji</h3>
+            <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Poznań, ul. Głogowska</span>
+          </div>
+          <div class="comparison-image-container">
+            <img src="images/elewacja-graffiti-metamorfoza.png" alt="Przed i po usunięciu graffiti" class="comparison-static-img">
+          </div>
+          <div class="comparison-footer">
+            <p><strong>Zakres prac:</strong> Skuteczne chemiczne i mechaniczne usunięcie graffiti, uzupełnienie zniszczonej struktury tynku mineralnego oraz precyzyjne odtworzenie i zatarcia powłoki malarskiej w oryginalnym odcieniu fasady.</p>
+          </div>
+        </div>
+
+        <!-- Metamorfoza 2: Renowacja elewacji i balustrad -->
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <h3>Mycie fasady i renowacja antykorozyjna balustrad</h3>
+            <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Rezydencja prywatna</span>
+          </div>
+          <div class="comparison-image-container">
+            <img src="images/renowacja-elewacja-balustrady.png" alt="Przed i po renowacji elewacji i balustrad" class="comparison-static-img">
+          </div>
+          <div class="comparison-footer">
+            <p><strong>Zakres prac:</strong> Mycie ciśnieniowe fasady, uzupełnienie ubytków tynkarskich, dwukrotne malowanie powłoką hydrofobową odporną na brud oraz szlifowanie i zabezpieczenie antykorozyjne balustrad ze stali.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS / HOW WE WORK ================= -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-tag">PROCES WSPÓŁPRACY</div>
+        <h2 class="section-heading">Jak wygląda realizacja z Muraven?</h2>
+        <p class="section-subtext">Przejrzyste zasady, bez ukrytych kosztów i nieprzewidzianych opóźnień.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h4>Audyt i bezpłatna wycena</h4>
+          <p>Zapoznajemy się z projektem, robimy wizję lokalną lub analizę rzutów i przygotowujemy rzetelny kosztorys.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h4>Umowa i harmonogram</h4>
+          <p>Podpisujemy umowę z gwarancją terminu oraz specyfikacją zastosowanych materiałów budowlanych.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h4>Profesjonalny montaż</h4>
+          <p>Wchodzimy na budowę ze sprzętem. Prace prowadzimy zgodnie z normami technologicznymi i BHP.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h4>Odbiór i gwarancja</h4>
+          <p>Wspólny protokół odbioru, uporządkowany teren i pisemna gwarancja na wykonane prace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & FAST ESTIMATE ================= -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info-panel">
+        <div class="section-tag">SKONTAKTUJ SIĘ</div>
+        <h2 class="section-heading">Porozmawiajmy o Twojej inwestycji</h2>
+        <p class="lead-text">
+          Niezależnie od tego, czy planujesz elewację domu, utwardzenie placu, czy sieć obiektów komercyjnych – jesteśmy do Twojej dyspozycji.
+        </p>
+
+        <div class="contact-details-list">
+          <div class="contact-row">
+            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <span class="c-label">Zadzwoń do nas</span>
+              <a href="tel:+48789270299" class="c-val">+48 789 270 299</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="c-label">Napisz e-mail</span>
+              <a href="mailto:biuro@muraven.pl" class="c-val">biuro@muraven.pl</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <span class="c-label">Obszar działalności</span>
+              <span class="c-val">Wielkopolska / cała Polska (dla kontraktów B2B)</span>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <span class="c-label">Godziny pracy</span>
+              <span class="c-val">Poniedziałek – Sobota: 7:00 – 18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="b2b-notice-box">
+          <i class="fa-solid fa-handshake"></i>
+          <div>
+            <strong>Zapytania przetargowe i B2B</strong>
+            <p>Obsługujemy generalnych wykonawców i sieci handlowe. Zapewniamy szybkie fakturowanie i elastyczne formy rozliczeń.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Contact Form -->
+      <div class="contact-form-panel">
+        <div class="form-wrapper-card">
+          <h3>Formularz bezpłatnej wyceny</h3>
+          <p class="form-sub">Wypełnij formularz – skontaktujemy się z gotową wstępną kalkulacją.</p>
+
+          <form id="main-contact-form" class="main-form">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="contact-name">Imię i nazwisko / Firma *</label>
+                <input type="text" id="contact-name" name="name" placeholder="Jan Kowalski" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Telefon kontaktowy *</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+48 ..." required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="contact-email">Adres e-mail</label>
+                <input type="email" id="contact-email" name="email" placeholder="jan@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contact-service">Rodzaj prac *</label>
+                <select id="contact-service" name="service" required>
+                  <option value="" disabled selected>Wybierz kategorię...</option>
+                  <option value="klinkier">Elewacje klinkierowe i fasady</option>
+                  <option value="brukarstwo">Brukarstwo i roboty ziemne</option>
+                  <option value="remont">Wykończenie wnętrz / Remont lokalu</option>
+                  <option value="b2b">Obsługa sieci handlowej / B2B</option>
+                  <option value="inne">Inne prace specjalistyczne</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-location">Lokalizacja inwestycji & Orientacyjny metraż</label>
+              <input type="text" id="contact-location" name="location" placeholder="np. Poznań, ok. 150 m² elewacji">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Opis projektu / Pytania *</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Opisz krótko zakres prac, termin realizacji lub pytania..." required></textarea>
+            </div>
+
+            <div class="form-checkbox-group">
+              <input type="checkbox" id="contact-consent" required>
+              <label for="contact-consent">Wyrażam zgodę na kontakt telefoniczny lub mailowy w celu przygotowania wyceny.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+              <span>Wyślij zapytanie ofertowe</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 40 40" width="30" height="30" fill="none">
+              <path d="M4 22L20 8L36 22" stroke="#e05638" stroke-width="4" stroke-linecap="round"/>
+              <path d="M9 18V32H31V18" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="logo-title text-white">MURAVEN</span>
+        </div>
+        <p class="footer-desc">
+          Profesjonalne generalne wykonawstwo, elewacje klinkierowe, roboty brukarskie oraz kompleksowa obsługa sieci handlowych i obiektów komercyjnych.
+        </p>
+        <p class="footer-copy">&copy; 2026 Muraven. Wszystkie prawa zastrzeżone.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Nawigacja</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Strona główna</a></li>
+          <li><a href="#about">O nas</a></li>
+          <li><a href="#services">Usługi</a></li>
+          <li><a href="#portfolio">Realizacje</a></li>
+          <li><a href="#contact">Kontakt i wycena</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Główne specjalizacje</h4>
+        <ul class="footer-links">
+          <li><a href="#portfolio">Elewacje z cegły klinkierowej</a></li>
+          <li><a href="#portfolio">Podbudowy pod recyklomaty</a></li>
+          <li><a href="#portfolio">Podjazdy i kostka brukowa</a></li>
+          <li><a href="#portfolio">Wykończenia pod klucz</a></li>
+          <li><a href="#portfolio">Usuwanie graffiti i renowacje</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-phone"></i> +48 789 270 299</li>
+          <li><i class="fa-solid fa-envelope"></i> biuro@muraven.pl</li>
+          <li><i class="fa-solid fa-location-dot"></i> muraven.pl</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT DETAILS MODAL ================= -->
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close" aria-label="Zamknij okno">&times;</button>
+      <div class="modal-content" id="modal-content">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
