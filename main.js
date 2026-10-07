@@ -297,11 +297,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isOpen) {
         block.classList.remove('open');
         trigger.setAttribute('aria-expanded', 'false');
-        if (btnText) btnText.textContent = 'Rozwiń projekty';
+        if (btnText) btnText.textContent = 'Rozwiń realizacje';
       } else {
         block.classList.add('open');
         trigger.setAttribute('aria-expanded', 'true');
-        if (btnText) btnText.textContent = 'Zwiń projekty';
+        if (btnText) btnText.textContent = 'Zwiń realizacje';
       }
     });
   });
