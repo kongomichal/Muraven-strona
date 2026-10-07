@@ -56,7 +56,6 @@
         <a href="#about" class="nav-item">O nas</a>
         <a href="#services" class="nav-item">Usługi</a>
         <a href="#portfolio" class="nav-item">Realizacje</a>
-        <a href="#comparison" class="nav-item">Przed & Po</a>
         <a href="#stats" class="nav-item">Klienci B2B</a>
         <a href="#contact" class="nav-item nav-btn-primary">Darmowa Wycena</a>
         <div class="nav-mobile-contact">
@@ -364,489 +363,696 @@
     </div>
   </section>
 
-  <!-- ================= PORTFOLIO SECTION (INTERACTIVE) ================= -->
+  <!-- ================= PORTFOLIO SECTION (EXPANDABLE CATEGORIES) ================= -->
   <section class="portfolio-section" id="portfolio">
     <div class="container">
       <div class="section-header-center">
         <div class="section-tag">PORTFOLIO REALIZACJI</div>
         <h2 class="section-heading">Przegląd naszych projektów</h2>
-        <p class="section-subtext">Wybierz kategorię lub wyszukaj konkretny projekt, aby poznać szczegóły technologiczne.</p>
+        <p class="section-subtext">Kliknij w wybraną kategorię prac, aby rozwinąć listę zrealizowanych inwestycji.</p>
       </div>
 
-      <!-- Portfolio Filter Controls & Search -->
-      <div class="portfolio-controls">
-        <div class="filter-buttons-group" id="filter-buttons">
-          <button class="filter-btn active" data-filter="all">
-            <i class="fa-solid fa-border-all"></i> Wszystkie (<span id="count-all">14</span>)
+      <div class="portfolio-categories-container">
+
+        <!-- ================= KATEGORIA 1: ELEWACJE I KLINKIER ================= -->
+        <div class="category-block" id="cat-klinkier">
+          <button class="category-trigger" type="button" aria-expanded="false" data-category="klinkier">
+            <div class="cat-left">
+              <div class="cat-icon"><i class="fa-solid fa-cubes"></i></div>
+              <div class="cat-text">
+                <h3 class="cat-title">Elewacje i Klinkier</h3>
+                <p class="cat-description">Fasady ceglane, płytki klinkierowe, spoinowanie, renowacje elewacji, mycie i usuwanie graffiti</p>
+              </div>
+            </div>
+            <div class="cat-right">
+              <span class="cat-pill">7 projektów</span>
+              <span class="cat-btn-label">
+                <span class="btn-text">Rozwiń projekty</span>
+                <i class="fa-solid fa-chevron-down cat-chevron"></i>
+              </span>
+            </div>
           </button>
-          <button class="filter-btn" data-filter="klinkier">
-            <i class="fa-solid fa-cubes"></i> Elewacje i Klinkier
-          </button>
-          <button class="filter-btn" data-filter="brukarstwo">
-            <i class="fa-solid fa-road"></i> Brukarstwo i Nawierzchnie
-          </button>
-          <button class="filter-btn" data-filter="wnetrza">
-            <i class="fa-solid fa-paint-roller"></i> Wnętrza i Remonty
-          </button>
-          <button class="filter-btn" data-filter="b2b">
-            <i class="fa-solid fa-building"></i> Dla Biznesu (B2B)
-          </button>
-        </div>
+          <div class="category-drawer">
+            <div class="category-drawer-inner">
+              <div class="projects-grid">
 
-        <div class="portfolio-search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="portfolio-search" placeholder="Szukaj projektu (np. Dino, klinkier, tapety)...">
-          <button class="search-clear-btn" id="search-clear" title="Wyczyść">&times;</button>
-        </div>
-      </div>
+                <!-- Tefra Koncept -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-tefra"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-building"></i> 6 budynków mieszkalnych</span>
+                      <span><i class="fa-solid fa-chart-area"></i> > 470 m²</span>
+                    </div>
+                    <h3 class="project-title">Tefra Koncept: Płytka elewacyjna na 6 budynkach</h3>
+                    <p class="project-snippet">
+                      Precyzyjny montaż oraz fugowanie płytki elewacyjnej na elewacjach i ogrodzeniach osiedla nowoczesnych domów jednorodzinnych.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Płytka elewacyjna</span>
+                      <span class="tag">Precyzyjne fugowanie</span>
+                      <span class="tag">Osiedle domów</span>
+                    </div>
+                  </div>
+                </article>
 
-      <!-- Projects Grid -->
-      <div class="projects-grid" id="projects-grid">
+                <!-- Klinkier szary willa -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-szary"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-home"></i> Dom jednorodzinny</span>
+                      <span><i class="fa-solid fa-gem"></i> Klinkier nowoczesny</span>
+                    </div>
+                    <h3 class="project-title">Nowoczesna willa: Elewacja z jasnej cegły klinkierowej</h3>
+                    <p class="project-snippet">
+                      Kompleksowa realizacja elewacji klinkierowej w awangardowej bryle budynku z geometrycznymi podcięciami i wielkoformatowymi oknami.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Cegła klinkierowa</span>
+                      <span class="tag">Nowoczesna architektura</span>
+                    </div>
+                  </div>
+                </article>
 
-        <!-- PROJECT 1: Dino Polska -->
-        <article class="project-card" data-category="brukarstwo b2b" data-keywords="dino polska recyklomaty roboty ziemne kostka brukowa wielkopolska">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge b2b">B2B & Brukarstwo</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-dino"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Wielkopolska (27 lokalizacji)</span>
-              <span><i class="fa-solid fa-calendar"></i> 2026</span>
-            </div>
-            <h3 class="project-title">Dino Polska: Podbudowy pod recyklomaty w 27 punktach</h3>
-            <p class="project-snippet">
-              Kompleksowe roboty ziemne oraz wykonanie stabilnych podbudów z kostki brukowej pod instalację nowoczesnych recyklomatów przy marketach Dino.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Roboty ziemne</span>
-              <span class="tag">Kostka brukowa</span>
-              <span class="tag">27 punktów</span>
-            </div>
-          </div>
-        </article>
+                <!-- Klinkier czerwony dom dwuspadowy -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-skos"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-home"></i> Dom dwukondygnacyjny</span>
+                      <span><i class="fa-solid fa-fire"></i> Klinkier tradycyjny</span>
+                    </div>
+                    <h3 class="project-title">Rezydencja podmiejska: Tradycyjny klinkier palony</h3>
+                    <p class="project-snippet">
+                      Pełne wykonanie fasady ceglanej z tradycyjnej cegły klinkierowej w domu o klasycznej bryle z dachem dwuspadowym.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Cegła palona</span>
+                      <span class="tag">Tradycyjny klinkier</span>
+                    </div>
+                  </div>
+                </article>
 
-        <!-- PROJECT 2: Erste Bank -->
-        <article class="project-card" data-category="wnetrza b2b" data-keywords="erste bank rebranding oddzialy bankowe malowanie wykonczenia">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge b2b">Rebranding B2B</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-erste"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Polska (15 oddziałów)</span>
-              <span><i class="fa-solid fa-chart-area"></i> > 1 300 m²</span>
-            </div>
-            <h3 class="project-title">Erste Bank: Prace malarsko-wykończeniowe w 15 oddziałach</h3>
-            <p class="project-snippet">
-              Ogólnopolski rebranding placówek bankowych – kompleksowe prace szpachlarskie, malarskie i montażowe z zachowaniem standardów identyfikacji wizualnej.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Rebranding</span>
-              <span class="tag">15 oddziałów</span>
-              <span class="tag">Ponad 1300 m²</span>
-            </div>
-          </div>
-        </article>
+                <!-- Klinkier czerwony modern -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-home"></i> Bryła modernistyczna</span>
+                      <span><i class="fa-solid fa-layer-group"></i> Wiązanie precyzyjne</span>
+                    </div>
+                    <h3 class="project-title">Dom modernistyczny: Cegła klinkierowa cieniowana</h3>
+                    <p class="project-snippet">
+                      Murowanie elewacji na piętrze i parterze nowoczesnego domu jednorodzinnego z perfekcyjnym spasowaniem narożników i nadproży.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Cegła cieniowana</span>
+                      <span class="tag">Modernizm</span>
+                    </div>
+                  </div>
+                </article>
 
-        <!-- PROJECT 3: Tefra Koncept -->
-        <article class="project-card" data-category="klinkier b2b" data-keywords="tefra koncept klinkier plytka elewacyjna fugowanie budynki mieszkalne">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-tefra"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-building"></i> 6 budynków mieszkalnych</span>
-              <span><i class="fa-solid fa-chart-area"></i> > 470 m²</span>
-            </div>
-            <h3 class="project-title">Tefra Koncept: Płytka elewacyjna na 6 budynkach</h3>
-            <p class="project-snippet">
-              Precyzyjny montaż oraz fugowanie płytki elewacyjnej na elewacjach i ogrodzeniach osiedla nowoczesnych domów jednorodzinnych.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Płytka elewacyjna</span>
-              <span class="tag">Precyzyjne fugowanie</span>
-              <span class="tag">Osiedle domów</span>
-            </div>
-          </div>
-        </article>
+                <!-- Bungalow parterowy -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-parter"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-home"></i> Bungalow parterowy</span>
+                      <span><i class="fa-solid fa-sun"></i> Klinkier piaskowy</span>
+                    </div>
+                    <h3 class="project-title">Bungalow parterowy: Elewacja z piaskowej cegły klinkierowej</h3>
+                    <p class="project-snippet">
+                      Kompleksowe prace murarskie na elewacji parterowego domu jednorodzinnego wraz z wykonaniem cokołów i obróbki otworów okiennych.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Dom parterowy</span>
+                      <span class="tag">Jasny klinkier</span>
+                    </div>
+                  </div>
+                </article>
 
-        <!-- PROJECT 4: Klinkier szary willa -->
-        <article class="project-card" data-category="klinkier" data-keywords="klinkier willa nowoczesna bryla cegla klinkierowa szary">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-klinkier-szary"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-home"></i> Dom jednorodzinny</span>
-              <span><i class="fa-solid fa-gem"></i> Klinkier nowoczesny</span>
-            </div>
-            <h3 class="project-title">Nowoczesna willa: Elewacja z jasnej cegły klinkierowej</h3>
-            <p class="project-snippet">
-              Kompleksowa realizacja elewacji klinkierowej w awangardowej bryle budynku z geometrycznymi podcięciami i wielkoformatowymi oknami.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Cegła klinkierowa</span>
-              <span class="tag">Nowoczesna architektura</span>
-            </div>
-          </div>
-        </article>
+                <!-- Usuwanie graffiti (dawna metamorfoza 1) -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Renowacja & Elewacje</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-graffiti"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> Poznań, ul. Głogowska</span>
+                      <span><i class="fa-solid fa-spray-can"></i> Antygraffiti</span>
+                    </div>
+                    <h3 class="project-title">Usuwanie graffiti i renowacja elewacji po dewastacji</h3>
+                    <p class="project-snippet">
+                      Skuteczne zmywanie chemiczne graffiti, odtworzenie struktury tynku mineralnego oraz powłoka ochronna antygraffiti na kamienicy.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Usuwanie graffiti</span>
+                      <span class="tag">Renowacja tynku</span>
+                      <span class="tag">Zabezpieczenie fasady</span>
+                    </div>
+                  </div>
+                </article>
 
-        <!-- PROJECT 5: Klinkier czerwony dom z dachem dwuspadowym -->
-        <article class="project-card" data-category="klinkier" data-keywords="klinkier cegla recznie formowana dom dwuspadowy czerwona cegla">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-klinkier-skos"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-home"></i> Dom dwukondygnacyjny</span>
-              <span><i class="fa-solid fa-fire"></i> Klinkier tradycyjny</span>
-            </div>
-            <h3 class="project-title">Rezydencja podmiejska: Tradycyjny klinkier palony</h3>
-            <p class="project-snippet">
-              Pełne wykonanie fasady ceglanej z tradycyjnej cegły klinkierowej w domu o klasycznej bryle z dachem dwuspadowym.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Cegła palona</span>
-              <span class="tag">Tradycyjny klinkier</span>
-            </div>
-          </div>
-        </article>
+                <!-- Mycie fasady i balustrady (dawna metamorfoza 2) -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge klinkier">Renowacja & Elewacje</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-mycie-balustrady"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-house"></i> Rezydencja prywatna</span>
+                      <span><i class="fa-solid fa-shield-halved"></i> Hydrofobizacja</span>
+                    </div>
+                    <h3 class="project-title">Mycie fasady i renowacja antykorozyjna balustrad</h3>
+                    <p class="project-snippet">
+                      Mycie ciśnieniowe fasady, dwukrotne malowanie farbą silikonową hydrofobową oraz antykorozyjne zabezpieczenie balustrad ze stali.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Mycie fasady</span>
+                      <span class="tag">Farba silikonowa</span>
+                      <span class="tag">Balustrady stalowe</span>
+                    </div>
+                  </div>
+                </article>
 
-        <!-- PROJECT 6: Klinkier czerwony nowoczesny sześcian -->
-        <article class="project-card" data-category="klinkier" data-keywords="klinkier nowoczesny kubik czerwona cegla wiazanie dzikie">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
+              </div>
             </div>
-            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-home"></i> Bryła modernistyczna</span>
-              <span><i class="fa-solid fa-layer-group"></i> Wiązanie precyzyjne</span>
-            </div>
-            <h3 class="project-title">Dom modernistyczny: Cegła klinkierowa cieniowana</h3>
-            <p class="project-snippet">
-              Murowanie elewacji na piętrze i parterze nowoczesnego domu jednorodzinnego z perfekcyjnym spasowaniem narożników i nadproży.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Cegła cieniowana</span>
-              <span class="tag">Modernizm</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 7: Dom parterowy klinkier -->
-        <article class="project-card" data-category="klinkier" data-keywords="dom parterowy klinkier piaskowy elewacja klinkierowa">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-klinkier-parter"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-home"></i> Bungalow parterowy</span>
-              <span><i class="fa-solid fa-sun"></i> Klinkier piaskowy</span>
-            </div>
-            <h3 class="project-title">Bungalow parterowy: Elewacja z piaskowej cegły klinkierowej</h3>
-            <p class="project-snippet">
-              Kompleksowe prace murarskie na elewacji parterowego domu jednorodzinnego wraz z wykonaniem cokołów i obróbki otworów okiennych.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Dom parterowy</span>
-              <span class="tag">Jasny klinkier</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 8: Biedronka Recyklomaty -->
-        <article class="project-card" data-category="brukarstwo b2b" data-keywords="biedronka recyklomaty podbudowy kostka brukowa parking">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge b2b">B2B & Brukarstwo</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-biedronka"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-shop"></i> Sieć Biedronka</span>
-              <span><i class="fa-solid fa-recycle"></i> Punkty recyklingu</span>
-            </div>
-            <h3 class="project-title">Biedronka: Utwardzone podbudowy pod recyklomaty</h3>
-            <p class="project-snippet">
-              Przygotowanie terenu, montaż obrzeży i ułożenie kostki pod automaty do zbiórki opakowań przy marketach Biedronka.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Podbudowa techniczna</span>
-              <span class="tag">Kostka przemysłowa</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 9: BookingHost Poznań -->
-        <article class="project-card" data-category="wnetrza b2b" data-keywords="bookinghost poznan apartamenty remont serwis wykonczenia panele podlogi">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge b2b">Obsługa B2B</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-bookinghost"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-city"></i> Poznań</span>
-              <span><i class="fa-solid fa-wrench"></i> Ponad 150 zleceń</span>
-            </div>
-            <h3 class="project-title">BookingHost: Stała obsługa techniczna apartamentów</h3>
-            <p class="project-snippet">
-              Bieżący serwis i kapitalne remonty lokali na wynajem krótkoterminowy – malowanie, naprawy podłóg, wymiana paneli w jodełkę i usuwanie awarii.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Serwis techniczny</span>
-              <span class="tag">Podłogi w jodełkę</span>
-              <span class="tag">>150 realizacji</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 10: Gaz-System S.A. -->
-        <article class="project-card" data-category="brukarstwo b2b" data-keywords="gaz system ciagi piesze chodniki kostka betonowa obiekty strategiczne">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge b2b">Inwestycja Strategiczna</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-gaz-system"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-industry"></i> Gaz-System S.A.</span>
-              <span><i class="fa-solid fa-person-walking"></i> Chodniki techniczne</span>
-            </div>
-            <h3 class="project-title">Gaz-System S.A.: Ciągi piesze i chodniki techniczne</h3>
-            <p class="project-snippet">
-              Budowa ciągów pieszych oraz dróg technicznych z kostki betonowej na terenie obiektów infrastruktury przesyłowej.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Infrastruktura techniczna</span>
-              <span class="tag">Kostka Holland/Behaton</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 11: Generalny remont mieszkania pod klucz -->
-        <article class="project-card" data-category="wnetrza" data-keywords="remont mieszkania pod klucz lazienka kuchnia salon plytki g-k">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-remont-klucz"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-door-open"></i> Mieszkanie pod klucz</span>
-              <span><i class="fa-solid fa-bath"></i> Łazienka, kuchnia, salon</span>
-            </div>
-            <h3 class="project-title">Generalny remont mieszkania „pod klucz”</h3>
-            <p class="project-snippet">
-              Kompleksowa modernizacja lokalu: adaptacja ścian, zabudowy G-K, gładzie, malowanie, montaż armatury oraz ułożenie dekoracyjnych płytek podłogowych.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Remont pod klucz</span>
-              <span class="tag">Łazienka i kuchnia</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 12: Wykończenie wnętrz z tapetami wielkoformatowymi -->
-        <article class="project-card" data-category="wnetrza" data-keywords="wykonczenie wnetrz tapety wielkoformatowe malowanie szpachlowanie">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-tapety"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-paint-roller"></i> Dom jednorodzinny</span>
-              <span><i class="fa-solid fa-image"></i> Tapety artystyczne</span>
-            </div>
-            <h3 class="project-title">Wykończenie wnętrz: Tapety wielkoformatowe i malowanie</h3>
-            <p class="project-snippet">
-              Artystyczne i precyzyjne wykończenie wnętrz: szpachlowanie na gładko, akcenty geometryczne oraz bezspoinowy montaż tapet panoramicznych.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Tapety wielkoformatowe</span>
-              <span class="tag">Prace malarskie</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 13: Podjazd z kostki i wiata garażowa -->
-        <article class="project-card" data-category="brukarstwo" data-keywords="podjazd kostka brukowa wiata obciazenia kolowe obrzeza korytowanie">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge brukarstwo">Brukarstwo i Teren</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-podjazd-wiata"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-car"></i> Podjazd samochodowy</span>
-              <span><i class="fa-solid fa-weight-hanging"></i> Podbudowa kołowa</span>
-            </div>
-            <h3 class="project-title">Podjazd z kostki brukowej pod wiatą garażową</h3>
-            <p class="project-snippet">
-              Głębokie korytowanie, solidna podbudowa pod nacisk pojazdów, ułożenie szlachetnej kostki płukanej oraz oprawa obrzeży.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Podjazd kołowy</span>
-              <span class="tag">Wiata garażowa</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 14: Rewitalizacja terenu posesji prywatnej -->
-        <article class="project-card" data-category="brukarstwo" data-keywords="aranzacja nawierzchni posesja prywatna opaski odwadniajace sciezki taras">
-          <div class="project-thumb">
-            <div class="thumb-placeholder">
-              <i class="fa-regular fa-image"></i>
-              <span>Miejsce na zdjęcie</span>
-            </div>
-            <div class="project-category-badge brukarstwo">Brukarstwo i Teren</div>
-            <div class="project-overlay">
-              <button class="btn-quick-view" data-project-id="p-posesja-taras"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fa-solid fa-tree"></i> Posesja prywatna</span>
-              <span><i class="fa-solid fa-droplet"></i> Opaski odwadniające</span>
-            </div>
-            <h3 class="project-title">Aranżacja nawierzchni posesji: Taras, opaski i parking</h3>
-            <p class="project-snippet">
-              Utwardzenie terenu wokół nowo powstałego domu: opaski odwadniające ze spadkiem, ścieżki ogrodowe, schody wejściowe oraz taras.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Taras z kostki</span>
-              <span class="tag">Odwodnienie</span>
-              <span class="tag">Schody wejściowe</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= BEFORE / AFTER COMPARISON SECTION ================= -->
-  <section class="comparison-section" id="comparison">
-    <div class="container">
-      <div class="section-header-center">
-        <div class="section-tag">METAMORFOZY I NAPRAWY</div>
-        <h2 class="section-heading">Zobacz efekt przed i po realizacji</h2>
-        <p class="section-subtext">Przywracamy idealny stan techniczny i wizualny nawet po poważnych zniszczeniach.</p>
-      </div>
-
-      <div class="comparison-grid">
-        <!-- Metamorfoza 1: Usuwanie graffiti Głogowska -->
-        <div class="comparison-card">
-          <div class="comparison-header">
-            <h3>Usuwanie graffiti i renowacja elewacji po dewastacji</h3>
-            <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Poznań, ul. Głogowska</span>
-          </div>
-          <div class="comparison-image-container">
-            <div class="thumb-placeholder comparison-placeholder">
-              <i class="fa-regular fa-images"></i>
-              <span>Miejsce na zdjęcie metamorfozy (Przed / Po)</span>
-            </div>
-          </div>
-          <div class="comparison-footer">
-            <p><strong>Zakres prac:</strong> Skuteczne chemiczne i mechaniczne usunięcie graffiti, uzupełnienie zniszczonej struktury tynku mineralnego oraz precyzyjne odtworzenie i zatarcia powłoki malarskiej w oryginalnym odcieniu fasady.</p>
           </div>
         </div>
 
-        <!-- Metamorfoza 2: Renowacja elewacji i balustrad -->
-        <div class="comparison-card">
-          <div class="comparison-header">
-            <h3>Mycie fasady i renowacja antykorozyjna balustrad</h3>
-            <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Rezydencja prywatna</span>
-          </div>
-          <div class="comparison-image-container">
-            <div class="thumb-placeholder comparison-placeholder">
-              <i class="fa-regular fa-images"></i>
-              <span>Miejsce na zdjęcie metamorfozy (Przed / Po)</span>
+        <!-- ================= KATEGORIA 2: BRUKARSTWO I NAWIERZCHNIE ================= -->
+        <div class="category-block" id="cat-brukarstwo">
+          <button class="category-trigger" type="button" aria-expanded="false" data-category="brukarstwo">
+            <div class="cat-left">
+              <div class="cat-icon"><i class="fa-solid fa-road"></i></div>
+              <div class="cat-text">
+                <h3 class="cat-title">Brukarstwo i Nawierzchnie</h3>
+                <p class="cat-description">Podbudowy pod recyklomaty, podjazdy kołowe, chodniki przemysłowe, tarasy i roboty ziemne</p>
+              </div>
+            </div>
+            <div class="cat-right">
+              <span class="cat-pill">5 projektów</span>
+              <span class="cat-btn-label">
+                <span class="btn-text">Rozwiń projekty</span>
+                <i class="fa-solid fa-chevron-down cat-chevron"></i>
+              </span>
+            </div>
+          </button>
+          <div class="category-drawer">
+            <div class="category-drawer-inner">
+              <div class="projects-grid">
+
+                <!-- Dino Polska -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge brukarstwo">Brukarstwo Przemysłowe</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-dino"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> Wielkopolska (27 lokalizacji)</span>
+                      <span><i class="fa-solid fa-calendar"></i> 2026</span>
+                    </div>
+                    <h3 class="project-title">Dino Polska: Podbudowy pod recyklomaty w 27 punktach</h3>
+                    <p class="project-snippet">
+                      Kompleksowe roboty ziemne oraz wykonanie stabilnych podbudów z kostki brukowej pod instalację recyklomatów przy marketach Dino.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Roboty ziemne</span>
+                      <span class="tag">Kostka brukowa</span>
+                      <span class="tag">27 punktów Dino</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Biedronka -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge brukarstwo">Brukarstwo Przemysłowe</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-biedronka"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-shop"></i> Sieć Biedronka</span>
+                      <span><i class="fa-solid fa-recycle"></i> Punkty recyklingu</span>
+                    </div>
+                    <h3 class="project-title">Biedronka: Utwardzone podbudowy pod recyklomaty</h3>
+                    <p class="project-snippet">
+                      Przygotowanie terenu, montaż obrzeży i ułożenie kostki pod automaty do zbiórki opakowań przy marketach Biedronka.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Podbudowa techniczna</span>
+                      <span class="tag">Kostka przemysłowa</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Gaz-System S.A. -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge brukarstwo">Infrastruktura</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-gaz-system"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-industry"></i> Gaz-System S.A.</span>
+                      <span><i class="fa-solid fa-person-walking"></i> Chodniki techniczne</span>
+                    </div>
+                    <h3 class="project-title">Gaz-System S.A.: Ciągi piesze i chodniki techniczne</h3>
+                    <p class="project-snippet">
+                      Budowa ciągów pieszych oraz dróg technicznych z kostki betonowej na terenie obiektów infrastruktury przesyłowej.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Infrastruktura techniczna</span>
+                      <span class="tag">Kostka Holland/Behaton</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Podjazd pod wiatą -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge brukarstwo">Nawierzchnie Posesji</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-podjazd-wiata"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-car"></i> Podjazd samochodowy</span>
+                      <span><i class="fa-solid fa-weight-hanging"></i> Podbudowa kołowa</span>
+                    </div>
+                    <h3 class="project-title">Podjazd z kostki brukowej pod wiatą garażową</h3>
+                    <p class="project-snippet">
+                      Głębokie korytowanie, solidna podbudowa pod nacisk pojazdów, ułożenie szlachetnej kostki płukanej oraz oprawa obrzeży.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Podjazd kołowy</span>
+                      <span class="tag">Wiata garażowa</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Aranżacja posesji: Taras, opaski -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge brukarstwo">Nawierzchnie Posesji</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-posesja-taras"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-tree"></i> Posesja prywatna</span>
+                      <span><i class="fa-solid fa-droplet"></i> Opaski odwadniające</span>
+                    </div>
+                    <h3 class="project-title">Aranżacja nawierzchni posesji: Taras, opaski i parking</h3>
+                    <p class="project-snippet">
+                      Utwardzenie terenu wokół nowo powstałego domu: opaski odwadniające ze spadkiem, ścieżki ogrodowe, schody wejściowe oraz taras.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Taras z kostki</span>
+                      <span class="tag">Odwodnienie</span>
+                      <span class="tag">Schody wejściowe</span>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
             </div>
           </div>
-          <div class="comparison-footer">
-            <p><strong>Zakres prac:</strong> Mycie ciśnieniowe fasady, uzupełnienie ubytków tynkarskich, dwukrotne malowanie powłoką hydrofobową odporną na brud oraz szlifowanie i zabezpieczenie antykorozyjne balustrad ze stali.</p>
+        </div>
+
+        <!-- ================= KATEGORIA 3: WNĘTRZA I REMONTY ================= -->
+        <div class="category-block" id="cat-wnetrza">
+          <button class="category-trigger" type="button" aria-expanded="false" data-category="wnetrza">
+            <div class="cat-left">
+              <div class="cat-icon"><i class="fa-solid fa-paint-roller"></i></div>
+              <div class="cat-text">
+                <h3 class="cat-title">Wnętrza i Remonty</h3>
+                <p class="cat-description">Kompleksowe remonty pod klucz, tapety wielkoformatowe, gładzie, łazienki i serwisy apartamentów</p>
+              </div>
+            </div>
+            <div class="cat-right">
+              <span class="cat-pill">3 projekty</span>
+              <span class="cat-btn-label">
+                <span class="btn-text">Rozwiń projekty</span>
+                <i class="fa-solid fa-chevron-down cat-chevron"></i>
+              </span>
+            </div>
+          </button>
+          <div class="category-drawer">
+            <div class="category-drawer-inner">
+              <div class="projects-grid">
+
+                <!-- Remont mieszkania pod klucz -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-remont-klucz"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-door-open"></i> Mieszkanie pod klucz</span>
+                      <span><i class="fa-solid fa-bath"></i> Łazienka, kuchnia, salon</span>
+                    </div>
+                    <h3 class="project-title">Generalny remont mieszkania „pod klucz”</h3>
+                    <p class="project-snippet">
+                      Kompleksowa modernizacja lokalu: adaptacja ścian, zabudowy G-K, gładzie, malowanie, montaż armatury oraz ułożenie dekoracyjnych płytek podłogowych.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Remont pod klucz</span>
+                      <span class="tag">Łazienka i kuchnia</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Tapety wielkoformatowe -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-tapety"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-paint-roller"></i> Dom jednorodzinny</span>
+                      <span><i class="fa-solid fa-image"></i> Tapety artystyczne</span>
+                    </div>
+                    <h3 class="project-title">Wykończenie wnętrz: Tapety wielkoformatowe i malowanie</h3>
+                    <p class="project-snippet">
+                      Artystyczne i precyzyjne wykończenie wnętrz: szpachlowanie na gładko, akcenty geometryczne oraz bezspoinowy montaż tapet panoramicznych.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Tapety wielkoformatowe</span>
+                      <span class="tag">Prace malarskie</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- BookingHost apartamenty -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge wnetrza">Remonty Wnętrz</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-bookinghost"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-city"></i> Poznań</span>
+                      <span><i class="fa-solid fa-wrench"></i> Ponad 150 zleceń</span>
+                    </div>
+                    <h3 class="project-title">BookingHost: Stała obsługa techniczna apartamentów</h3>
+                    <p class="project-snippet">
+                      Bieżący serwis i kapitalne remonty lokali na wynajem krótkoterminowy – malowanie, naprawy podłóg, montaż paneli w jodełkę i usuwanie awarii.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Serwis techniczny</span>
+                      <span class="tag">Podłogi w jodełkę</span>
+                      <span class="tag">>150 realizacji</span>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- ================= KATEGORIA 4: DLA BIZNESU (B2B) ================= -->
+        <div class="category-block" id="cat-b2b">
+          <button class="category-trigger" type="button" aria-expanded="false" data-category="b2b">
+            <div class="cat-left">
+              <div class="cat-icon"><i class="fa-solid fa-building"></i></div>
+              <div class="cat-text">
+                <h3 class="cat-title">Dla Biznesu (B2B)</h3>
+                <p class="cat-description">Obsługa sieci handlowych, banków, spółek strategicznych i generalnych wykonawców</p>
+              </div>
+            </div>
+            <div class="cat-right">
+              <span class="cat-pill">5 projektów</span>
+              <span class="cat-btn-label">
+                <span class="btn-text">Rozwiń projekty</span>
+                <i class="fa-solid fa-chevron-down cat-chevron"></i>
+              </span>
+            </div>
+          </button>
+          <div class="category-drawer">
+            <div class="category-drawer-inner">
+              <div class="projects-grid">
+
+                <!-- Dino Polska B2B -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge b2b">Sieć Handlowa B2B</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-dino"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> 27 lokalizacji Dino</span>
+                      <span><i class="fa-solid fa-calendar"></i> 2026</span>
+                    </div>
+                    <h3 class="project-title">Dino Polska: Podbudowy pod recyklomaty w 27 punktach</h3>
+                    <p class="project-snippet">
+                      Cykliczna, terminowa realizacja utwardzonych stanowisk recyklingowych przy sklepach Dino na terenie Wielkopolski pod surowy reżim odbiorowy sieci.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Sieć Dino Polska</span>
+                      <span class="tag">27 lokalizacji</span>
+                      <span class="tag">Podbudowa recyklingowa</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Erste Bank -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge b2b">Rebranding B2B</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-erste"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> Polska (15 oddziałów)</span>
+                      <span><i class="fa-solid fa-chart-area"></i> > 1 300 m²</span>
+                    </div>
+                    <h3 class="project-title">Erste Bank: Prace malarsko-wykończeniowe w 15 oddziałach</h3>
+                    <p class="project-snippet">
+                      Ogólnopolski rebranding placówek bankowych – kompleksowe prace szpachlarskie, malarskie i montażowe z zachowaniem standardów identyfikacji wizualnej.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Rebranding Erste</span>
+                      <span class="tag">15 oddziałów</span>
+                      <span class="tag">Ponad 1300 m²</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Biedronka B2B -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge b2b">Sieć Handlowa B2B</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-biedronka"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-shop"></i> Biedronka</span>
+                      <span><i class="fa-solid fa-recycle"></i> Recyklomaty</span>
+                    </div>
+                    <h3 class="project-title">Biedronka: Utwardzone podbudowy pod recyklomaty</h3>
+                    <p class="project-snippet">
+                      Montaż betonowych obrzeży, profilowanie podłoża i ułożenie kostki przemysłowej pod automaty do zbiórki butelek przy marketach Biedronka.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Sieć Biedronka</span>
+                      <span class="tag">Roboty ziemne</span>
+                      <span class="tag">Kostka przemysłowa</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Gaz-System B2B -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge b2b">Inwestycja Strategiczna</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-gaz-system"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-industry"></i> Gaz-System S.A.</span>
+                      <span><i class="fa-solid fa-shield"></i> Obiekt Strategiczny</span>
+                    </div>
+                    <h3 class="project-title">Gaz-System S.A.: Ciągi piesze i chodniki techniczne</h3>
+                    <p class="project-snippet">
+                      Budowa ciągów pieszych oraz dróg technicznych z kostki betonowej na terenie obiektów strategicznej infrastruktury przesyłowej.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Gaz-System S.A.</span>
+                      <span class="tag">Chodniki techniczne</span>
+                      <span class="tag">Nawierzchnie z atestem</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- BookingHost B2B -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <div class="thumb-placeholder">
+                      <i class="fa-regular fa-image"></i>
+                      <span>Miejsce na zdjęcie</span>
+                    </div>
+                    <div class="project-category-badge b2b">Obsługa B2B</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-bookinghost"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-city"></i> BookingHost Poznań</span>
+                      <span><i class="fa-solid fa-wrench"></i> Stała umowa</span>
+                    </div>
+                    <h3 class="project-title">BookingHost: Stała obsługa techniczna apartamentów</h3>
+                    <p class="project-snippet">
+                      Ciągły serwis techniczny, naprawy powykonawcze, układanie podłóg i odnawianie apartamentów w systemie najmu krótkoterminowego (ponad 150 zleceń).
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">BookingHost</span>
+                      <span class="tag">Stała umowa serwisowa</span>
+                      <span class="tag">>150 zleceń</span>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

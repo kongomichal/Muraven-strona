@@ -190,6 +190,32 @@ document.addEventListener('DOMContentLoaded', () => {
         'Przestronny frontowy podjazd parkingowy'
       ],
       description: 'Pełne utwardzenie otoczenia budynku po zakończeniu budowy. Zapewniono skuteczne odprowadzenie wody deszczowej oraz spójną stylistykę wokół całej działki.'
+    },
+    'p-graffiti': {
+      title: 'Usuwanie graffiti i renowacja elewacji po dewastacji',
+      category: 'Elewacje i Klinkier',
+      location: 'Poznań, ul. Głogowska',
+      timeline: 'Renowacja fasady po zniszczeniach',
+      scope: [
+        'Skuteczne zmywanie chemiczne i hydrodynamiczne powłok sprayowych',
+        'Uzupełnienie uszkodzonej struktury tynku mineralnego',
+        'Precyzyjne odtworzenie powłoki malarskiej w oryginalnym odcieniu fasady',
+        'Aplikacja niewidocznej powłoki antygraffiti'
+      ],
+      description: 'Kompleksowa interwencja w centrum Poznania. Zlikwidowano rozległe graffiti bez uszczerbku dla faktury zabytkowego tynku, przywracając reprezentacyjny wygląd frontu kamienicy.'
+    },
+    'p-mycie-balustrady': {
+      title: 'Mycie fasady i renowacja antykorozyjna balustrad',
+      category: 'Elewacje i Klinkier',
+      location: 'Rezydencja prywatna',
+      timeline: 'Kompleksowy lifting zewnętrzny',
+      scope: [
+        'Czyszczenie ciśnieniowe fasady z usunięciem nalotów biologicznych',
+        'Dwukrotne malowanie paroprzepuszczalną powłoką hydrofobową',
+        'Szlifowanie i zabezpieczenie antykorozyjne stalowych balustrad',
+        'Trwałe malowanie ochronne elementów metalowych'
+      ],
+      description: 'Odświeżenie rezydencji obejmujące renowację elewacji zewnętrznej wraz z zabezpieczeniem elementów stalowych balustrad i balkonów, zapewniając ochronę na kolejne sezony.'
     }
   };
 
@@ -256,69 +282,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     4. PORTFOLIO FILTERING & LIVE SEARCH
+     4. PORTFOLIO EXPANDABLE CATEGORY ACCORDIONS
      ========================================================================== */
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-  const searchInput = document.getElementById('portfolio-search');
-  const searchClear = document.getElementById('search-clear');
-  let currentFilter = 'all';
+  const categoryBlocks = document.querySelectorAll('.category-block');
 
-  function applyFilters() {
-    const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+  categoryBlocks.forEach(block => {
+    const trigger = block.querySelector('.category-trigger');
+    if (!trigger) return;
 
-    if (searchClear) {
-      searchClear.style.display = query.length > 0 ? 'block' : 'none';
-    }
+    trigger.addEventListener('click', () => {
+      const isOpen = block.classList.contains('open');
+      const btnText = trigger.querySelector('.btn-text');
 
-    projectCards.forEach(card => {
-      const categories = card.getAttribute('data-category') || '';
-      const keywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
-      
-      const matchesCategory = (currentFilter === 'all') || categories.includes(currentFilter);
-      const matchesSearch = query === '' || keywords.toLowerCase().includes(query);
-
-      if (matchesCategory && matchesSearch) {
-        card.style.display = 'flex';
-        card.style.opacity = '1';
-        card.style.transform = 'scale(1)';
+      if (isOpen) {
+        block.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        if (btnText) btnText.textContent = 'Rozwiń projekty';
       } else {
-        card.style.display = 'none';
-        card.style.opacity = '0';
-        card.style.transform = 'scale(0.95)';
+        block.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+        if (btnText) btnText.textContent = 'Zwiń projekty';
       }
-    });
-  }
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.getAttribute('data-filter');
-      applyFilters();
     });
   });
 
-  if (searchInput) {
-    searchInput.addEventListener('input', applyFilters);
-  }
-
-  if (searchClear) {
-    searchClear.addEventListener('click', () => {
-      searchInput.value = '';
-      applyFilters();
-      searchInput.focus();
-    });
-  }
-
-  // Links in Service Cards that trigger portfolio filtering
+  // Links in Service Cards that expand the corresponding category
   document.querySelectorAll('.service-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const targetFilter = link.getAttribute('data-filter');
-      if (targetFilter) {
-        const correspondingBtn = document.querySelector(`.filter-btn[data-filter="${targetFilter}"]`);
-        if (correspondingBtn) {
-          correspondingBtn.click();
+    link.addEventListener('click', () => {
+      const targetCategory = link.getAttribute('data-filter');
+      if (targetCategory) {
+        const targetBlock = document.getElementById(`cat-${targetCategory}`);
+        if (targetBlock) {
+          if (!targetBlock.classList.contains('open')) {
+            const trigger = targetBlock.querySelector('.category-trigger');
+            if (trigger) trigger.click();
+          }
+          setTimeout(() => {
+            targetBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
         }
       }
     });
