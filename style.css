@@ -454,20 +454,21 @@ a {
    ========================================================================== */
 .partners-section {
   background-color: #ffffff;
-  padding: 38px 0;
+  padding: 44px 0 40px;
   border-bottom: 1px solid var(--color-card-border);
 }
 
 .partners-title-wrapper {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 
 .partners-subtitle {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: var(--color-text-light);
+  text-transform: uppercase;
 }
 
 .logos-track {
@@ -475,28 +476,55 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px 38px;
 }
 
-.logo-badge {
-  background-color: var(--color-bg-light);
-  border: 1px solid var(--color-card-border);
-  padding: 10px 22px;
-  border-radius: var(--radius-md);
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--color-secondary);
-  transition: var(--transition);
+.partner-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 4px 6px;
+  transition: transform var(--transition);
 }
 
-.logo-badge:hover {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.partner-logo-item img {
+  display: block;
+  max-height: 28px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.55);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Optyczne wyrównanie wag logotypów o nietypowych proporcjach */
+.partner-logo-item img[alt="CityFit"] {
+  max-height: 34px;
+}
+
+.partner-logo-item img[alt="MAX Polska"] {
+  max-height: 25px;
+}
+
+.partner-logo-item img[alt="Deichmann"] {
+  max-height: 20px;
+  max-width: 125px;
+}
+
+.partner-logo-item img[alt="Biedronka"] {
+  max-height: 30px;
+}
+
+.partner-logo-item img[alt="BookingHost"] {
+  max-height: 22px;
+}
+
+/* Hover: powrót do pełnego koloru marki i subtelne powiększenie */
+.partner-logo-item:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.08);
 }
 
 /* ==========================================================================
@@ -1937,6 +1965,38 @@ a {
 
   .section-header-center {
     margin-bottom: 36px;
+  }
+
+  /* Partners Logo Cloud Mobile */
+  .partners-section {
+    padding: 32px 0 28px;
+  }
+
+  .logos-track {
+    gap: 16px 24px;
+  }
+
+  .partner-logo-item {
+    height: 38px;
+    padding: 2px 4px;
+  }
+
+  .partner-logo-item img {
+    max-height: 24px;
+    max-width: 95px;
+  }
+
+  .partner-logo-item img[alt="CityFit"] {
+    max-height: 28px;
+  }
+
+  .partner-logo-item img[alt="MAX Polska"] {
+    max-height: 20px;
+  }
+
+  .partner-logo-item img[alt="Deichmann"] {
+    max-height: 16px;
+    max-width: 95px;
   }
 
   /* Stats 2x2 Grid on Mobile */
