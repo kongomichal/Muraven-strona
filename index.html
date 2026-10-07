@@ -50,7 +50,7 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop & Mobile Navigation -->
       <nav class="nav-links" id="nav-links">
         <a href="#home" class="nav-item active">Strona główna</a>
         <a href="#about" class="nav-item">O nas</a>
@@ -59,6 +59,14 @@
         <a href="#comparison" class="nav-item">Przed & Po</a>
         <a href="#stats" class="nav-item">Klienci B2B</a>
         <a href="#contact" class="nav-item nav-btn-primary">Darmowa Wycena</a>
+        <div class="nav-mobile-contact">
+          <a href="tel:+48789270299" class="nav-mobile-contact-item">
+            <i class="fa-solid fa-phone"></i> +48 789 270 299
+          </a>
+          <a href="mailto:biuro@muraven.pl" class="nav-mobile-contact-item">
+            <i class="fa-solid fa-envelope"></i> biuro@muraven.pl
+          </a>
+        </div>
       </nav>
 
       <!-- Mobile Menu Toggle -->
@@ -66,6 +74,8 @@
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
+    <!-- Mobile Backdrop -->
+    <div class="nav-backdrop" id="nav-backdrop"></div>
   </header>
 
   <!-- ================= HERO SECTION ================= -->
@@ -396,7 +406,10 @@
         <!-- PROJECT 1: Dino Polska -->
         <article class="project-card" data-category="brukarstwo b2b" data-keywords="dino polska recyklomaty roboty ziemne kostka brukowa wielkopolska">
           <div class="project-thumb">
-            <img src="images/dino-polska-recyklomaty.jpg" alt="Dino Polska - roboty ziemne pod recyklomaty" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge b2b">B2B & Brukarstwo</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-dino"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -422,7 +435,10 @@
         <!-- PROJECT 2: Erste Bank -->
         <article class="project-card" data-category="wnetrza b2b" data-keywords="erste bank rebranding oddzialy bankowe malowanie wykonczenia">
           <div class="project-thumb">
-            <img src="images/erste-bank-oddzialy.png" alt="Erste Bank prace wykończeniowe" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge b2b">Rebranding B2B</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-erste"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -448,7 +464,10 @@
         <!-- PROJECT 3: Tefra Koncept -->
         <article class="project-card" data-category="klinkier b2b" data-keywords="tefra koncept klinkier plytka elewacyjna fugowanie budynki mieszkalne">
           <div class="project-thumb">
-            <img src="images/tefra-koncept.png" alt="Tefra Koncept płytka elewacyjna" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-tefra"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -474,7 +493,10 @@
         <!-- PROJECT 4: Klinkier szary willa -->
         <article class="project-card" data-category="klinkier" data-keywords="klinkier willa nowoczesna bryla cegla klinkierowa szary">
           <div class="project-thumb">
-            <img src="images/klinkier-szary-bryla.png" alt="Elewacja z cegły klinkierowej willa szara" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-klinkier-szary"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -499,7 +521,10 @@
         <!-- PROJECT 5: Klinkier czerwony dom z dachem dwuspadowym -->
         <article class="project-card" data-category="klinkier" data-keywords="klinkier cegla recznie formowana dom dwuspadowy czerwona cegla">
           <div class="project-thumb">
-            <img src="images/klinkier-dom-skosny.png" alt="Elewacja z cegły klinkierowej czerwona dom dwuspadowy" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-klinkier-skos"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -524,7 +549,10 @@
         <!-- PROJECT 6: Klinkier czerwony nowoczesny sześcian -->
         <article class="project-card" data-category="klinkier" data-keywords="klinkier nowoczesny kubik czerwona cegla wiazanie dzikie">
           <div class="project-thumb">
-            <img src="images/klinkier-czerwony-modern.png" alt="Elewacja klinkierowa nowoczesna bryła" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -549,7 +577,10 @@
         <!-- PROJECT 7: Dom parterowy klinkier -->
         <article class="project-card" data-category="klinkier" data-keywords="dom parterowy klinkier piaskowy elewacja klinkierowa">
           <div class="project-thumb">
-            <img src="images/klinkier-dom-parterowy.png" alt="Dom parterowy elewacja klinkierowa" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-klinkier-parter"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -574,7 +605,10 @@
         <!-- PROJECT 8: Biedronka Recyklomaty -->
         <article class="project-card" data-category="brukarstwo b2b" data-keywords="biedronka recyklomaty podbudowy kostka brukowa parking">
           <div class="project-thumb">
-            <img src="images/biedronka-recyklomaty.png" alt="Biedronka nawierzchnie pod recyklomaty" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge b2b">B2B & Brukarstwo</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-biedronka"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -599,7 +633,10 @@
         <!-- PROJECT 9: BookingHost Poznań -->
         <article class="project-card" data-category="wnetrza b2b" data-keywords="bookinghost poznan apartamenty remont serwis wykonczenia panele podlogi">
           <div class="project-thumb">
-            <img src="images/bookinghost-poznan.png" alt="BookingHost obsługa apartamentów" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge b2b">Obsługa B2B</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-bookinghost"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -625,7 +662,10 @@
         <!-- PROJECT 10: Gaz-System S.A. -->
         <article class="project-card" data-category="brukarstwo b2b" data-keywords="gaz system ciagi piesze chodniki kostka betonowa obiekty strategiczne">
           <div class="project-thumb">
-            <img src="images/gaz-system-chodniki.png" alt="Gaz-System chodniki techniczne" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge b2b">Inwestycja Strategiczna</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-gaz-system"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -650,7 +690,10 @@
         <!-- PROJECT 11: Generalny remont mieszkania pod klucz -->
         <article class="project-card" data-category="wnetrza" data-keywords="remont mieszkania pod klucz lazienka kuchnia salon plytki g-k">
           <div class="project-thumb">
-            <img src="images/remont-mieszkania-pod-klucz.png" alt="Generalny remont mieszkania pod klucz" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-remont-klucz"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -675,7 +718,10 @@
         <!-- PROJECT 12: Wykończenie wnętrz z tapetami wielkoformatowymi -->
         <article class="project-card" data-category="wnetrza" data-keywords="wykonczenie wnetrz tapety wielkoformatowe malowanie szpachlowanie">
           <div class="project-thumb">
-            <img src="images/wykonczenie-wnetrz-tapety.png" alt="Tapety wielkoformatowe wykończenie wnętrz" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge wnetrza">Wnętrza i Remonty</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-tapety"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -700,7 +746,10 @@
         <!-- PROJECT 13: Podjazd z kostki i wiata garażowa -->
         <article class="project-card" data-category="brukarstwo" data-keywords="podjazd kostka brukowa wiata obciazenia kolowe obrzeza korytowanie">
           <div class="project-thumb">
-            <img src="images/podjazd-kostka-wiata.png" alt="Podjazd z kostki brukowej pod wiatą" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge brukarstwo">Brukarstwo i Teren</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-podjazd-wiata"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -725,7 +774,10 @@
         <!-- PROJECT 14: Rewitalizacja terenu posesji prywatnej -->
         <article class="project-card" data-category="brukarstwo" data-keywords="aranzacja nawierzchni posesja prywatna opaski odwadniajace sciezki taras">
           <div class="project-thumb">
-            <img src="images/aranzacja-nawierzchni-taras.png" alt="Aranżacja nawierzchni posesji prywatnej" loading="lazy">
+            <div class="thumb-placeholder">
+              <i class="fa-regular fa-image"></i>
+              <span>Miejsce na zdjęcie</span>
+            </div>
             <div class="project-category-badge brukarstwo">Brukarstwo i Teren</div>
             <div class="project-overlay">
               <button class="btn-quick-view" data-project-id="p-posesja-taras"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
@@ -769,7 +821,10 @@
             <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Poznań, ul. Głogowska</span>
           </div>
           <div class="comparison-image-container">
-            <img src="images/elewacja-graffiti-metamorfoza.png" alt="Przed i po usunięciu graffiti" class="comparison-static-img">
+            <div class="thumb-placeholder comparison-placeholder">
+              <i class="fa-regular fa-images"></i>
+              <span>Miejsce na zdjęcie metamorfozy (Przed / Po)</span>
+            </div>
           </div>
           <div class="comparison-footer">
             <p><strong>Zakres prac:</strong> Skuteczne chemiczne i mechaniczne usunięcie graffiti, uzupełnienie zniszczonej struktury tynku mineralnego oraz precyzyjne odtworzenie i zatarcia powłoki malarskiej w oryginalnym odcieniu fasady.</p>
@@ -783,7 +838,10 @@
             <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Rezydencja prywatna</span>
           </div>
           <div class="comparison-image-container">
-            <img src="images/renowacja-elewacja-balustrady.png" alt="Przed i po renowacji elewacji i balustrad" class="comparison-static-img">
+            <div class="thumb-placeholder comparison-placeholder">
+              <i class="fa-regular fa-images"></i>
+              <span>Miejsce na zdjęcie metamorfozy (Przed / Po)</span>
+            </div>
           </div>
           <div class="comparison-footer">
             <p><strong>Zakres prac:</strong> Mycie ciśnieniowe fasady, uzupełnienie ubytków tynkarskich, dwukrotne malowanie powłoką hydrofobową odporną na brud oraz szlifowanie i zabezpieczenie antykorozyjne balustrad ze stali.</p>
@@ -1004,6 +1062,18 @@
       </div>
     </div>
   </div>
+
+  <!-- ================= MOBILE FLOATING QUICK ACTION BAR ================= -->
+  <aside class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Szybki kontakt telefoniczny i wycena">
+    <a href="tel:+48789270299" class="mobile-bar-btn btn-call" aria-label="Zadzwoń do nas">
+      <i class="fa-solid fa-phone"></i>
+      <span>Zadzwoń</span>
+    </a>
+    <a href="#contact" class="mobile-bar-btn btn-quote" aria-label="Przejdź do formularza bezpłatnej wyceny">
+      <i class="fa-solid fa-paper-plane"></i>
+      <span>Darmowa wycena</span>
+    </a>
+  </aside>
 
   <!-- JavaScript -->
   <script src="main.js"></script>

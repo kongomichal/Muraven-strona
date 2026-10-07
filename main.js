@@ -198,30 +198,48 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');
+  const navBackdrop = document.getElementById('nav-backdrop');
+
+  function closeMobileNav() {
+    if (!navLinks) return;
+    navLinks.classList.remove('open');
+    if (navBackdrop) navBackdrop.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    const icon = mobileToggle ? mobileToggle.querySelector('i') : null;
+    if (icon) {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  }
+
+  function openMobileNav() {
+    if (!navLinks) return;
+    navLinks.classList.add('open');
+    if (navBackdrop) navBackdrop.classList.add('open');
+    document.body.classList.add('menu-open');
+    const icon = mobileToggle ? mobileToggle.querySelector('i') : null;
+    if (icon) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+    }
+  }
 
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      const icon = mobileToggle.querySelector('i');
       if (navLinks.classList.contains('open')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
+        closeMobileNav();
       } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+        openMobileNav();
       }
     });
 
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeMobileNav);
+    }
+
     // Close mobile nav on link click
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
-      });
+      link.addEventListener('click', closeMobileNav);
     });
   }
 
@@ -319,30 +337,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!data || !modalContent || !projectModal) return;
 
     modalContent.innerHTML = `
-      <div style="margin-bottom: 16px;">
+      <div class="modal-header-info">
         <span class="section-tag">${data.category}</span>
-        <h2 style="font-size: 1.8rem; margin: 10px 0;">${data.title}</h2>
-        <div style="display: flex; gap: 20px; font-size: 0.9rem; color: #64748b; margin-bottom: 20px;">
-          <span><i class="fa-solid fa-location-dot" style="color: #e05638;"></i> ${data.location}</span>
-          <span><i class="fa-solid fa-circle-info" style="color: #0ea5e9;"></i> ${data.timeline}</span>
+        <h2 class="modal-title">${data.title}</h2>
+        <div class="modal-meta-row">
+          <span><i class="fa-solid fa-location-dot"></i> ${data.location}</span>
+          <span><i class="fa-solid fa-circle-info"></i> ${data.timeline}</span>
         </div>
       </div>
 
-      <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
-        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #0b132b;"><i class="fa-solid fa-list-check" style="color: #e05638; margin-right: 8px;"></i> Zakres wykonanych prac:</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
-          ${data.scope.map(item => `<li style="font-size: 0.92rem; display: flex; align-items: flex-start; gap: 10px;"><i class="fa-solid fa-check" style="color: #10b981; margin-top: 4px;"></i> <span>${item}</span></li>`).join('')}
+      <div class="modal-scope-box">
+        <h4><i class="fa-solid fa-list-check"></i> Zakres wykonanych prac:</h4>
+        <ul class="modal-scope-list">
+          ${data.scope.map(item => `<li><i class="fa-solid fa-check"></i> <span>${item}</span></li>`).join('')}
         </ul>
       </div>
 
-      <div style="margin-bottom: 28px;">
-        <h4 style="font-size: 1.1rem; margin-bottom: 10px; color: #0b132b;">Opis inżynieryjny realizacji:</h4>
-        <p style="font-size: 0.95rem; line-height: 1.7; color: #475569;">${data.description}</p>
+      <div class="modal-desc-box">
+        <h4>Opis inżynieryjny realizacji:</h4>
+        <p>${data.description}</p>
       </div>
 
-      <div style="display: flex; gap: 14px; justify-content: flex-end; border-top: 1px solid #e2e8f0; padding-top: 20px;">
-        <button class="btn btn-secondary" id="modal-inner-close" style="color: #1e293b; border-color: #cbd5e1;">Zamknij</button>
-        <a href="#contact" class="btn btn-primary" id="modal-contact-btn">
+      <div class="modal-actions-bar">
+        <button class="btn btn-secondary modal-btn-close" id="modal-inner-close">Zamknij</button>
+        <a href="#contact" class="btn btn-primary modal-btn-contact" id="modal-contact-btn">
           <span>Zapytaj o podobny projekt</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -365,11 +383,25 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  // Quick view button click
   document.querySelectorAll('.btn-quick-view').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const pId = btn.getAttribute('data-project-id');
       openProjectModal(pId);
+    });
+  });
+
+  // Enable whole card tapping on mobile & desktop
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Don't duplicate if clicking directly on a button or link
+      if (e.target.closest('.btn-quick-view') || e.target.closest('a')) return;
+      const btn = card.querySelector('.btn-quick-view');
+      if (btn) {
+        const pId = btn.getAttribute('data-project-id');
+        if (pId) openProjectModal(pId);
+      }
     });
   });
 
