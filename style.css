@@ -485,7 +485,6 @@ a {
   justify-content: center;
   height: 44px;
   padding: 4px 6px;
-  transition: transform var(--transition);
 }
 
 .partner-logo-item img {
@@ -495,8 +494,6 @@ a {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.55);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Optyczne wyrównanie wag logotypów o nietypowych proporcjach */
@@ -519,12 +516,6 @@ a {
 
 .partner-logo-item img[alt="BookingHost"] {
   max-height: 22px;
-}
-
-/* Hover: powrót do pełnego koloru marki i subtelne powiększenie */
-.partner-logo-item:hover img {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.08);
 }
 
 /* ==========================================================================
