@@ -85,6 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Wykonanie fasady z płytek klinkierowych na domu parterowym z garażem oraz kompleksowe wykonanie muru i słupków ogrodzenia frontowego.'
     },
+    'p-tefra-4': {
+      title: 'Tefra Koncept: Ściana szczytowa parteru (Budynek 4)',
+      category: 'Elewacje i Klinkier',
+      location: 'Inwestycja deweloperska Tefra Koncept',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/tefra-parterowy-1.jpg'
+      ],
+      scope: [
+        'Montaż płytek elewacyjnych na ścianie szczytowej parteru',
+        'Spasowanie płytki z grafitową blendą okienną',
+        'Wykończenie narożników płytkami kątowymi',
+        'Precyzyjne fugowanie spoin lica'
+      ],
+      description: 'Precyzyjny montaż płytek elewacyjnych na ścianie szczytowej budynku parterowego. Połączenie klinkieru z grafitową stolarką i tynkiem elewacyjnym.'
+    },
     'p-klinkier-jasny-dom': {
       title: 'Dom parterowy: Elewacja z jasnej cegły klinkierowej',
       category: 'Elewacje i Klinkier',
