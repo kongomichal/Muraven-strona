@@ -69,6 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Kompleksowe wykonanie fasady z płytek klinkierowych na segmentach bliźniaczych wraz z wymurowaniem reprezentacyjnych murków ogrodzeniowych przed wejściami.'
     },
+    'p-tefra-3': {
+      title: 'Tefra Koncept: Dom z garażem i ogrodzeniem (Budynek 3)',
+      category: 'Elewacje i Klinkier',
+      location: 'Inwestycja deweloperska Tefra Koncept',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/tefra-dom-ogrodzenie-1.jpg'
+      ],
+      scope: [
+        'Montaż płytek elewacyjnych na ścianach garażu i parteru',
+        'Wykończenie narożników płytkami kątowymi',
+        'Murowanie słupków i podmurówki klinkierowej ogrodzenia frontowego',
+        'Fugowanie i zabezpieczenie hydrofobowe'
+      ],
+      description: 'Wykonanie fasady z płytek klinkierowych na domu parterowym z garażem oraz kompleksowe wykonanie muru i słupków ogrodzenia frontowego.'
+    },
     'p-klinkier-jasny-dom': {
       title: 'Dom parterowy: Elewacja z jasnej cegły klinkierowej',
       category: 'Elewacje i Klinkier',
