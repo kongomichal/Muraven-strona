@@ -227,17 +227,21 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Przestronny dom parterowy wykończony jasną cegłą. Jasny klinkier optycznie powiększa bryłę i doskonale współgra z grafitowym dachem oraz instalacją fotowoltaiczną.'
     },
     'p-biedronka': {
-      title: 'Biedronka: Utwardzone podbudowy pod recyklomaty',
-      category: 'B2B & Brukarstwo Przemysłowe',
-      location: 'Punkty sieci Biedronka',
-      timeline: 'Nawierzchnie techniczne',
-      scope: [
-        'Korytowanie terenu przyległego do elewacji marketu',
-        'Podbudowa pod urządzenia wielkogabarytowe',
-        'Ułożenie kostki z wypełnieniem spoin piaskiem płukanym',
-        'Spadki odwadniające zabezpieczające ścianę budynku'
+      title: 'Biedronka: Utwardzona podbudowa pod recyklomat',
+      category: 'Brukarstwo i Nawierzchnie',
+      location: 'Market sieci Biedronka',
+      timeline: 'Realizacja pod klucz',
+      images: [
+        'images/portfolio/biedronka-recyklomat.jpg'
       ],
-      description: 'Kolejna realizacja infrastruktury technicznej dla czołowej sieci dyskontów w Polsce. Szybka realizacja bez uciążliwości dla dostaw i klientów sklepu.'
+      scope: [
+        'Korytowanie gruntu bezpośrednio przy ścianie marketu',
+        'Zagęszczona podbudowa z kruszywa łamanego',
+        'Montaż obrzeży betonowych z zachowaniem spadków odwadniających od elewacji',
+        'Ułożenie nawierzchni z przemysłowej kostki brukowej',
+        'Przygotowanie podłoża pod automat recyklingowy'
+      ],
+      description: 'Wykonanie utwardzonego stanowiska z kostki brukowej pod automat recyklingowy przy ścianie marketu Biedronka. Prace przeprowadzone sprawnie, z zachowaniem spadków zabezpieczających elewację przed wodą opadową.'
     },
     'p-bookinghost': {
       title: 'BookingHost: Stała obsługa techniczna apartamentów',
