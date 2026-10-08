@@ -19,54 +19,62 @@
 </head>
 <body>
 
-  <!-- ================= TOPBAR ================= -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-contact">
-        <span><i class="fa-solid fa-phone"></i> +48 572 533 862</span>
-        <span><i class="fa-solid fa-envelope"></i> kontakt@muraven.pl</span>
-        <span><i class="fa-solid fa-location-dot"></i> Obszar działania: Wielkopolska</span>
-      </div>
-      <div class="topbar-badge">
-        <i class="fa-solid fa-shield-halved"></i> Gwarancja jakości i terminowości
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= HEADER & NAVIGATION ================= -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar-inner">
-      <a href="#home" class="brand-logo" id="brand-logo" aria-label="Muraven">
-        <img src="images/logo-muraven.png" alt="Muraven" class="site-logo-img">
-      </a>
-
-      <!-- Desktop & Mobile Navigation -->
-      <nav class="nav-links" id="nav-links">
-        <a href="#home" class="nav-item active">Strona główna</a>
-        <a href="#about" class="nav-item">O nas</a>
-        <a href="#services" class="nav-item">Usługi</a>
-        <a href="#portfolio" class="nav-item">Realizacje</a>
-        <a href="#contact" class="nav-item nav-btn-primary">Darmowa Wycena</a>
-        <div class="nav-mobile-contact">
-          <a href="tel:+48572533862" class="nav-mobile-contact-item">
+  <!-- ================= STICKY SITE HEADER (TOPBAR + NAVBAR) ================= -->
+  <header class="site-header" id="site-header">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-contact">
+          <a href="tel:+48572533862" class="topbar-contact-item">
             <i class="fa-solid fa-phone"></i> +48 572 533 862
           </a>
-          <a href="mailto:kontakt@muraven.pl" class="nav-mobile-contact-item">
+          <a href="mailto:kontakt@muraven.pl" class="topbar-contact-item">
             <i class="fa-solid fa-envelope"></i> kontakt@muraven.pl
           </a>
-          <div class="nav-mobile-contact-item">
+          <span class="topbar-contact-item">
             <i class="fa-solid fa-location-dot"></i> Obszar działania: Wielkopolska
-          </div>
+          </span>
         </div>
-      </nav>
-
-      <!-- Mobile Menu Toggle -->
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu mobilne">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+        <div class="topbar-badge">
+          <i class="fa-solid fa-shield-halved"></i> Gwarancja jakości i terminowości
+        </div>
+      </div>
     </div>
-    <!-- Mobile Backdrop -->
-    <div class="nav-backdrop" id="nav-backdrop"></div>
+
+    <!-- Main Navigation Bar -->
+    <div class="navbar" id="navbar">
+      <div class="container navbar-inner">
+        <a href="#home" class="brand-logo" id="brand-logo" aria-label="Muraven">
+          <img src="images/logo-muraven.png" alt="Muraven" class="site-logo-img">
+        </a>
+
+        <!-- Desktop & Mobile Navigation -->
+        <nav class="nav-links" id="nav-links">
+          <a href="#home" class="nav-item active">Strona główna</a>
+          <a href="#services" class="nav-item">Usługi</a>
+          <a href="#portfolio" class="nav-item">Realizacje</a>
+          <a href="#contact" class="nav-item nav-btn-primary">Darmowa Wycena</a>
+          <div class="nav-mobile-contact">
+            <a href="tel:+48572533862" class="nav-mobile-contact-item">
+              <i class="fa-solid fa-phone"></i> +48 572 533 862
+            </a>
+            <a href="mailto:kontakt@muraven.pl" class="nav-mobile-contact-item">
+              <i class="fa-solid fa-envelope"></i> kontakt@muraven.pl
+            </a>
+            <div class="nav-mobile-contact-item">
+              <i class="fa-solid fa-location-dot"></i> Obszar działania: Wielkopolska
+            </div>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu mobilne">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile Backdrop -->
+      <div class="nav-backdrop" id="nav-backdrop"></div>
+    </div>
   </header>
 
   <!-- ================= HERO SECTION ================= -->
@@ -79,11 +87,11 @@
           Generalne wykonawstwo i prace specjalistyczne
         </div>
         <h1 class="hero-title">
-          Precyzja inżynieryjna.<br>
-          <span class="gradient-text">Solidność bez kompromisów.</span>
+          Sprawdzony podwykonawca<br>
+          <span class="gradient-text">dla deweloperów i biznesu.</span>
         </h1>
         <p class="hero-description">
-          Specjalizujemy się w nowoczesnych <strong>elewacjach z cegły klinkierowej</strong>, kompleksowym <strong>brukarstwie</strong>, remontach wykończeniowych oraz obsłudze technicznej ogólnopolskich sieci handlowych i inwestycji B2B.
+          Specjalizujemy się w montażu <strong>płytek elewacyjnych</strong> oraz kompleksowych pracach budowlano-montażowych na kontraktach <strong>B2B</strong>. Realizujemy zlecenia dla deweloperów, sieci handlowych i inwestorów prywatnych.
         </p>
 
         <div class="hero-actions">
@@ -96,53 +104,61 @@
             <span>Poproś o wycenę</span>
           </a>
         </div>
-
-        <div class="hero-highlights">
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Obsługa sieci handlowych (Dino, Biedronka)</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Własny park maszynowy i doświadczona kadra</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Certyfikowane materiały i precyzyjne fugowanie</span>
-          </div>
-        </div>
       </div>
 
-      <!-- Hero Fast Quote Card -->
+      <!-- Hero Contractor Assurance Card (Option B) -->
       <div class="hero-card-wrapper">
-        <div class="hero-card">
+        <div class="hero-card hero-trust-card">
           <div class="hero-card-header">
-            <h3>Szybka konsultacja</h3>
-            <p>Odpowiadamy w ciągu maksymalnie 24 godzin</p>
+            <span class="trust-card-badge"><i class="fa-solid fa-handshake-angle"></i> Współpraca B2B</span>
+            <h3>Standard Wykonawczy</h3>
+            <p>Konkretne warunki, brak pośredników i pełna decyzyjność na miejscu robót.</p>
           </div>
-          <form class="hero-mini-form" id="hero-quick-form">
-            <div class="form-group">
-              <label for="hero-name">Imię i nazwisko / Firma</label>
-              <input type="text" id="hero-name" placeholder="np. Jan Kowalski" required>
+
+          <div class="trust-card-list">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-user-check"></i></div>
+              <div class="trust-text">
+                <strong>Bezpośredni kontakt z wykonawcą</strong>
+                <span>Rozmawiasz bezpośrednio z osobą kierującą pracami, bez zbędnych pośredników.</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="hero-phone">Numer telefonu</label>
-              <input type="tel" id="hero-phone" placeholder="np. +48 600 000 000" required>
+
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="trust-text">
+                <strong>Prace nocne i weekendowe</strong>
+                <span>Elastyczny harmonogram bez przestojów i paraliżu na czynnych obiektach handlowych.</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="hero-type">Zakres prac</label>
-              <select id="hero-type">
-                <option value="klinkier">Elewacje klinkierowe i fasady</option>
-                <option value="brukarstwo">Kostka brukowa i podbudowy</option>
-                <option value="remont">Wykończenie wnętrz / Remont</option>
-                <option value="b2b">Obsługa sieci handlowej / B2B</option>
-              </select>
+
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-file-shield"></i></div>
+              <div class="trust-text">
+                <strong>Polisa OC i faktura VAT</strong>
+                <span>Ubezpieczenie OC wykonawcy, rzetelne umowy i pełne rozliczenia formalne.</span>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              Zamów bezpłatną wycenę
-            </button>
-            <p class="form-micro-text"><i class="fa-solid fa-lock"></i> Bez żadnych zobowiązań. Szanujemy Twoją prywatność.</p>
-          </form>
+
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="trust-text">
+                <strong>Szybka reakcja w Wielkopolsce</strong>
+                <span>Sprawny dojazd na pilne zgłoszenia serwisowe i terminowa realizacja etapów.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust-card-footer">
+            <a href="#contact" class="btn btn-primary btn-block">
+              <span>Zapytaj o wycenę lub współpracę</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <div class="trust-direct-phone">
+              <span>Bezpośredni kontakt telefoniczny:</span>
+              <a href="tel:+48530372879"><i class="fa-solid fa-phone"></i> +48 530 372 879</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -192,188 +208,109 @@
     </div>
   </section>
 
-  <!-- ================= KEY STATS / NUMBERS ================= -->
-  <section class="stats-section" id="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-store"></i></div>
-          <div class="stat-number" data-target="27">0</div>
-          <div class="stat-suffix">+</div>
-          <p class="stat-label">Punktów sieci handlowych</p>
-          <span class="stat-sub">Dino i Biedronka pod recyklomaty</span>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <div class="stat-number" data-target="15">0</div>
-          <div class="stat-suffix"></div>
-          <p class="stat-label">Oddziałów bankowych</p>
-          <span class="stat-sub">Rebranding dla Erste Bank</span>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-key"></i></div>
-          <div class="stat-number" data-target="150">0</div>
-          <div class="stat-suffix">+</div>
-          <p class="stat-label">Zrealizowanych zleceń</p>
-          <span class="stat-sub">Stała obsługa apartamentów BookingHost</span>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
-          <div class="stat-number" data-target="1300">0</div>
-          <div class="stat-suffix"> m²</div>
-          <p class="stat-label">Wykończonych powierzchni</p>
-          <span class="stat-sub">W ramach pojedynczych kontraktów</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ABOUT US ================= -->
-  <section class="about-section" id="about">
-    <div class="container about-grid">
-      <div class="about-text-content">
-        <div class="section-tag">O FIRMIE MURAVEN</div>
-        <h2 class="section-heading">Partner wykonawczy, na którym możesz polegać w 100%</h2>
-        <p class="lead-text">
-          Łączymy rzemieślniczą dokładność z inżynieryjnym podejściem do harmonogramu i norm technicznych.
-        </p>
-        <p>
-          Działamy zarówno dla klientów indywidualnych szukających ponadczasowej elewacji klinkierowej czy trwałego podjazdu, jak i dla potężnych korporacji, które wymagają pracy w ściśle określonych oknach czasowych bez zakłócania ciągłości sprzedaży.
-        </p>
-        
-        <div class="about-features-list">
-          <div class="feature-bullet">
-            <div class="f-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-            <div>
-              <h4>Precyzja i rygor technologiczny</h4>
-              <p>Trzymamy się wytycznych producentów materiałów, zapewniając trwałość konstrukcji na dziesięciolecia.</p>
-            </div>
-          </div>
-          <div class="feature-bullet">
-            <div class="f-icon"><i class="fa-solid fa-clock"></i></div>
-            <div>
-              <h4>Pewny harmonogram</h4>
-              <p>Pracujemy na jasnych umowach z gwarancją terminu zakończenia robót.</p>
-            </div>
-          </div>
-          <div class="feature-bullet">
-            <div class="f-icon"><i class="fa-solid fa-toolbox"></i></div>
-            <div>
-              <h4>Własny sprzęt i zaplecze</h4>
-              <p>Nie jesteśmy pośrednikami. Dysponujemy wykwalifikowaną brygadą montażową i własnymi maszynami.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-banner-visual">
-        <div class="about-glass-card">
-          <div class="glass-header">
-            <i class="fa-solid fa-award"></i>
-            <div>
-              <strong>Dlaczego Muraven?</strong>
-              <span>Doświadczenie potwierdzone referencjami</span>
-            </div>
-          </div>
-          <ul class="glass-list">
-            <li><i class="fa-solid fa-check"></i> Kompleksowe korytowanie i podbudowy pod obciążenia kołowe</li>
-            <li><i class="fa-solid fa-check"></i> Mistrzowskie fugowanie elewacji z cegły i płytek klinkierowych</li>
-            <li><i class="fa-solid fa-check"></i> Wykończenia wnętrz pod klucz z tapetami wielkoformatowymi</li>
-            <li><i class="fa-solid fa-check"></i> Usuwanie graffiti i precyzyjne odtwarzanie powłok tynkarskich</li>
-            <li><i class="fa-solid fa-check"></i> Gotowość do realizacji zleceń na terenie całego kraju</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SERVICES SECTION ================= -->
+  <!-- ================= SERVICES & PROVEN TRACK RECORD ================= -->
   <section class="services-section" id="services">
     <div class="container">
       <div class="section-header-center">
-        <div class="section-tag">NASZA OFERTA</div>
-        <h2 class="section-heading">Zakres usług wykonawczych</h2>
-        <p class="section-subtext">Oferujemy specjalistyczne wsparcie w czterech kluczowych obszarach budownictwa i renowacji.</p>
+        <div class="section-tag">NASZA OFERTA & SKALA DZIAŁANIA</div>
+        <h2 class="section-heading">Zakres usług potwierdzony liczbami</h2>
       </div>
 
       <div class="services-grid">
-        <!-- Service 1 -->
+        <!-- Service 1: Elewacje i płytki -->
         <div class="service-card">
-          <div class="service-card-header">
-            <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
-            <span class="service-num">01</span>
+          <div class="service-card-top">
+            <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
           </div>
-          <h3 class="service-title">Elewacje Klinkierowe i Fasady</h3>
+          <div class="service-metric">
+            <span class="service-stat-num stat-number" data-target="2000">0</span>
+            <span class="service-stat-suffix">+ m²</span>
+          </div>
+          <h3 class="service-title">Płytki elewacyjne i klinkier</h3>
           <p class="service-desc">
-            Murowanie z cegły klinkierowej, montaż płytek elewacyjnych, fugowanie maszynowe i ręczne, docieplenia oraz renowacja fasad.
+            Montaż płytek elewacyjnych oraz murowanie klinkieru na inwestycjach deweloperskich i komercyjnych.
           </p>
           <ul class="service-list">
-            <li>Cegła ręcznie formowana i klinkier</li>
-            <li>Montaż płytek na budynkach mieszkalnych</li>
-            <li>Precyzyjne fugowanie odporne na wykwity</li>
-            <li>Mycie ciśnieniowe i hydrofobizacja</li>
+            <li>Montaż płytek na elewacjach budynków</li>
+            <li>Murowanie cegły klinkierowej</li>
+            <li>Precyzyjne fugowanie i spoinowanie</li>
+            <li>Hydrofobizacja i zabezpieczenie lica</li>
           </ul>
-          <a href="#portfolio" class="service-link" data-filter="klinkier">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#portfolio" class="service-link" data-filter="klinkier">
+            <span>Zobacz realizacje</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
-        <!-- Service 2 -->
+        <!-- Service 2: Podbudowy i brukarstwo -->
         <div class="service-card">
-          <div class="service-card-header">
-            <div class="service-icon"><i class="fa-solid fa-road"></i></div>
-            <span class="service-num">02</span>
+          <div class="service-card-top">
+            <div class="service-icon"><i class="fa-solid fa-recycle"></i></div>
           </div>
-          <h3 class="service-title">Brukarstwo i Roboty Ziemne</h3>
+          <div class="service-metric">
+            <span class="service-stat-num stat-number" data-target="30">0</span>
+            <span class="service-stat-suffix">+</span>
+          </div>
+          <h3 class="service-title">Podbudowy pod recyklomaty</h3>
           <p class="service-desc">
-            Profesjonalne podbudowy i nawierzchnie brukowe pod obciążenia kołowe, ciągi piesze, recyklomaty oraz posesje prywatne.
+            Prace ziemne, korytowanie i utwardzanie nawierzchni pod automaty recyklingowe dla sieci marketów.
           </p>
           <ul class="service-list">
-            <li>Nawierzchnie pod recyklomaty dla marketów</li>
-            <li>Podjazdy, parkingi i opaski odwadniające</li>
-            <li>Chodniki techniczne i alejki osiedlowe</li>
-            <li>Korytowanie i zagęszczanie podbudowy</li>
+            <li>Ponad 30 punktów Dino i Biedronka w Wielkopolsce</li>
+            <li>Podbudowy z kruszywa pod obciążenia</li>
+            <li>Montaż obrzeży i krawężników drogowych</li>
+            <li>Utwardzenia nawierzchni i parkingi</li>
           </ul>
-          <a href="#portfolio" class="service-link" data-filter="brukarstwo">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#portfolio" class="service-link" data-filter="brukarstwo">
+            <span>Zobacz realizacje</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
-        <!-- Service 3 -->
+        <!-- Service 3: Rebrandingi bankowe -->
         <div class="service-card">
-          <div class="service-card-header">
-            <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
-            <span class="service-num">03</span>
+          <div class="service-card-top">
+            <div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
           </div>
-          <h3 class="service-title">Wykończenia Wnętrz i Remonty</h3>
+          <div class="service-metric">
+            <span class="service-stat-num stat-number" data-target="15">0</span>
+            <span class="service-stat-suffix"></span>
+          </div>
+          <h3 class="service-title">Rebrandingi placówek bankowych</h3>
           <p class="service-desc">
-            Kompleksowe remonty pod klucz domów, mieszkań i apartamentów inwestycyjnych z dbałością o detale wykończeniowe.
+            Ekspresowe remonty i liftingi wizualne oddziałów bankowych bez przestojów w obsłudze klienta.
           </p>
           <ul class="service-list">
-            <li>Gładzie bezpyłowe i precyzyjne malowanie</li>
-            <li>Montaż tapet wielkoformatowych</li>
-            <li>Układanie płytek, gresu i paneli/parkietu</li>
-            <li>Zabudowy G-K i adaptacja pomieszczeń</li>
+            <li>15 placówek Erste Bank w Wielkopolsce</li>
+            <li>Sprawny tryb nocny oraz weekendowy</li>
+            <li>Gładzie i malowanie</li>
+            <li>Zabudowy G-K i sufity kasetonowe</li>
           </ul>
-          <a href="#portfolio" class="service-link" data-filter="wnetrza">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#portfolio" class="service-link" data-filter="wnetrza">
+            <span>Zobacz realizacje</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
-        <!-- Service 4 -->
+        <!-- Service 4: Serwis techniczny -->
         <div class="service-card">
-          <div class="service-card-header">
-            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <span class="service-num">04</span>
+          <div class="service-card-top">
+            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
           </div>
-          <h3 class="service-title">Inwestycje B2B i Rebrandingi</h3>
+          <div class="service-metric">
+            <span class="service-stat-num stat-number" data-target="200">0</span>
+            <span class="service-stat-suffix">+</span>
+          </div>
+          <h3 class="service-title">Serwis techniczny i naprawy</h3>
           <p class="service-desc">
-            Dedykowana obsługa sieci retail, instytucji finansowych, wspólnot mieszkaniowych oraz zarządców nieruchomości.
+            Bieżące utrzymanie techniczne, usuwanie awarii i szybkie interwencje w lokalach komercyjnych.
           </p>
           <ul class="service-list">
-            <li>Ogólnopolskie rebrandingi placówek (banki)</li>
-            <li>Stała obsługa techniczna apartamentów</li>
-            <li>Remonty i wymiana okładzin w windach</li>
-            <li>Usuwanie graffiti i naprawy po dewastacji</li>
+            <li>Ponad 200 zrealizowanych zleceń serwisu</li>
+            <li>Obsługa sieci handlowych i gastronomicznych</li>
+            <li>Pilne naprawy budowlano-montażowe</li>
+            <li>Mobilna brygada na terenie Wielkopolski</li>
           </ul>
-          <a href="#portfolio" class="service-link" data-filter="b2b">Zobacz realizacje <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#portfolio" class="service-link" data-filter="ogrodzenia">
+            <span>Zobacz realizacje</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -411,6 +348,110 @@
             <div class="category-drawer-inner">
               <div class="projects-grid">
 
+                <!-- Realizacja: Elewacja z jasnej cegły klinkierowej -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <img src="images/portfolio/klinkier-dom-jasny-1.jpg" alt="Elewacja z jasnej cegły klinkierowej" class="project-img" loading="lazy">
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-jasny-dom"><i class="fa-solid fa-eye"></i> Zobacz zdjęcia i opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-house"></i> Dom parterowy</span>
+                      <span><i class="fa-solid fa-cubes"></i> Klinkier jasny</span>
+                    </div>
+                    <h3 class="project-title">Dom parterowy: Elewacja z jasnej cegły klinkierowej</h3>
+                    <p class="project-snippet">
+                      Kompleksowe wykonanie fasady trójwarstwowej z jasnej cegły klinkierowej wraz z termoizolacją i spoinowaniem.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Cegła klinkierowa</span>
+                      <span class="tag">Fasada trójwarstwowa</span>
+                      <span class="tag">Precyzyjne spoinowanie</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Realizacja 2: Elewacja z tradycyjnej czerwonej cegły -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <img src="images/portfolio/klinkier-dom-czerwony-1.jpg" alt="Elewacja z tradycyjnej czerwonej cegły klinkierowej" class="project-img" loading="lazy">
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-czerwony-dom"><i class="fa-solid fa-eye"></i> Zobacz zdjęcia i opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-house"></i> Dom z poddaszem</span>
+                      <span><i class="fa-solid fa-cubes"></i> Czerwony klinkier</span>
+                    </div>
+                    <h3 class="project-title">Dom z poddaszem: Elewacja z czerwonej cegły</h3>
+                    <p class="project-snippet">
+                      Wykonanie pełnej elewacji ceglanej z tradycyjnej czerwonej cegły na budynku z dachem dwuspadowym wraz z detalami otworów.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Cegła tradycyjna</span>
+                      <span class="tag">Dach dwuspadowy</span>
+                      <span class="tag">Precyzyjne murowanie</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Realizacja 3: Nowoczesna willa z klinkieru -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <img src="images/portfolio/klinkier-willa-modern-1.jpg" alt="Elewacja z jasnoszarego klinkieru na nowoczesnej willi" class="project-img" loading="lazy">
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-szary"><i class="fa-solid fa-eye"></i> Zobacz zdjęcia i opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-house"></i> Nowoczesna willa</span>
+                      <span><i class="fa-solid fa-cubes"></i> Klinkier jasnoszary</span>
+                    </div>
+                    <h3 class="project-title">Nowoczesna willa: Elewacja z jasnoszarego klinkieru</h3>
+                    <p class="project-snippet">
+                      Kompleksowe wykonanie elewacji na modernistycznej willi z płaskim dachem i dekoracyjnym pasem w pionowym wiązaniu cegły.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Bryła nowoczesna</span>
+                      <span class="tag">Pionowe wiązanie</span>
+                      <span class="tag">Płaski dach</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Realizacja 4: Dom modernistyczny z klinkieru cieniowanego -->
+                <article class="project-card">
+                  <div class="project-thumb">
+                    <img src="images/portfolio/klinkier-dom-cieniowany-gotowy.jpg" alt="Dom modernistyczny: Cegła klinkierowa cieniowana" class="project-img" loading="lazy">
+                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
+                    <div class="project-overlay">
+                      <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz zdjęcia i opis</button>
+                    </div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span><i class="fa-solid fa-house"></i> Dom modernistyczny</span>
+                      <span><i class="fa-solid fa-cubes"></i> Klinkier cieniowany</span>
+                    </div>
+                    <h3 class="project-title">Dom modernistyczny: Cegła klinkierowa cieniowana</h3>
+                    <p class="project-snippet">
+                      Kompleksowa realizacja domu z płaskim dachem od etapu fundamentów po elewację z cieniowanej cegły z dekoracyjnym pasem.
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Cegła cieniowana</span>
+                      <span class="tag">Płaski dach</span>
+                      <span class="tag">Stan zerowy i elewacja</span>
+                    </div>
+                  </div>
+                </article>
+
                 <!-- Tefra Koncept -->
                 <article class="project-card">
                   <div class="project-thumb">
@@ -436,90 +477,6 @@
                       <span class="tag">Płytka elewacyjna</span>
                       <span class="tag">Precyzyjne fugowanie</span>
                       <span class="tag">Osiedle domów</span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Klinkier szary willa -->
-                <article class="project-card">
-                  <div class="project-thumb">
-                    <div class="thumb-placeholder">
-                      <i class="fa-regular fa-image"></i>
-                      <span>Miejsce na zdjęcie</span>
-                    </div>
-                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-                    <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-klinkier-szary"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-                    </div>
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span><i class="fa-solid fa-home"></i> Dom jednorodzinny</span>
-                      <span><i class="fa-solid fa-gem"></i> Klinkier nowoczesny</span>
-                    </div>
-                    <h3 class="project-title">Nowoczesna willa: Elewacja z jasnej cegły klinkierowej</h3>
-                    <p class="project-snippet">
-                      Kompleksowa realizacja elewacji klinkierowej w awangardowej bryle budynku z geometrycznymi podcięciami i wielkoformatowymi oknami.
-                    </p>
-                    <div class="project-tags">
-                      <span class="tag">Cegła klinkierowa</span>
-                      <span class="tag">Nowoczesna architektura</span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Klinkier czerwony dom dwuspadowy -->
-                <article class="project-card">
-                  <div class="project-thumb">
-                    <div class="thumb-placeholder">
-                      <i class="fa-regular fa-image"></i>
-                      <span>Miejsce na zdjęcie</span>
-                    </div>
-                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-                    <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-klinkier-skos"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-                    </div>
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span><i class="fa-solid fa-home"></i> Dom dwukondygnacyjny</span>
-                      <span><i class="fa-solid fa-fire"></i> Klinkier tradycyjny</span>
-                    </div>
-                    <h3 class="project-title">Rezydencja podmiejska: Tradycyjny klinkier palony</h3>
-                    <p class="project-snippet">
-                      Pełne wykonanie fasady ceglanej z tradycyjnej cegły klinkierowej w domu o klasycznej bryle z dachem dwuspadowym.
-                    </p>
-                    <div class="project-tags">
-                      <span class="tag">Cegła palona</span>
-                      <span class="tag">Tradycyjny klinkier</span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Klinkier czerwony modern -->
-                <article class="project-card">
-                  <div class="project-thumb">
-                    <div class="thumb-placeholder">
-                      <i class="fa-regular fa-image"></i>
-                      <span>Miejsce na zdjęcie</span>
-                    </div>
-                    <div class="project-category-badge klinkier">Elewacje i Klinkier</div>
-                    <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-                    </div>
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span><i class="fa-solid fa-home"></i> Bryła modernistyczna</span>
-                      <span><i class="fa-solid fa-layer-group"></i> Wiązanie precyzyjne</span>
-                    </div>
-                    <h3 class="project-title">Dom modernistyczny: Cegła klinkierowa cieniowana</h3>
-                    <p class="project-snippet">
-                      Murowanie elewacji na piętrze i parterze nowoczesnego domu jednorodzinnego z perfekcyjnym spasowaniem narożników i nadproży.
-                    </p>
-                    <div class="project-tags">
-                      <span class="tag">Cegła cieniowana</span>
-                      <span class="tag">Modernizm</span>
                     </div>
                   </div>
                 </article>
@@ -894,14 +851,14 @@
           </div>
         </div>
 
-        <!-- ================= KATEGORIA 4: DLA BIZNESU (B2B) ================= -->
-        <div class="category-block" id="cat-b2b">
-          <button class="category-trigger" type="button" aria-expanded="false" data-category="b2b">
+        <!-- ================= KATEGORIA 4: PŁOTY I OGRODZENIA MURARSKIE ================= -->
+        <div class="category-block" id="cat-ogrodzenia">
+          <button class="category-trigger" type="button" aria-expanded="false" data-category="ogrodzenia">
             <div class="cat-left">
-              <div class="cat-icon"><i class="fa-solid fa-building"></i></div>
+              <div class="cat-icon"><i class="fa-solid fa-border-all"></i></div>
               <div class="cat-text">
-                <h3 class="cat-title">Dla Biznesu (B2B)</h3>
-                <p class="cat-description">Obsługa sieci handlowych, banków, spółek strategicznych i generalnych wykonawców</p>
+                <h3 class="cat-title">Płoty i Ogrodzenia Murarskie</h3>
+                <p class="cat-description">Kompleksowe murowanie, korekty, podbudowy, montaż słupków i wykańczanie ogrodzeń z klinkieru oraz bloczków</p>
               </div>
             </div>
             <div class="cat-right">
@@ -915,147 +872,115 @@
             <div class="category-drawer-inner">
               <div class="projects-grid">
 
-                <!-- Dino Polska B2B -->
+                <!-- Realizacja: Ogrodzenie z cegły klinkierowej -->
                 <article class="project-card">
                   <div class="project-thumb">
-                    <div class="thumb-placeholder">
-                      <i class="fa-regular fa-image"></i>
-                      <span>Miejsce na zdjęcie</span>
-                    </div>
-                    <div class="project-category-badge b2b">Sieć Handlowa B2B</div>
+                    <img src="images/portfolio/ogrodzenie-klinkier-1.jpg" alt="Mur z cegły klinkierowej i ogrodzenie osiedla" class="project-img" loading="lazy">
+                    <div class="project-category-badge ogrodzenia">Płoty i Ogrodzenia</div>
                     <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-dino"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                      <button class="btn-quick-view" data-project-id="p-ogrodzenie-klinkier"><i class="fa-solid fa-eye"></i> Zobacz zdjęcia i opis</button>
                     </div>
                   </div>
                   <div class="project-body">
                     <div class="project-meta">
-                      <span><i class="fa-solid fa-location-dot"></i> 27 lokalizacji Dino</span>
-                      <span><i class="fa-solid fa-calendar"></i> 2026</span>
+                      <span><i class="fa-solid fa-border-all"></i> Mur klinkierowy</span>
+                      <span><i class="fa-solid fa-layer-group"></i> Osiedle domów</span>
                     </div>
-                    <h3 class="project-title">Dino Polska: Podbudowy pod recyklomaty w 27 punktach</h3>
+                    <h3 class="project-title">Mur z cegły klinkierowej: Ogrodzenie osiedla domów</h3>
                     <p class="project-snippet">
-                      Cykliczna, terminowa realizacja utwardzonych stanowisk recyklingowych przy sklepach Dino na terenie Wielkopolski pod surowy reżim odbiorowy sieci.
+                      Kompleksowe murowanie wolnostojącego ogrodzenia z cegły klinkierowej wraz z podbudową, korektą i spoinowaniem.
                     </p>
                     <div class="project-tags">
-                      <span class="tag">Sieć Dino Polska</span>
-                      <span class="tag">27 lokalizacji</span>
-                      <span class="tag">Podbudowa recyklingowa</span>
+                      <span class="tag">Ogrodzenia klinkierowe</span>
+                      <span class="tag">Mur z cegły</span>
+                      <span class="tag">Precyzyjne fugowanie</span>
                     </div>
                   </div>
                 </article>
 
-                <!-- Erste Bank -->
+                <!-- Płoty klinkierowe ze słupkami -->
                 <article class="project-card">
                   <div class="project-thumb">
                     <div class="thumb-placeholder">
                       <i class="fa-regular fa-image"></i>
                       <span>Miejsce na zdjęcie</span>
                     </div>
-                    <div class="project-category-badge b2b">Rebranding B2B</div>
+                    <div class="project-category-badge ogrodzenia">Płoty i Ogrodzenia</div>
                     <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-erste"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                      <button class="btn-quick-view" data-project-id="p-klinkier-skos"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
                     </div>
                   </div>
                   <div class="project-body">
                     <div class="project-meta">
-                      <span><i class="fa-solid fa-location-dot"></i> Polska (15 oddziałów)</span>
-                      <span><i class="fa-solid fa-chart-area"></i> > 1 300 m²</span>
+                      <span><i class="fa-solid fa-monument"></i> Słupki i podmurówka</span>
+                      <span><i class="fa-solid fa-shield"></i> Klinkier lity</span>
                     </div>
-                    <h3 class="project-title">Erste Bank: Prace malarsko-wykończeniowe w 15 oddziałach</h3>
+                    <h3 class="project-title">Ogrodzenie frontowe ze słupkami klinkierowymi</h3>
                     <p class="project-snippet">
-                      Ogólnopolski rebranding placówek bankowych – kompleksowe prace szpachlarskie, malarskie i montażowe z zachowaniem standardów identyfikacji wizualnej.
+                      Murowanie reprezentacyjnych słupków ogrodzeniowych z cegły klinkierowej wraz z podmurówką pod przęsła metalowe.
                     </p>
                     <div class="project-tags">
-                      <span class="tag">Rebranding Erste</span>
-                      <span class="tag">15 oddziałów</span>
-                      <span class="tag">Ponad 1300 m²</span>
+                      <span class="tag">Słupki klinkierowe</span>
+                      <span class="tag">Podmurówka</span>
+                      <span class="tag">Klinkier</span>
                     </div>
                   </div>
                 </article>
 
-                <!-- Biedronka B2B -->
+                <!-- Korekty i renowacje płotów -->
                 <article class="project-card">
                   <div class="project-thumb">
                     <div class="thumb-placeholder">
                       <i class="fa-regular fa-image"></i>
                       <span>Miejsce na zdjęcie</span>
                     </div>
-                    <div class="project-category-badge b2b">Sieć Handlowa B2B</div>
+                    <div class="project-category-badge ogrodzenia">Płoty i Ogrodzenia</div>
                     <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-biedronka"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                      <button class="btn-quick-view" data-project-id="p-tefra"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
                     </div>
                   </div>
                   <div class="project-body">
                     <div class="project-meta">
-                      <span><i class="fa-solid fa-shop"></i> Biedronka</span>
-                      <span><i class="fa-solid fa-recycle"></i> Recyklomaty</span>
+                      <span><i class="fa-solid fa-wrench"></i> Prace korekcyjne</span>
+                      <span><i class="fa-solid fa-check"></i> Wykończenie</span>
                     </div>
-                    <h3 class="project-title">Biedronka: Utwardzone podbudowy pod recyklomaty</h3>
+                    <h3 class="project-title">Korekta, poziomowanie i renowacja płotów</h3>
                     <p class="project-snippet">
-                      Montaż betonowych obrzeży, profilowanie podłoża i ułożenie kostki przemysłowej pod automaty do zbiórki butelek przy marketach Biedronka.
+                      Naprawa uszkodzonych odcinków muru, poziomowanie, wymiana pękniętych elementów oraz nowe spoinowanie.
                     </p>
                     <div class="project-tags">
-                      <span class="tag">Sieć Biedronka</span>
-                      <span class="tag">Roboty ziemne</span>
-                      <span class="tag">Kostka przemysłowa</span>
+                      <span class="tag">Korekty murarskie</span>
+                      <span class="tag">Renowacja</span>
+                      <span class="tag">Spoinowanie</span>
                     </div>
                   </div>
                 </article>
 
-                <!-- Gaz-System B2B -->
+                <!-- Bloczki modułowe -->
                 <article class="project-card">
                   <div class="project-thumb">
                     <div class="thumb-placeholder">
                       <i class="fa-regular fa-image"></i>
                       <span>Miejsce na zdjęcie</span>
                     </div>
-                    <div class="project-category-badge b2b">Inwestycja Strategiczna</div>
+                    <div class="project-category-badge ogrodzenia">Płoty i Ogrodzenia</div>
                     <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-gaz-system"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
+                      <button class="btn-quick-view" data-project-id="p-klinkier-modern"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
                     </div>
                   </div>
                   <div class="project-body">
                     <div class="project-meta">
-                      <span><i class="fa-solid fa-industry"></i> Gaz-System S.A.</span>
-                      <span><i class="fa-solid fa-shield"></i> Obiekt Strategiczny</span>
+                      <span><i class="fa-solid fa-cubes-stacked"></i> Bloczki modułowe</span>
+                      <span><i class="fa-solid fa-house"></i> Nowoczesne</span>
                     </div>
-                    <h3 class="project-title">Gaz-System S.A.: Ciągi piesze i chodniki techniczne</h3>
+                    <h3 class="project-title">Ogrodzenia z bloczków gładkich i łupanych</h3>
                     <p class="project-snippet">
-                      Budowa ciągów pieszych oraz dróg technicznych z kostki betonowej na terenie obiektów strategicznej infrastruktury przesyłowej.
+                      Precyzyjny montaż i zalewanie bloczków betonowych z montażem daszków i przygotowaniem pod automatykę bramową.
                     </p>
                     <div class="project-tags">
-                      <span class="tag">Gaz-System S.A.</span>
-                      <span class="tag">Chodniki techniczne</span>
-                      <span class="tag">Nawierzchnie z atestem</span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- BookingHost B2B -->
-                <article class="project-card">
-                  <div class="project-thumb">
-                    <div class="thumb-placeholder">
-                      <i class="fa-regular fa-image"></i>
-                      <span>Miejsce na zdjęcie</span>
-                    </div>
-                    <div class="project-category-badge b2b">Obsługa B2B</div>
-                    <div class="project-overlay">
-                      <button class="btn-quick-view" data-project-id="p-bookinghost"><i class="fa-solid fa-eye"></i> Zobacz opis</button>
-                    </div>
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span><i class="fa-solid fa-city"></i> BookingHost Poznań</span>
-                      <span><i class="fa-solid fa-wrench"></i> Stała umowa</span>
-                    </div>
-                    <h3 class="project-title">BookingHost: Stała obsługa techniczna apartamentów</h3>
-                    <p class="project-snippet">
-                      Ciągły serwis techniczny, naprawy powykonawcze, układanie podłóg i odnawianie apartamentów w systemie najmu krótkoterminowego (ponad 150 zleceń).
-                    </p>
-                    <div class="project-tags">
-                      <span class="tag">BookingHost</span>
-                      <span class="tag">Stała umowa serwisowa</span>
-                      <span class="tag">>150 zleceń</span>
+                      <span class="tag">Bloczki modułowe</span>
+                      <span class="tag">Daszki betonowe</span>
+                      <span class="tag">Montaż</span>
                     </div>
                   </div>
                 </article>
@@ -1194,7 +1119,7 @@
           <img src="images/logo-muraven-light.png" alt="Muraven" class="footer-logo-img">
         </div>
         <p class="footer-desc">
-          Profesjonalne generalne wykonawstwo, elewacje klinkierowe, roboty brukarskie oraz kompleksowa obsługa sieci handlowych i obiektów komercyjnych.
+          Profesjonalne generalne wykonawstwo, elewacje klinkierowe, murowanie i wykańczanie płotów, roboty brukarskie oraz kompleksowa obsługa sieci handlowych i obiektów komercyjnych.
         </p>
         <p class="footer-copy">&copy; 2026 Muraven. Wszystkie prawa zastrzeżone.</p>
       </div>
@@ -1203,7 +1128,6 @@
         <h4>Nawigacja</h4>
         <ul class="footer-links">
           <li><a href="#home">Strona główna</a></li>
-          <li><a href="#about">O nas</a></li>
           <li><a href="#services">Usługi</a></li>
           <li><a href="#portfolio">Realizacje</a></li>
           <li><a href="#contact">Kontakt i wycena</a></li>
@@ -1213,11 +1137,12 @@
       <div class="footer-col">
         <h4>Główne specjalizacje</h4>
         <ul class="footer-links">
-          <li><a href="#portfolio">Elewacje z cegły klinkierowej</a></li>
-          <li><a href="#portfolio">Podbudowy pod recyklomaty</a></li>
-          <li><a href="#portfolio">Podjazdy i kostka brukowa</a></li>
-          <li><a href="#portfolio">Wykończenia pod klucz</a></li>
-          <li><a href="#portfolio">Usuwanie graffiti i renowacje</a></li>
+          <li><a href="#services">Elewacje ze starej cegły i klinkieru</a></li>
+          <li><a href="#portfolio">Murowanie, korekty i wykańczanie płotów</a></li>
+          <li><a href="#services">Podjazdy, chodniki, kostka brukowa</a></li>
+          <li><a href="#services">Prace serwisowe B2B</a></li>
+          <li><a href="#services">Renowacje i usuwanie graffiti</a></li>
+          <li><a href="#services">Remonty i wykończenia wnętrz</a></li>
         </ul>
       </div>
 

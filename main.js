@@ -48,18 +48,78 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Wykonanie nowoczesnych fasad oraz ogrodzeń na kameralnym osiedlu domów. Dzięki zastosowaniu płytek elewacyjnych uzyskano prestiżowy wygląd tradycyjnego muru ceglanego przy jednoczesnej lekkości konstrukcji.'
     },
-    'p-klinkier-szary': {
-      title: 'Nowoczesna willa: Elewacja z jasnej cegły klinkierowej',
-      category: 'Elewacje Klinkierowe & Bryła Nowoczesna',
-      location: 'Klient indywidualny',
-      timeline: 'Etap surowy do stanu wykończonego',
-      scope: [
-        'Murowanie ścian osłonowych z cegły klinkierowej szarej / grafitowej',
-        'Trójwymiarowe detale wysunięć cegieł w pasach podokiennych',
-        'Kotwienie do konstrukcji nośnej za pomocą atestowanych kotew nierdzewnych',
-        'Fugowanie zlicowane z cegłą odporne na powstawanie mostków i wykwitów'
+    'p-klinkier-jasny-dom': {
+      title: 'Dom parterowy: Elewacja z jasnej cegły klinkierowej',
+      category: 'Elewacje i Klinkier',
+      location: 'Budynek jednorodzinny',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/klinkier-dom-jasny-1.jpg',
+        'images/portfolio/klinkier-dom-jasny-2.jpg',
+        'images/portfolio/klinkier-dom-jasny-3.jpg',
+        'images/portfolio/klinkier-dom-jasny-4.jpg'
       ],
-      description: 'Architektoniczna realizacja dla wymagającego inwestora. Nietypowa, geometryczna bryła z podcieniami wymagała kunsztu murarskiego i perfekcyjnego planowania wiązań cegieł.'
+      scope: [
+        'Montaż płyt termoizolacyjnych',
+        'Murowanie elewacji z jasnej cegły klinkierowej',
+        'Wykonanie nadproży i glifów okiennych',
+        'Precyzyjne spoinowanie lica'
+      ],
+      description: 'Kompleksowe wykonanie trójwarstwowej elewacji z jasnej cegły klinkierowej na domu parterowym. Zakres prac obejmował montaż termoizolacji, murowanie ścian osłonowych oraz precyzyjne spoinowanie.'
+    },
+    'p-klinkier-szary': {
+      title: 'Nowoczesna willa: Elewacja z jasnoszarego klinkieru',
+      category: 'Elewacje i Klinkier',
+      location: 'Budynek jednorodzinny',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/klinkier-willa-modern-1.jpg',
+        'images/portfolio/klinkier-willa-modern-2.jpg',
+        'images/portfolio/klinkier-willa-modern-3.jpg'
+      ],
+      scope: [
+        'Murowanie ścian osłonowych z jasnoszarej cegły klinkierowej',
+        'Wykonanie pionowego wiązania cegieł w pasie międzykondygnacyjnym',
+        'Precyzyjne obróbki podcięć architektonicznych i narożników',
+        'Spoinowanie lica elewacji'
+      ],
+      description: 'Realizacja nowoczesnej elewacji na modernistycznej willi z płaskim dachem. Projekt wyróżnia się zastosowaniem pionowego wątku cegły w pasie obwodowym oraz precyzyjnym wykończeniem podcięć konstrukcyjnych.'
+    },
+    'p-klinkier-czerwony-dom': {
+      title: 'Dom z poddaszem: Elewacja z tradycyjnej czerwonej cegły',
+      category: 'Elewacje i Klinkier',
+      location: 'Budynek jednorodzinny',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/klinkier-dom-czerwony-1.jpg',
+        'images/portfolio/klinkier-dom-czerwony-2.jpg',
+        'images/portfolio/klinkier-dom-czerwony-3.jpg',
+        'images/portfolio/klinkier-dom-czerwony-4.jpg'
+      ],
+      scope: [
+        'Murowanie ścian osłonowych z czerwonej cegły klinkierowej',
+        'Wykonanie zbrojonych nadproży i glifów okiennych',
+        'Wyprowadzenie ścian szczytowych i wykuszy wejściowych',
+        'Spoinowanie lica elewacji'
+      ],
+      description: 'Wykonanie pełnej elewacji ceglanej na budynku z dachem dwuspadowym. Zakres obejmował murowanie ścian zewnętrznych, wyprowadzenie szczytów oraz staranne wykończenie otworów okiennych i drzwiowych.'
+    },
+    'p-ogrodzenie-klinkier': {
+      title: 'Mur z cegły klinkierowej: Ogrodzenie osiedla domów',
+      category: 'Płoty i Ogrodzenia',
+      location: 'Osiedle mieszkaniowe',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/ogrodzenie-klinkier-1.jpg',
+        'images/portfolio/ogrodzenie-klinkier-2.jpg'
+      ],
+      scope: [
+        'Przygotowanie podbudowy i korekta linii ogrodzenia',
+        'Precyzyjne murowanie muru z cegły klinkierowej',
+        'Zwieńczenie i zabezpieczenie korony muru',
+        'Spoinowanie lica i impregnacja hydrofobowa'
+      ],
+      description: 'Kompleksowe wykonanie wolnostojącego ogrodzenia z cegły klinkierowej na osiedlu mieszkaniowym. Zakres prac obejmował korektę i przygotowanie podłoża, murowanie lica oraz precyzyjne spoinowanie.'
     },
     'p-klinkier-skos': {
       title: 'Rezydencja podmiejska: Tradycyjny klinkier palony',
@@ -76,16 +136,22 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'p-klinkier-modern': {
       title: 'Dom modernistyczny: Cegła klinkierowa cieniowana',
-      category: 'Elewacje Klinkierowe',
-      location: 'Inwestycja prywatna',
-      timeline: 'Elewacja piętra i parteru',
-      scope: [
-        'Precyzyjne murowanie z selekcjonowanej cegły klinkierowej cieniowanej',
-        'Wiązania dzikie z zachowaniem powtarzalności deseniu',
-        'Wykonanie dylatacji pionowych i poziomych',
-        'Czyszczenie i zabezpieczenie antywykwitowe'
+      category: 'Elewacje i Klinkier',
+      location: 'Budynek jednorodzinny',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/klinkier-dom-cieniowany-gotowy.jpg',
+        'images/portfolio/klinkier-dom-cieniowany-etap2.jpg',
+        'images/portfolio/klinkier-dom-cieniowany-etap1.jpg',
+        'images/portfolio/klinkier-dom-cieniowany-fundamenty.jpg'
       ],
-      description: 'Nowoczesna willa z płaskim dachem. Kontrast ciepłej, cieniowanej cegły z ciemną stolarką i obróbkami blacharskimi stworzył unikalny styl miejskiej rezydencji.'
+      scope: [
+        'Prace fundamentowe i stan zerowy',
+        'Montaż płyt termoizolacyjnych',
+        'Murowanie elewacji z cieniowanej cegły klinkierowej',
+        'Wykonanie pionowego pasa ozdobnego i spoinowanie'
+      ],
+      description: 'Kompleksowa realizacja domu modernistycznego z płaskim dachem od etapu fundamentów po elewację klinkierową. Zastosowano cieniowaną cegłę z ozdobnym pionowym pasem międzykondygnacyjnym.'
     },
     'p-klinkier-parter': {
       title: 'Bungalow parterowy: Elewacja z piaskowej cegły klinkierowej',
@@ -273,12 +339,11 @@ document.addEventListener('DOMContentLoaded', () => {
      3. STICKY NAVBAR SHADOW & SCROLL EFFECT
      ========================================================================== */
   const navbar = document.getElementById('navbar');
+  const siteHeader = document.getElementById('site-header');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    const isScrolled = window.scrollY > 40;
+    if (siteHeader) siteHeader.classList.toggle('scrolled', isScrolled);
+    if (navbar) navbar.classList.toggle('scrolled', isScrolled);
   });
 
   /* ==========================================================================
@@ -337,6 +402,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = projectDetailsData[projectId];
     if (!data || !modalContent || !projectModal) return;
 
+    const hasImages = data.images && data.images.length > 0;
+
     modalContent.innerHTML = `
       <div class="modal-header-info">
         <span class="section-tag">${data.category}</span>
@@ -347,6 +414,23 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
 
+      ${hasImages ? `
+        <div class="modal-gallery">
+          <div class="modal-main-image-wrap">
+            <img src="${data.images[0]}" alt="${data.title}" id="modal-main-img" class="modal-main-img">
+          </div>
+          ${data.images.length > 1 ? `
+            <div class="modal-thumbnails">
+              ${data.images.map((img, idx) => `
+                <button type="button" class="modal-thumb-btn ${idx === 0 ? 'active' : ''}" data-full="${img}">
+                  <img src="${img}" alt="Miniatura ${idx + 1}">
+                </button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+      ` : ''}
+
       <div class="modal-scope-box">
         <h4><i class="fa-solid fa-list-check"></i> Zakres wykonanych prac:</h4>
         <ul class="modal-scope-list">
@@ -355,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <div class="modal-desc-box">
-        <h4>Opis inżynieryjny realizacji:</h4>
+        <h4>Opis realizacji:</h4>
         <p>${data.description}</p>
       </div>
 
@@ -367,6 +451,22 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>
       </div>
     `;
+
+    // Hook thumbnail switching
+    if (hasImages && data.images.length > 1) {
+      const mainImg = document.getElementById('modal-main-img');
+      const thumbBtns = modalContent.querySelectorAll('.modal-thumb-btn');
+      thumbBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          thumbBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const targetSrc = btn.getAttribute('data-full');
+          if (mainImg && targetSrc) {
+            mainImg.src = targetSrc;
+          }
+        });
+      });
+    }
 
     projectModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -433,17 +533,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-          stat.textContent = target;
+          stat.textContent = target >= 1000 ? target.toLocaleString('pl-PL') : target;
           clearInterval(timer);
         } else {
-          stat.textContent = Math.floor(current);
+          const val = Math.floor(current);
+          stat.textContent = val >= 1000 ? val.toLocaleString('pl-PL') : val;
         }
       }, stepTime);
     });
   }
 
-  const statsSection = document.getElementById('stats');
-  if (statsSection) {
+  const servicesSection = document.getElementById('services') || document.getElementById('stats');
+  if (servicesSection) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !animated) {
@@ -451,9 +552,9 @@ document.addEventListener('DOMContentLoaded', () => {
           runCounters();
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.15 });
 
-    observer.observe(statsSection);
+    observer.observe(servicesSection);
   }
 
   /* ==========================================================================
