@@ -9,18 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const projectDetailsData = {
     'p-dino': {
-      title: 'Dino Polska: Podbudowy pod recyklomaty w 27 punktach handlowych',
-      category: 'B2B & Brukarstwo Przemysłowe',
-      location: 'Wielkopolska (27 lokalizacji sieci Dino)',
-      timeline: 'Realizacja cykliczna 2026',
-      scope: [
-        'Kompleksowe roboty ziemne i wykop precyzyjny',
-        'Wykonanie wielowarstwowej podbudowy z kruszywa łamanego pod obciążenia',
-        'Montaż betonowych obrzeży drogowych',
-        'Ułożenie nawierzchni z kostki przemysłowej odpornej na nacisk i warunki atmosferyczne',
-        'Przygotowanie przyłączy i posadowienie urządzeń recyklingowych'
+      title: 'Dino Polska: Podbudowy pod recyklomaty i automaty',
+      category: 'Brukarstwo i Podbudowy',
+      location: 'Wielkopolska (markety sieci Dino)',
+      timeline: 'Realizacja pod klucz',
+      images: [
+        'images/portfolio/dino-recyklomat-dzien.jpg',
+        'images/portfolio/dino-recyklomat-noc1.jpg',
+        'images/portfolio/dino-recyklomat-noc2.jpg',
+        'images/portfolio/dino-recyklomat-slonce.jpg',
+        'images/portfolio/dino-recyklomat-automat.jpg'
       ],
-      description: 'Zadanie polegało na szybkiej i bezkolizyjnej realizacji utwardzonych stanowisk pod automaty do zbiórki butelek i puszek przy marketach Dino na terenie całej Wielkopolski. Każdy punkt został wykonany zgodnie z surowymi normami sieci handlowej bez zakłócania ruchu klientów sklepu.'
+      scope: [
+        'Korytowanie i precyzyjne roboty ziemne',
+        'Wielowarstwowa podbudowa z kruszywa łamanego',
+        'Montaż krawężników i obrzeży betonowych',
+        'Ułożenie nawierzchni z przemysłowej kostki brukowej',
+        'Przygotowanie przepustów instalacyjnych i posadowienie automatu'
+      ],
+      description: 'Wykonanie utwardzonych stanowisk z kostki brukowej pod automaty recyklingowe i paczkowe przy marketach sieci Dino. Prace realizowane sprawnie, również w godzinach wieczornych i nocnych, z zachowaniem ciągłości funkcjonowania sklepów.'
     },
     'p-erste': {
       title: 'Erste Bank: Prace malarsko-wykończeniowe w 15 oddziałach',
