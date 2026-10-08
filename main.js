@@ -36,17 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Kompleksowy lifting wizualny placówek bankowych realizowany pod klucz. Prace wymagały najwyższego rygoru czystości, precyzji odcieni farb zgodnych z księgą znaku oraz terminowości w oddawaniu poszczególnych stref banku.'
     },
     'p-tefra': {
-      title: 'Tefra Koncept: Płytka elewacyjna na 6 budynkach mieszkalnych',
-      category: 'Elewacje Klinkierowe',
+      title: 'Tefra Koncept: Płytka elewacyjna na budynkach mieszkalnych',
+      category: 'Elewacje i Klinkier',
       location: 'Inwestycja deweloperska',
-      timeline: 'Łączna powierzchnia > 470 m²',
-      scope: [
-        'Klejenie płytek elewacyjnych elastycznymi zaprawami mrozoodpornymi',
-        'Precyzyjne fugowanie spoin z zachowaniem idealnej geometrii',
-        'Wykończenie narożników płytkami kątowymi',
-        'Zabezpieczenie hydrofobowe lica płytek przed wilgocią'
+      timeline: 'Powierzchnia > 470 m²',
+      images: [
+        'images/portfolio/plytka-elewacyjna-osiedle-gotowy.jpg',
+        'images/portfolio/plytka-elewacyjna-osiedle-rusztowania.jpg',
+        'images/portfolio/plytka-elewacyjna-osiedle-podloze.jpg'
       ],
-      description: 'Wykonanie nowoczesnych fasad oraz ogrodzeń na kameralnym osiedlu domów. Dzięki zastosowaniu płytek elewacyjnych uzyskano prestiżowy wygląd tradycyjnego muru ceglanego przy jednoczesnej lekkości konstrukcji.'
+      scope: [
+        'Przygotowanie i gruntowanie podłoża ociepleniowego',
+        'Klejenie płytek elewacyjnych zaprawami elastycznymi',
+        'Montaż płytek kątowych na narożnikach i glifach okiennych',
+        'Precyzyjne fugowanie spoin'
+      ],
+      description: 'Montaż płytek elewacyjnych na osiedlu nowoczesnych domów jednorodzinnych. Połączenie faktury cegły z grafitowym tynkiem i stolarką stworzyło nowoczesny, spójny design fasady.'
     },
     'p-klinkier-jasny-dom': {
       title: 'Dom parterowy: Elewacja z jasnej cegły klinkierowej',
