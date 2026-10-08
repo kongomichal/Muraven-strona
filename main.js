@@ -303,17 +303,23 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Realizacja projektu wnętrzarskiego z naciskiem na sztukę tapetowania i nasyconą kolorystykę ścian. Bezspoinowe połączenia tapet wielkoformatowych.'
     },
     'p-podjazd-wiata': {
-      title: 'Podjazd z kostki brukowej pod wiatą garażową',
+      title: 'Prywatny podjazd i schody wejściowe z kostki grafitowej',
       category: 'Brukarstwo i Nawierzchnie',
-      location: 'Posesja prywatna',
-      timeline: 'Podjazd, wiata i dojścia do domu',
-      scope: [
-        'Głębokie korytowanie i podbudowa z kruszyw łamanych',
-        'Nawierzchnia z melanżowej kostki płukanej',
-        'Dopasowanie do słupów wiaty i ogrodzenia',
-        'Precyzyjny spadek odprowadzający wodę opadową z posesji'
+      location: 'Posesja prywatna – dom jednorodzinny',
+      timeline: 'Kompleksowa metamorfoza terenu',
+      images: [
+        'images/portfolio/podjazd-grafit-dom-gotowy.jpg',
+        'images/portfolio/podjazd-grafit-schody.jpg',
+        'images/portfolio/podjazd-grafit-przed.jpg'
       ],
-      description: 'Solidny, estetyczny podjazd zaprojektowany na codzienne manewrowanie samochodami. Połączenie szarości i grafitu z drewnianą konstrukcją wiaty.'
+      scope: [
+        'Korytowanie nieutwardzonego terenu i profilowanie spadków',
+        'Wielowarstwowa, zagęszczona mechanicznie podbudowa pod ruch kołowy',
+        'Montaż obrzeży betonowych stabilizujących nawierzchnię',
+        'Ułożenie nawierzchni z grafitowej kostki brukowej',
+        'Wykonanie dwustopniowych schodów wejściowych i spocznika przy wejściu'
+      ],
+      description: 'Kompleksowe utwardzenie frontu posesji przed nowoczesnym domem piętrowym. W ramach prac zniwelowano nierówności nieutwardzonego gruntu, wykonano podbudowę pod regularny ruch kołowy oraz ułożono grafitową kostkę brukową z reprezentacyjnym wykończeniem schodów wejściowych.'
     },
     'p-posesja-taras': {
       title: 'Aranżacja nawierzchni posesji: Taras, opaski i parking',
