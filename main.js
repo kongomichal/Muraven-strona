@@ -259,15 +259,22 @@ document.addEventListener('DOMContentLoaded', () => {
     'p-gaz-system': {
       title: 'Gaz-System S.A.: Ciągi piesze i chodniki techniczne',
       category: 'Inwestycje Strategiczne & Brukarstwo',
-      location: 'Obiekty techniczne Gaz-System',
-      timeline: 'Chodniki i place manewrowe',
-      scope: [
-        'Budowa ciągów komunikacyjnych z kostki betonowej Behaton/Holland',
-        'Odwodnienie liniowe i montaż krawężników',
-        'Stabilizacja podłoża cementem',
-        'Prace w warunkach zaostrzonych rygorów bezpieczeństwa obiektu strategicznego'
+      location: 'Obiekt techniczny Gaz-System S.A.',
+      timeline: 'Chodniki i ciągi komunikacyjne',
+      images: [
+        'images/portfolio/gaz-system-chodnik-1.jpg',
+        'images/portfolio/gaz-system-kontener-gotowy.jpg',
+        'images/portfolio/gaz-system-kontener-przed.jpg',
+        'images/portfolio/gaz-system-chodnik-etap.jpg'
       ],
-      description: 'Realizacja zamówienia na terenie operatora przesyłowego gazu ziemnego w Polsce. Prace wykonane z zachowaniem wszelkich procedur BHP i rygorów technicznych.'
+      scope: [
+        'Demontaż zużytej nawierzchni i korytowanie terenu',
+        'Wyrównanie i zagęszczenie nowej podbudowy',
+        'Układanie ciągów pieszych z kostki ozdobnej oraz przemysłowej Behaton',
+        'Montaż obrzeży betonowych z zachowaniem spadków',
+        'Prace wykonane zgodnie z wymogami bezpieczeństwa obiektu strategicznego'
+      ],
+      description: 'Modernizacja ciągów komunikacyjnych i dojść technicznych na terenie obiektu Gaz-System S.A. Wykonano reprezentacyjny chodnik z kostki z geometrycznym wzorem oraz trwałe dojście techniczne przy kontenerze aparatury.'
     },
     'p-remont-klucz': {
       title: 'Generalny remont mieszkania „pod klucz”',
