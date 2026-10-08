@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Kompleksowy lifting wizualny placówek bankowych realizowany pod klucz. Prace wymagały najwyższego rygoru czystości, precyzji odcieni farb zgodnych z księgą znaku oraz terminowości w oddawaniu poszczególnych stref banku.'
     },
     'p-tefra': {
-      title: 'Tefra Koncept: Płytka elewacyjna na budynkach mieszkalnych',
+      title: 'Tefra Koncept: Dom bliźniaczy (Budynek 1)',
       category: 'Elewacje i Klinkier',
-      location: 'Inwestycja deweloperska',
-      timeline: 'Powierzchnia > 470 m²',
+      location: 'Inwestycja deweloperska Tefra Koncept',
+      timeline: 'Kompleksowa realizacja',
       images: [
         'images/portfolio/plytka-elewacyjna-osiedle-gotowy.jpg',
         'images/portfolio/plytka-elewacyjna-osiedle-rusztowania.jpg',
@@ -51,7 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
         'Montaż płytek kątowych na narożnikach i glifach okiennych',
         'Precyzyjne fugowanie spoin'
       ],
-      description: 'Montaż płytek elewacyjnych na osiedlu nowoczesnych domów jednorodzinnych. Połączenie faktury cegły z grafitowym tynkiem i stolarką stworzyło nowoczesny, spójny design fasady.'
+      description: 'Montaż płytki elewacyjnej na budynku mieszkalnym w inwestycji deweloperskiej. Połączenie klinkieru z grafitowym tynkiem i stolarką stworzyło nowoczesny design fasady.'
+    },
+    'p-tefra-2': {
+      title: 'Tefra Koncept: Domy bliźniacze z murkiem (Budynek 2)',
+      category: 'Elewacje i Klinkier',
+      location: 'Inwestycja deweloperska Tefra Koncept',
+      timeline: 'Kompleksowa realizacja',
+      images: [
+        'images/portfolio/tefra-blizniak-1.jpg'
+      ],
+      scope: [
+        'Montaż płytek elewacyjnych na ścianach szczytowych',
+        'Wykończenie narożników płytkami kątowymi',
+        'Murowanie murków wejściowych z cegły klinkierowej',
+        'Precyzyjne fugowanie i hydrofobizacja'
+      ],
+      description: 'Kompleksowe wykonanie fasady z płytek klinkierowych na segmentach bliźniaczych wraz z wymurowaniem reprezentacyjnych murków ogrodzeniowych przed wejściami.'
     },
     'p-klinkier-jasny-dom': {
       title: 'Dom parterowy: Elewacja z jasnej cegły klinkierowej',
