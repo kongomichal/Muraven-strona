@@ -1363,7 +1363,7 @@ a {
   margin-bottom: 8px;
 }
 
-.main-form input,
+.main-form input:not([type="checkbox"]),
 .main-form select,
 .main-form textarea {
   width: 100%;
@@ -1377,7 +1377,7 @@ a {
   transition: var(--transition);
 }
 
-.main-form input:focus,
+.main-form input:not([type="checkbox"]):focus,
 .main-form select:focus,
 .main-form textarea:focus {
   border-color: var(--color-accent);
@@ -1387,19 +1387,29 @@ a {
 .form-checkbox-group {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 24px;
 }
 
-.form-checkbox-group input {
-  margin-top: 4px;
+.form-checkbox-group input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px;
+  padding: 0 !important;
+  margin: 2px 0 0 0 !important;
   accent-color: var(--color-accent);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .form-checkbox-group label {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 400;
   color: var(--color-text-muted);
-  line-height: 1.4;
+  line-height: 1.45;
+  margin-bottom: 0;
+  cursor: pointer;
+  flex: 1;
 }
 
 .form-feedback {
