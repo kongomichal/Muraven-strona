@@ -790,6 +790,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'Rodzaj prac': service,
             'Lokalizacja i metraż': location,
             'Opis projektu': message,
+            'email': email,
+            '_replyto': email,
             '_subject': `Nowe zapytanie ofertowe od: ${name} (Muraven.pl)`,
             '_template': 'table',
             '_captcha': 'false'
@@ -804,6 +806,12 @@ document.addEventListener('DOMContentLoaded', () => {
             formFeedback.style.display = 'block';
             formFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Dziękujemy! Twoje zapytanie zostało pomyślnie wysłane. Skontaktujemy się z Tobą w ciągu maksymalnie 24 godzin.';
             mainForm.reset();
+          }
+        } else if (data.message && data.message.toLowerCase().includes('activation')) {
+          if (formFeedback) {
+            formFeedback.className = 'form-feedback success';
+            formFeedback.style.display = 'block';
+            formFeedback.innerHTML = '<i class="fa-solid fa-envelope-circle-check"></i> Wysłano link aktywacyjny na adres kontakt@muraven.pl. Kliknij w odebranym mailu zielony przycisk „Activate Form”.';
           }
         } else {
           throw new Error(data.message || 'Błąd wysyłki');
