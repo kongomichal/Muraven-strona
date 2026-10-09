@@ -1429,6 +1429,15 @@ a {
   border-radius: var(--radius-md);
 }
 
+.form-feedback.error {
+  display: block;
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 12px;
+  border-radius: var(--radius-md);
+}
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */

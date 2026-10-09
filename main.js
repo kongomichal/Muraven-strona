@@ -702,26 +702,71 @@ document.addEventListener('DOMContentLoaded', () => {
   const formFeedback = document.getElementById('form-feedback');
 
   if (mainForm) {
-    mainForm.addEventListener('submit', (e) => {
+    mainForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = document.getElementById('submit-btn');
+      
+      const name = document.getElementById('contact-name')?.value || '';
+      const phone = document.getElementById('contact-phone')?.value || '';
+      const email = document.getElementById('contact-email')?.value || 'Nie podano';
+      const serviceSelect = document.getElementById('contact-service');
+      const service = serviceSelect?.options[serviceSelect.selectedIndex]?.text || '';
+      const location = document.getElementById('contact-location')?.value || 'Nie podano';
+      const message = document.getElementById('contact-message')?.value || '';
+
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Wysyłanie...';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Wysyłanie zapytania...';
       }
 
-      setTimeout(() => {
+      if (formFeedback) {
+        formFeedback.style.display = 'none';
+      }
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/kontakt@muraven.pl', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            'Imię i nazwisko / Firma': name,
+            'Telefon kontaktowy': phone,
+            'Adres e-mail': email,
+            'Rodzaj prac': service,
+            'Lokalizacja i metraż': location,
+            'Opis projektu': message,
+            '_subject': `Nowe zapytanie ofertowe od: ${name} (Muraven.pl)`,
+            '_template': 'table',
+            '_captcha': 'false'
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success !== 'false') {
+          if (formFeedback) {
+            formFeedback.className = 'form-feedback success';
+            formFeedback.style.display = 'block';
+            formFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Dziękujemy! Twoje zapytanie zostało pomyślnie wysłane. Skontaktujemy się z Tobą w ciągu maksymalnie 24 godzin.';
+            mainForm.reset();
+          }
+        } else {
+          throw new Error(data.message || 'Błąd wysyłki');
+        }
+      } catch (err) {
+        if (formFeedback) {
+          formFeedback.className = 'form-feedback error';
+          formFeedback.style.display = 'block';
+          formFeedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Wystąpił problem z wysłaniem wiadomości. Prosimy o bezpośredni kontakt telefoniczny: <a href="tel:+48572533862" style="color: inherit; text-decoration: underline; font-weight: 700;">+48 572 533 862</a>.';
+        }
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = '<span>Wyślij zapytanie ofertowe</span> <i class="fa-solid fa-paper-plane"></i>';
         }
-
-        if (formFeedback) {
-          formFeedback.className = 'form-feedback success';
-          formFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Dziękujemy! Twoje zapytanie zostało zarejestrowane. Skontaktujemy się z Tobą w ciągu maksymalnie 24 godzin.';
-          mainForm.reset();
-        }
-      }, 700);
+      }
     });
   }
 
