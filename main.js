@@ -31,9 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'p-erste': {
       title: 'Erste Bank: Prace malarsko-wykończeniowe w 15 oddziałach',
-      category: 'Rebranding B2B & Wykończenia Komercyjne',
-      location: 'Polska (15 placówek bankowych)',
+      category: 'Wnętrza i Remonty Komercyjne',
+      location: '15 placówek bankowych w Wielkopolsce',
       timeline: 'Ponad 1 300 m² odnowionych powierzchni',
+      images: [
+        'images/portfolio/erste-bank-2.jpg',
+        'images/portfolio/erste-bank-1.jpg',
+        'images/portfolio/erste-bank-3.jpg',
+        'images/portfolio/erste-bank-4.jpg'
+      ],
       scope: [
         'Precyzyjne prace malarskie w brandingu korporacyjnym Erste',
         'Szpachlowanie i bezpyłowe wygładzanie ścian do standardu Q4',
@@ -42,15 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Kompleksowy lifting wizualny placówek bankowych realizowany pod klucz. Prace wymagały najwyższego rygoru czystości, precyzji odcieni farb zgodnych z księgą znaku oraz terminowości w oddawaniu poszczególnych stref banku.'
     },
+    'p-deichmann': {
+      title: 'Deichmann: Malowanie i prace wykończeniowe salonu',
+      category: 'Wnętrza Komercyjne & Malowanie',
+      location: 'Salon handlowy Deichmann',
+      timeline: 'Prace malarsko-wykończeniowe retail',
+      images: [
+        'images/portfolio/deichmann-malowanie.jpg'
+      ],
+      scope: [
+        'Przygotowanie powierzchni ścian, naprawa ubytków i szpachlowanie',
+        'Precyzyjne malowanie ścian farbami o podwyższonej odporności na szorowanie',
+        'Prace wykończeniowe w strefie ekspozycji, wejścia i regałów handlowych',
+        'Terminowa realizacja w restrykcyjnym reżimie czasowym obiektu handlowego'
+      ],
+      description: 'Prace malarsko-wykończeniowe w lokalu handlowym sieci Deichmann. Zapewniono idealne krycie, perfekcyjne odcięcia oraz wysoką trwałość powłok ściennych w strefie o dużym natężeniu ruchu klientów.'
+    },
     'p-tefra': {
       title: 'Tefra Koncept: Dom bliźniaczy (Budynek 1)',
       category: 'Elewacje i Klinkier',
       location: 'Inwestycja deweloperska Tefra Koncept',
       timeline: 'Kompleksowa realizacja',
       images: [
-        'images/portfolio/plytka-elewacyjna-osiedle-gotowy.jpg',
-        'images/portfolio/plytka-elewacyjna-osiedle-rusztowania.jpg',
-        'images/portfolio/plytka-elewacyjna-osiedle-podloze.jpg'
+        'images/portfolio/tefra-budynek1-1.jpg',
+        'images/portfolio/tefra-budynek1-2.jpg',
+        'images/portfolio/tefra-budynek1-3.jpg'
       ],
       scope: [
         'Przygotowanie i gruntowanie podłoża ociepleniowego',
@@ -181,18 +203,21 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Kompleksowe wykonanie wolnostojącego ogrodzenia z cegły klinkierowej na osiedlu mieszkaniowym. Zakres prac obejmował korektę i przygotowanie podłoża, murowanie lica oraz precyzyjne spoinowanie.'
     },
-    'p-klinkier-skos': {
-      title: 'Rezydencja podmiejska: Tradycyjny klinkier palony',
-      category: 'Elewacje Klinkierowe',
-      location: 'Wielkopolska',
-      timeline: 'Pełna fasada budynku dwukondygnacyjnego',
-      scope: [
-        'Murowanie z tradycyjnej cegły klinkierowej w wiązaniu kowadełkowym',
-        'Nadproża zbrojone w cegle klinkierowej',
-        'Obróbka otworów okiennych i drzwiowych',
-        'Impregnacja hydrofobowa fasady'
+    'p-ogrodzenie-malowanie': {
+      title: 'Renowacja i malowanie muru ogrodzeniowego z przęsłami',
+      category: 'Płoty i Ogrodzenia',
+      location: 'Posesja prywatna / Rezydencja',
+      timeline: 'Kompleksowa renowacja ogrodzenia',
+      images: [
+        'images/portfolio/ogrodzenie-malowanie.jpg'
       ],
-      description: 'Tradycyjny, elegancki dom z dachem dwuspadowym. Zastosowanie cegły palonej o ciepłej barwie gwarantuje niepowtarzalny charakter oraz odporność na warunki atmosferyczne na dziesięciolecia bez konieczności odnawiania.'
+      scope: [
+        'Oczyszczenie powierzchni słupków i podmurówki, usunięcie spękań i starej powłoki',
+        'Naprawa ubytków, szpachlowanie i wyrównanie faktury tynku',
+        'Precyzyjne malowanie muru i daszków farbą elewacyjną odporną na czynniki atmosferyczne',
+        'Zabezpieczenie i odświeżenie metalowych przęseł kutych'
+      ],
+      description: 'Kompleksowa renowacja i malowanie reprezentacyjnego ogrodzenia murowanego z metalowymi przęsłami. Odnowiono podmurówkę, słupki oraz daszki nakrywowe, przywracając nienaganną estetykę frontu posesji.'
     },
     'p-klinkier-modern': {
       title: 'Dom modernistyczny: Cegła klinkierowa cieniowana',
@@ -213,19 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Kompleksowa realizacja domu modernistycznego z płaskim dachem od etapu fundamentów po elewację klinkierową. Zastosowano cieniowaną cegłę z ozdobnym pionowym pasem międzykondygnacyjnym.'
     },
-    'p-klinkier-parter': {
-      title: 'Bungalow parterowy: Elewacja z piaskowej cegły klinkierowej',
-      category: 'Elewacje Klinkierowe',
-      location: 'Budownictwo jednorodzinne',
-      timeline: 'Kompletna elewacja parteru',
-      scope: [
-        'Mur z cegły piaskowej / beżowej',
-        'Cokoły z hydroizolacją przeciwwilgociową',
-        'Fugowanie jasną zaprawą klinkierową',
-        'Obróbka parapetów z kształtek klinkierowych'
-      ],
-      description: 'Przestronny dom parterowy wykończony jasną cegłą. Jasny klinkier optycznie powiększa bryłę i doskonale współgra z grafitowym dachem oraz instalacją fotowoltaiczną.'
-    },
     'p-biedronka': {
       title: 'Biedronka: Utwardzona podbudowa pod recyklomat',
       category: 'Brukarstwo i Nawierzchnie',
@@ -243,64 +255,77 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Wykonanie utwardzonego stanowiska z kostki brukowej pod automat recyklingowy przy ścianie marketu Biedronka. Prace przeprowadzone sprawnie, z zachowaniem spadków zabezpieczających elewację przed wodą opadową.'
     },
-    'p-bookinghost': {
-      title: 'BookingHost: Stała obsługa techniczna apartamentów',
-      category: 'Obsługa B2B & Wykończenia Wnętrz',
-      location: 'Poznań (ponad 150 zleceń)',
-      timeline: 'Ciągła współpraca abonamentowa',
-      scope: [
-        'Szybkie usuwanie uszkodzeń i awarii między pobytami gości',
-        'Układanie podłóg (w tym nowoczesne panele w jodełkę)',
-        'Malowanie, naprawy ubytków tynków i gładzi',
-        'Biały montaż i wymiana armatury sanitarnej'
-      ],
-      description: 'Stała opieka techniczna nad luksusowymi apartamentami wynajmowanymi krótkoterminowo. Gwarantujemy ekspresowy czas reakcji oraz wysoki standard wykończenia.'
-    },
     'p-gaz-system': {
       title: 'Gaz-System S.A.: Ciągi piesze i chodniki techniczne',
       category: 'Inwestycje Strategiczne & Brukarstwo',
       location: 'Obiekt techniczny Gaz-System S.A.',
       timeline: 'Chodniki i ciągi komunikacyjne',
       images: [
-        'images/portfolio/gaz-system-chodnik-1.jpg',
         'images/portfolio/gaz-system-kontener-gotowy.jpg',
-        'images/portfolio/gaz-system-kontener-przed.jpg',
-        'images/portfolio/gaz-system-chodnik-etap.jpg'
+        'images/portfolio/gaz-system-kontener-przed.jpg'
       ],
       scope: [
         'Demontaż zużytej nawierzchni i korytowanie terenu',
         'Wyrównanie i zagęszczenie nowej podbudowy',
-        'Układanie ciągów pieszych z kostki ozdobnej oraz przemysłowej Behaton',
+        'Układanie trwałego dojścia technicznego z kostki przemysłowej Behaton',
         'Montaż obrzeży betonowych z zachowaniem spadków',
         'Prace wykonane zgodnie z wymogami bezpieczeństwa obiektu strategicznego'
       ],
-      description: 'Modernizacja ciągów komunikacyjnych i dojść technicznych na terenie obiektu Gaz-System S.A. Wykonano reprezentacyjny chodnik z kostki z geometrycznym wzorem oraz trwałe dojście techniczne przy kontenerze aparatury.'
+      description: 'Modernizacja dojścia technicznego na terenie obiektu Gaz-System S.A. Wykonano nową podbudowę oraz trwałe dojście z przemysłowej kostki brukowej Behaton przy kontenerze aparatury.'
     },
     'p-remont-klucz': {
       title: 'Generalny remont mieszkania „pod klucz”',
       category: 'Wnętrza i Remonty',
       location: 'Lokal mieszkalny',
       timeline: 'Generalna metamorfoza lokalu',
+      images: [
+        'images/portfolio/remont-mieszkania-1.jpg',
+        'images/portfolio/remont-mieszkania-2.jpg',
+        'images/portfolio/remont-mieszkania-3.jpg'
+      ],
       scope: [
         'Kompletna adaptacja instalacji wod-kan i elektrycznych',
-        'Gładzie gipsowe, ścianki G-K i sufity podwieszane',
-        'Kompleksowe wykończenie łazienki (kabina walk-in, armatura podtynkowa)',
-        'Montaż podłóg i hiszpańskich płytek patchworkowych'
+        'Gładzie gipsowe, ścianki G-K i malowanie ścian oraz sufitów',
+        'Kompleksowe wykończenie łazienki (kabina prysznicowa z czarnymi profilami, armatura, lustro)',
+        'Precyzyjny montaż hiszpańskich płytek podłogowych w stylu patchwork',
+        'Zabudowa meblowa i montaż wyposażenia kuchennego'
       ],
-      description: 'Modernizacja mieszkania od stanu surowego do wprowadzenia się. Dopracowane detale, funkcjonalna kuchnia, designerska łazienka i ciepłe wnętrza.'
+      description: 'Kompleksowy remont mieszkania od podstaw do stanu gotowego do zamieszkania. Wykonano instalacje, gładzie, malowanie ze strefowym akcentem kolorystycznym, designerską łazienkę oraz stylową kuchnię z dekoracyjną posadzką patchworkową.'
     },
     'p-tapety': {
-      title: 'Wykończenie wnętrz: Tapety wielkoformatowe i malowanie',
+      title: 'Tapety wielkoformatowe i specjalistyczne malowanie pod preferencje klienta',
       category: 'Wnętrza i Remonty',
-      location: 'Dom jednorodzinny',
-      timeline: 'Prace wykończeniowe i dekoracyjne',
-      scope: [
-        'Montaż tapet wielkoformatowych z precyzyjnym dopasowaniem brytów',
-        'Geometria malarska (nowoczesne łuki i akcenty kolorystyczne)',
-        'Szpachlowanie natryskowe i szlifowanie mechaniczne z doświetleniem',
-        'Montaż listew przypodłogowych i oświetlenia LED'
+      location: 'Wnętrza prywatne',
+      timeline: 'Prace wykończeniowe i dekoratorskie',
+      images: [
+        'images/portfolio/tapety-dekoracyjne-1.jpg',
+        'images/portfolio/tapety-dekoracyjne-2.jpg',
+        'images/portfolio/tapety-dekoracyjne-3.jpg'
       ],
-      description: 'Realizacja projektu wnętrzarskiego z naciskiem na sztukę tapetowania i nasyconą kolorystykę ścian. Bezspoinowe połączenia tapet wielkoformatowych.'
+      scope: [
+        'Bezspoinowy montaż tapet wielkoformatowych na trudnych płaszczyznach i skosach poddasza',
+        'Precyzyjna geometria malarska i akcenty ścienne (nowoczesne łuki, formy organiczne)',
+        'Specjalistyczne malowanie dekoracyjne pod indywidualne preferencje klienta',
+        'Szpachlowanie, bezpyłowe szlifowanie i przygotowanie podłoża pod wymagające okładziny'
+      ],
+      description: 'Artystyczne i precyzyjne wykończenie wnętrz z naciskiem na nowoczesny design. Wykonano montaż tapet wielkoformatowych na skosach poddasza oraz autorskie malowanie geometryczne i dekoracyjne dopasowane do wizji inwestora.'
+    },
+    'p-cegla-wnetrze': {
+      title: 'Dekoracyjna ściana z cegły w salonie',
+      category: 'Wnętrza i Cegła Dekoracyjna',
+      location: 'Apartament prywatny',
+      timeline: 'Aranżacja ściany akcentowej',
+      images: [
+        'images/portfolio/cegla-dekoracyjna-salon-1.jpg',
+        'images/portfolio/cegla-dekoracyjna-salon-2.jpg'
+      ],
+      scope: [
+        'Gruntowanie i przygotowanie podłoża pod okładzinę z lica ceglanego',
+        'Precyzyjne układanie płytek ceglanych z zachowaniem równego wiązania murarskiego',
+        'Ręczne fugowanie w technologii grubej spoiny w kontrastowym kolorze',
+        'Impregnacja zabezpieczająca cegłę przed osiadaniem kurzu i wilgocią'
+      ],
+      description: 'Wykonanie efektownej ściany akcentowej z płytek ceglanych w nowoczesnym salonie. Połączenie naturalnej faktury cegły, ciemnej spoiny i ciepłego drewna podłogi nadało wnętrzu unikalny, loftowy klimat.'
     },
     'p-podjazd-wiata': {
       title: 'Prywatny podjazd i schody wejściowe z kostki grafitowej',
@@ -322,43 +347,55 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Kompleksowe utwardzenie frontu posesji przed nowoczesnym domem piętrowym. W ramach prac zniwelowano nierówności nieutwardzonego gruntu, wykonano podbudowę pod regularny ruch kołowy oraz ułożono grafitową kostkę brukową z reprezentacyjnym wykończeniem schodów wejściowych.'
     },
     'p-posesja-taras': {
-      title: 'Aranżacja nawierzchni posesji: Taras, opaski i parking',
+      title: 'Nawierzchnia posesji: Podjazd i wiata garażowa',
       category: 'Brukarstwo i Nawierzchnie',
-      location: 'Nowo wybudowany dom bliźniaczy',
-      timeline: 'Kompleksowe zagospodarowanie terenu',
-      scope: [
-        'Opaski odwadniające wokół fundamentów ze spadkiem',
-        'Taras ziemny z kostki o dużej powierzchni',
-        'Schody wejściowe z bloków betonowych i kostki',
-        'Przestronny frontowy podjazd parkingowy'
+      location: 'Posesja prywatna',
+      timeline: 'Kompleksowe utwardzenie nawierzchni',
+      images: [
+        'images/portfolio/podjazd-wiata-parking.jpg'
       ],
-      description: 'Pełne utwardzenie otoczenia budynku po zakończeniu budowy. Zapewniono skuteczne odprowadzenie wody deszczowej oraz spójną stylistykę wokół całej działki.'
+      scope: [
+        'Korytowanie i profilowanie spadków pod zadaszeniem i podjazdem',
+        'Zagęszczona podbudowa z kruszywa pod regularne obciążenia kołowe',
+        'Układanie melanżowej kostki brukowej pod wiatą garażową i bramą wjazdową',
+        'Montaż obrzeży betonowych zintegrowanych ze strefą ogrodzenia i zieleni'
+      ],
+      description: 'Kompleksowe utwardzenie wjazdu na posesję oraz strefy parkowania pod drewnianą wiatą garażową. Wykonano stabilną podbudowę pod ruch kołowy, precyzyjne spadki odwadniające oraz estetyczną nawierzchnię z melanżowej kostki brukowej.'
     },
     'p-graffiti': {
-      title: 'Usuwanie graffiti i renowacja elewacji po dewastacji',
-      category: 'Elewacje i Klinkier',
+      title: 'Usuwanie graffiti i renowacja elewacji kamienicy',
+      category: 'Elewacje i Renowacje Fasad',
       location: 'Poznań, ul. Głogowska',
       timeline: 'Renowacja fasady po zniszczeniach',
+      images: [
+        'images/portfolio/graffiti-glogowska-po.jpg',
+        'images/portfolio/graffiti-glogowska-przed.jpg',
+        'images/portfolio/graffiti-glogowska-detal.jpg'
+      ],
       scope: [
         'Skuteczne zmywanie chemiczne i hydrodynamiczne powłok sprayowych',
         'Uzupełnienie uszkodzonej struktury tynku mineralnego',
         'Precyzyjne odtworzenie powłoki malarskiej w oryginalnym odcieniu fasady',
         'Aplikacja niewidocznej powłoki antygraffiti'
       ],
-      description: 'Kompleksowa interwencja w centrum Poznania. Zlikwidowano rozległe graffiti bez uszczerbku dla faktury zabytkowego tynku, przywracając reprezentacyjny wygląd frontu kamienicy.'
+      description: 'Kompleksowa interwencja w centrum Poznania przy ul. Głogowskiej. Zlikwidowano rozległe graffiti bez uszczerbku dla faktury tynku kamienicy, przywracając reprezentacyjny wygląd frontu lokali użytkowych.'
     },
     'p-mycie-balustrady': {
-      title: 'Mycie fasady i renowacja antykorozyjna balustrad',
-      category: 'Elewacje i Klinkier',
+      title: 'Renowacja elewacji, tarasu i balustrad rezydencji',
+      category: 'Elewacje i Renowacje Fasad',
       location: 'Rezydencja prywatna',
-      timeline: 'Kompleksowy lifting zewnętrzny',
-      scope: [
-        'Czyszczenie ciśnieniowe fasady z usunięciem nalotów biologicznych',
-        'Dwukrotne malowanie paroprzepuszczalną powłoką hydrofobową',
-        'Szlifowanie i zabezpieczenie antykorozyjne stalowych balustrad',
-        'Trwałe malowanie ochronne elementów metalowych'
+      timeline: 'Prace na wysokości i renowacja zewnętrzna',
+      images: [
+        'images/portfolio/balustrady-elewacja-gotowy.jpg',
+        'images/portfolio/balustrady-elewacja-etap.jpg'
       ],
-      description: 'Odświeżenie rezydencji obejmujące renowację elewacji zewnętrznej wraz z zabezpieczeniem elementów stalowych balustrad i balkonów, zapewniając ochronę na kolejne sezony.'
+      scope: [
+        'Prace z rusztowania: mycie ciśnieniowe fasady i przygotowanie podłoża',
+        'Malowanie elewacji willi paroprzepuszczalną powłoką hydrofobową',
+        'Antykorozyjne zabezpieczenie i malowanie stalowych balustrad tarasowych',
+        'Kompleksowe wykończenie tarasu i schodów zewnętrznych'
+      ],
+      description: 'Kompleksowy lifting zewnętrzny klasycznej willi. Przeprowadzono renowację elewacji z rusztowania, hydrofobizację ścian, odnowienie i zabezpieczenie balustrad stalowych oraz wykończenie schodów tarasowych.'
     }
   };
 
