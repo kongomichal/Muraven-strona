@@ -65,10 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Prace malarsko-wykończeniowe w lokalu handlowym sieci Deichmann. Zapewniono idealne krycie, perfekcyjne odcięcia oraz wysoką trwałość powłok ściennych w strefie o dużym natężeniu ruchu klientów.'
     },
     'p-tefra': {
-      title: 'Tefra Koncept: Dom bliźniaczy (Budynek 1)',
+      title: 'Tefra Koncept: Dom bliźniaczy z elewacją klinkierową',
       category: 'Elewacje i Klinkier',
-      location: 'Inwestycja deweloperska Tefra Koncept',
-      timeline: 'Kompleksowa realizacja',
+      location: 'Inwestycja mieszkaniowa Tefra Koncept',
+      timeline: 'Kompleksowa realizacja fasady',
       images: [
         'images/portfolio/tefra-budynek1-1.jpg',
         'images/portfolio/tefra-budynek1-2.jpg',
@@ -80,13 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'Montaż płytek kątowych na narożnikach i glifach okiennych',
         'Precyzyjne fugowanie spoin'
       ],
-      description: 'Montaż płytki elewacyjnej na budynku mieszkalnym w inwestycji deweloperskiej. Połączenie klinkieru z grafitowym tynkiem i stolarką stworzyło nowoczesny design fasady.'
+      description: 'Montaż płytki elewacyjnej na budynku mieszkalnym. Połączenie klinkieru z grafitowym tynkiem i stolarką stworzyło nowoczesny, elegancki design fasady.'
     },
     'p-tefra-2': {
-      title: 'Tefra Koncept: Domy bliźniacze z murkiem (Budynek 2)',
+      title: 'Tefra Koncept: Fasada klinkierowa i murki wejściowe',
       category: 'Elewacje i Klinkier',
-      location: 'Inwestycja deweloperska Tefra Koncept',
-      timeline: 'Kompleksowa realizacja',
+      location: 'Inwestycja mieszkaniowa Tefra Koncept',
+      timeline: 'Elewacja i mała architektura',
       images: [
         'images/portfolio/tefra-blizniak-1.jpg'
       ],
@@ -96,13 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'Murowanie murków wejściowych z cegły klinkierowej',
         'Precyzyjne fugowanie i hydrofobizacja'
       ],
-      description: 'Kompleksowe wykonanie fasady z płytek klinkierowych na segmentach bliźniaczych wraz z wymurowaniem reprezentacyjnych murków ogrodzeniowych przed wejściami.'
+      description: 'Kompleksowe wykonanie fasady z płytek klinkierowych na budynku mieszkalnym wraz z wymurowaniem reprezentacyjnych murków ogrodzeniowych przed wejściami.'
     },
     'p-tefra-3': {
-      title: 'Tefra Koncept: Dom z garażem i ogrodzeniem (Budynek 3)',
+      title: 'Tefra Koncept: Dom z garażem i ogrodzeniem',
       category: 'Elewacje i Klinkier',
-      location: 'Inwestycja deweloperska Tefra Koncept',
-      timeline: 'Kompleksowa realizacja',
+      location: 'Inwestycja mieszkaniowa Tefra Koncept',
+      timeline: 'Elewacja i ogrodzenie frontowe',
       images: [
         'images/portfolio/tefra-dom-ogrodzenie-1.jpg'
       ],
@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Wykonanie fasady z płytek klinkierowych na domu parterowym z garażem oraz kompleksowe wykonanie muru i słupków ogrodzenia frontowego.'
     },
     'p-tefra-4': {
-      title: 'Tefra Koncept: Ściana szczytowa parteru (Budynek 4)',
+      title: 'Tefra Koncept: Ściana szczytowa parteru z klinkieru',
       category: 'Elewacje i Klinkier',
-      location: 'Inwestycja deweloperska Tefra Koncept',
-      timeline: 'Kompleksowa realizacja',
+      location: 'Inwestycja mieszkaniowa Tefra Koncept',
+      timeline: 'Montaż płytek elewacyjnych',
       images: [
         'images/portfolio/tefra-parterowy-1.jpg'
       ],
