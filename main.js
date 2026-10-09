@@ -698,6 +698,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Phone input formatting & limitation (max 9 cyfr po +48)
+  const phoneInput = document.getElementById('contact-phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      let val = phoneInput.value;
+
+      if (val === '' || val === '+' || val === '+4' || val === '+48' || val === '+48 ') {
+        if (e.inputType === 'deleteContentBackward') {
+          return;
+        }
+      }
+
+      // Extract only digits
+      let digits = val.replace(/\D/g, '');
+
+      // Remove leading 48 if already typed/pasted
+      if (digits.startsWith('48')) {
+        digits = digits.substring(2);
+      }
+
+      // Limit to 9 digits (standard Polish number)
+      digits = digits.slice(0, 9);
+
+      if (digits.length === 0) {
+        phoneInput.value = '';
+        return;
+      }
+
+      // Format as +48 XXX XXX XXX
+      let formatted = '+48 ' + digits.substring(0, 3);
+      if (digits.length > 3) {
+        formatted += ' ' + digits.substring(3, 6);
+      }
+      if (digits.length > 6) {
+        formatted += ' ' + digits.substring(6, 9);
+      }
+
+      phoneInput.value = formatted;
+    });
+
+    phoneInput.addEventListener('focus', () => {
+      if (!phoneInput.value) {
+        phoneInput.value = '+48 ';
+      }
+    });
+
+    phoneInput.addEventListener('blur', () => {
+      if (phoneInput.value === '+48 ' || phoneInput.value === '+48') {
+        phoneInput.value = '';
+      }
+    });
+  }
+
   const mainForm = document.getElementById('main-contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
