@@ -84,6 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Service select value color handler (placeholder styling)
+  const serviceSelect = document.getElementById('contact-service');
+  if (serviceSelect) {
+    const updateServiceSelectColor = () => {
+      if (serviceSelect.value) {
+        serviceSelect.classList.add('has-value');
+      } else {
+        serviceSelect.classList.remove('has-value');
+      }
+    };
+    serviceSelect.addEventListener('change', updateServiceSelectColor);
+    updateServiceSelectColor();
+  }
+
   /* ==========================================================================
      SCHEDULE TILES INTERACTION (KONCEPCJA 1)
      ========================================================================== */
@@ -183,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formFeedback.style.display = 'block';
             formFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Dziękujemy! Twoje zapytanie zostało pomyślnie wysłane. Skontaktujemy się z Tobą w ciągu maksymalnie 24 godzin.';
             mainForm.reset();
+            if (serviceSelect) serviceSelect.classList.remove('has-value');
 
             // Zresetuj kafelki terminu do domyślnego
             termTiles.forEach((t, i) => {

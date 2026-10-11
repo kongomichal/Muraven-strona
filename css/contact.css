@@ -125,19 +125,87 @@
   width: 100%;
   padding: 13px 16px;
   background-color: #ffffff;
-  border: 1px solid var(--color-card-border);
+  border: 1.5px solid var(--color-card-border);
   border-radius: var(--radius-md);
   font-size: 0.95rem;
   font-family: inherit;
+  color: var(--color-text-main);
   outline: none;
   transition: var(--transition);
+}
+
+.main-form input:not([type="checkbox"]),
+.main-form select {
+  height: 52px;
+}
+
+.main-form input::placeholder,
+.main-form textarea::placeholder {
+  color: var(--color-text-light);
+  opacity: 1;
+}
+
+.main-form input:not([type="checkbox"]):hover,
+.main-form textarea:hover,
+.select-wrapper:hover select {
+  border-color: #cbd5e1;
 }
 
 .main-form input:not([type="checkbox"]):focus,
 .main-form select:focus,
 .main-form textarea:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(212, 35, 116, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 35, 116, 0.12);
+}
+
+/* Custom Select Styling */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 44px;
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+
+.select-wrapper select.has-value,
+.select-wrapper select:valid {
+  color: var(--color-text-main);
+}
+
+.select-wrapper .select-chevron {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.select-wrapper:hover .select-chevron {
+  color: var(--color-text-muted);
+}
+
+.select-wrapper select:focus + .select-chevron {
+  color: var(--color-accent);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-wrapper select option {
+  color: var(--color-text-main);
+  background-color: #ffffff;
+  padding: 10px 14px;
+}
+
+.select-wrapper select option[value=""] {
+  color: var(--color-text-light);
 }
 
 /* ==========================================================================
