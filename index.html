@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/mobile-bar.css">
+  <link rel="stylesheet" href="css/cookie-banner.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -1199,6 +1200,9 @@
           Sprawdzony podwykonawca dla deweloperów i biznesu.
         </p>
         <p class="footer-copy">&copy; 2026 Muraven. Wszystkie prawa zastrzeżone.</p>
+        <a href="#" id="open-cookie-settings" class="cookie-settings-link" style="color: rgba(255, 255, 255, 0.45); font-size: 0.76rem; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; margin-top: 8px;">
+          <i class="fa-solid fa-cookie-bite"></i> Ustawienia plików cookies
+        </a>
       </div>
 
       <div class="footer-col">
@@ -1257,6 +1261,32 @@
     </a>
   </aside>
 
+  <!-- ================= COOKIE CONSENT BANNER ================= -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Zgoda na pliki cookies" style="display: none;">
+    <div class="container cookie-banner-inner">
+      <div class="cookie-content">
+        <div class="cookie-icon-wrap">
+          <i class="fa-solid fa-cookie-bite"></i>
+        </div>
+        <div class="cookie-text">
+          <strong>Dbamy o Twoją prywatność</strong>
+          <p>
+            Nasza strona wykorzystuje pliki cookies i pamięć lokalną w celu zapewnienia prawidłowego działania serwisu, bezpieczeństwa oraz optymalizacji wygody przeglądania. Wybierz, na które pliki cookies wyrażasz zgodę.
+          </p>
+        </div>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn-cookie-essential" id="cookie-btn-essential">
+          Tylko niezbędne
+        </button>
+        <button type="button" class="btn-cookie-accept" id="cookie-btn-accept">
+          <span>Akceptuję wszystkie</span>
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- JavaScript (projects-data.js musi być pierwszy) -->
   <script src="js/projects-data.js"></script>
   <script src="js/navigation.js"></script>
@@ -1264,5 +1294,6 @@
   <script src="js/modal.js"></script>
   <script src="js/counters.js"></script>
   <script src="js/contact-form.js"></script>
+  <script src="js/cookie-banner.js"></script>
 </body>
 </html>
