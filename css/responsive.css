@@ -74,10 +74,10 @@
   /* Mobile Slide Drawer */
   .nav-links {
     position: fixed;
-    top: 76px;
+    top: 88px;
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 76px);
+    max-height: calc(100vh - 88px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     background-color: #ffffff;
@@ -137,7 +137,7 @@
   }
 
   .site-logo-img {
-    height: 42px;
+    height: 50px;
   }
 
   .nav-mobile-contact {

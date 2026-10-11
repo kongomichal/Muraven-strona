@@ -15,10 +15,10 @@
 
 .topbar {
   background-color: var(--color-primary);
-  color: #cbd5e1;
-  font-size: 0.85rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 8px 0;
+  color: #e2e8f0;
+  font-size: 0.96rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
 }
 
 .topbar-inner {
@@ -29,7 +29,7 @@
 
 .topbar-contact {
   display: flex;
-  gap: 20px;
+  gap: 26px;
 }
 
 .topbar-contact span,
@@ -37,9 +37,10 @@
 .topbar-contact-item {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 9px;
   color: inherit;
   text-decoration: none;
+  font-weight: 500;
   transition: color var(--transition);
 }
 
@@ -49,14 +50,16 @@
 
 .topbar-contact i {
   color: var(--color-accent);
+  font-size: 1.05rem;
 }
 
 .topbar-badge {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: #38bdf8;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.94rem;
 }
 
 /* ==========================================================================
@@ -78,7 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 88px;
 }
 
 .brand-logo {
@@ -88,7 +91,7 @@
 }
 
 .site-logo-img {
-  height: 52px;
+  height: 66px;
   width: auto;
   display: block;
   object-fit: contain;
