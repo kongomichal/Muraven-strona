@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muraven | Propozycja Terminarza i Kalendarza do Formularza</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    :root {
+      --color-primary: #122330;
+      --color-primary-light: #1c3548;
+      --color-secondary: #284861;
+      --color-accent: #d42374;
+      --color-accent-hover: #bb1a63;
+      --color-cyan: #24b9c0;
+      --color-cyan-hover: #1ca2a8;
+      --color-bg-light: #f7fafc;
+      --color-bg-white: #ffffff;
+      --color-card-border: #e2e8f0;
+      --color-text-main: #142838;
+      --color-text-muted: #5a7182;
+      --color-text-light: #8ca0af;
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 25px -5px rgba(18, 35, 48, 0.08), 0 8px 10px -6px rgba(18, 35, 48, 0.04);
+      --shadow-xl: 0 20px 30px -10px rgba(18, 35, 48, 0.12);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text-main);
+      background: #f1f5f9;
+      line-height: 1.6;
+      padding: 30px 20px 80px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* Top banner */
+    .demo-header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1a3a52 100%);
+      color: #fff;
+      padding: 36px 40px;
+      border-radius: var(--radius-xl);
+      margin-bottom: 35px;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-header::after {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(212, 35, 116, 0.35) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .demo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-cyan);
+      margin-bottom: 14px;
+    }
+
+    .demo-header h1 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .demo-header p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      max-width: 780px;
+    }
+
+    /* Tabs navigation */
+    .tabs-wrapper {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: #fff;
+      border: 1px solid var(--color-card-border);
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-btn:hover {
+      color: var(--color-primary);
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+
+    .tab-btn.active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+      box-shadow: 0 8px 20px -6px rgba(18, 35, 48, 0.35);
+    }
+
+    .tab-btn .badge-pill {
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: rgba(212, 35, 116, 0.15);
+      color: var(--color-accent);
+      font-weight: 800;
+    }
+
+    .tab-btn.active .badge-pill {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    /* Concept card */
+    .concept-panel {
+      display: none;
+      background: #fff;
+      border-radius: var(--radius-xl);
+      padding: 38px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-card-border);
+    }
+
+    .concept-panel.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .concept-header-bar {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #edf2f7;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .concept-header-bar h2 {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+    }
+
+    .concept-header-bar p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .concept-tag {
+      background: rgba(36, 185, 192, 0.12);
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(36, 185, 192, 0.25);
+    }
+
+    /* Layout: Form on Left, Live Preview / Explanation on Right */
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* Form card */
+    .form-box {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .form-title {
+      font-size: 1.35rem;
+      font-family: var(--font-heading);
+      margin-bottom: 6px;
+      color: var(--color-primary);
+    }
+
+    .form-subtitle {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      margin-bottom: 8px;
+    }
+
+    .form-group input:not([type="checkbox"]),
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background-color: #ffffff;
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(212, 35, 116, 0.15);
+    }
+
+    /* =======================================================
+       ELEMENTY KALENDARZA I WYBORU TERMINU
+       ======================================================= */
+
+    /* SEKCJA KAFELKÓW (WARIANT 1) */
+    .term-tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .term-tile {
+      background: #fff;
+      border: 2px solid var(--color-card-border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+      position: relative;
+    }
+
+    .term-tile:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+
+    .term-tile.active {
+      border-color: var(--color-accent);
+      background: rgba(212, 35, 116, 0.04);
+      box-shadow: 0 4px 12px rgba(212, 35, 116, 0.12);
+    }
+
+    .term-tile .tile-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--color-bg-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .term-tile.active .tile-icon {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    .term-tile .tile-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      display: block;
+    }
+
+    .term-tile .tile-sub {
+      font-size: 0.74rem;
+      color: var(--color-text-muted);
+      display: block;
+    }
+
+    .term-tile.active::after {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 0.75rem;
+      color: var(--color-accent);
+    }
+
+    /* ROZWIJANY MINI KALENDARZ DLA WARIANTU 1 & 2 */
+    .calendar-picker-box {
+      background: #fff;
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-top: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .cal-header .cal-month-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cal-nav-btn {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-card-border);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-primary);
+      transition: var(--transition);
+    }
+
+    .cal-nav-btn:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    .cal-days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+      text-align: center;
+    }
+
+    .cal-day-head {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      padding: 4px 0;
+    }
+
+    .cal-day {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .cal-day:hover:not(.empty):not(.disabled) {
+      background: rgba(36, 185, 192, 0.15);
+      border-color: var(--color-cyan);
+      color: var(--color-primary);
+    }
+
+    .cal-day.active {
+      background: var(--color-accent) !important;
+      color: #fff !important;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(212, 35, 116, 0.3);
+    }
+
+    .cal-day.in-range {
+      background: rgba(212, 35, 116, 0.12);
+      color: var(--color-accent);
+      border-radius: 0;
+    }
+
+    .cal-day.range-start {
+      background: var(--color-accent) !important;
+      color: #fff !important;
+      border-radius: 8px 0 0 8px;
+    }
+
+    .cal-day.range-end {
+      background: var(--color-accent) !important;
+      color: #fff !important;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .cal-day.disabled {
+      color: #cbd5e1;
+      cursor: not-allowed;
+      text-decoration: line-through;
+      font-size: 0.8rem;
+    }
+
+    .cal-day.empty {
+      cursor: default;
+    }
+
+    .cal-day .dot-avail {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color-cyan);
+      position: absolute;
+      bottom: 4px;
+    }
+
+    .cal-day.active .dot-avail {
+      background: #fff;
+    }
+
+    .cal-legend {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 0.76rem;
+      color: var(--color-text-muted);
+    }
+
+    .cal-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cal-legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .dot-cyan { background: var(--color-cyan); }
+    .dot-magenta { background: var(--color-accent); }
+
+    /* WARIANT 2: Kalendarz wizyty / obmiaru z godzinami */
+    .time-slot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .time-slot {
+      border: 1px solid var(--color-card-border);
+      background: #fff;
+      padding: 10px 8px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--color-primary);
+    }
+
+    .time-slot:hover {
+      border-color: var(--color-cyan);
+    }
+
+    .time-slot.active {
+      background: var(--color-cyan);
+      border-color: var(--color-cyan);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Prawy panel - Podgląd i analiza */
+    .preview-card {
+      background: #fff;
+      border: 1px solid var(--color-card-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-md);
+      position: sticky;
+      top: 30px;
+    }
+
+    .preview-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .preview-value-box {
+      background: #f8fafc;
+      border-left: 4px solid var(--color-accent);
+      padding: 16px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: 24px;
+    }
+
+    .preview-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .preview-term-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+    }
+
+    .preview-term-sub {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .features-list li {
+      font-size: 0.88rem;
+      color: var(--color-text-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .features-list li i {
+      color: #10b981;
+      margin-top: 3px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-action:hover {
+      background: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(212, 35, 116, 0.25);
+    }
+
+    /* Pigułka wyboru trybu */
+    .selector-pill-row {
+      display: flex;
+      gap: 8px;
+      background: #e2e8f0;
+      padding: 4px;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+    }
+
+    .selector-pill {
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: var(--color-text-muted);
+      transition: var(--transition);
+    }
+
+    .selector-pill.active {
+      background: #fff;
+      color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Styl wyboru miesięcy */
+    .months-pill-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .month-pill {
+      background: #fff;
+      border: 1px solid var(--color-card-border);
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      transition: var(--transition);
+    }
+
+    .month-pill:hover {
+      border-color: var(--color-accent);
+    }
+
+    .month-pill.active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+      .term-tiles-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+      .preview-card {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <header class="demo-header">
+      <div class="demo-badge">
+        <i class="fa-solid fa-calendar-check"></i> Propozycja Modułu Terminarza
+      </div>
+      <h1>Jak wprowadzić wybór terminu do Muraven?</h1>
+      <p>
+        W branży budowlanej klient rzadko potrzebuje rezerwacji co do godziny. Zwykle zależy mu na określeniu <strong>horyzontu czasowego (pilne / za 1-2 miesiące)</strong>, <strong>konkretnego miesiąca</strong> lub <strong>dnia na bezpłatny obmiar</strong>. Poniżej przygotowaliśmy 3 interaktywne koncepcje do wyboru.
+      </p>
+    </header>
+
+    <!-- Tabs switcher -->
+    <div class="tabs-wrapper">
+      <button class="tab-btn active" data-tab="tab-1">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Koncepcja 1: Inteligentne Kafelki + Miesiąc</span>
+        <span class="badge-pill">Rekomendowana</span>
+      </button>
+
+      <button class="tab-btn" data-tab="tab-2">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>Koncepcja 2: Wizualny Kalendarz & Obmiar</span>
+        <span class="badge-pill">Precyzyjna</span>
+      </button>
+
+      <button class="tab-btn" data-tab="tab-3">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Koncepcja 3: Formularz Muraven (Pełny widok)</span>
+        <span class="badge-pill">Klasyczna</span>
+      </button>
+    </div>
+
+    <!-- =========================================================
+         KONCEPCJA 1: INTELIGENTNE KAFELKI + MIESIĄC (NAJLEPSZY UX)
+         ========================================================= -->
+    <section class="concept-panel active" id="tab-1">
+      <div class="concept-header-bar">
+        <div>
+          <h2>Koncepcja 1: Kafelki intencji + opcjonalny selektor miesiąca</h2>
+          <p>Daje klientowi błyskawiczny wybór bez konieczności przeklikiwania kalendarza, zachowując 100% precyzji dla osób z konkretnym terminem.</p>
+        </div>
+        <div class="concept-tag">
+          <i class="fa-solid fa-bolt"></i> Najwyższa konwersja (Zero wysiłku dla klienta)
+        </div>
+      </div>
+
+      <div class="demo-grid">
+        <!-- Lewa kolumna: formularz -->
+        <div class="form-box">
+          <h3 class="form-title">Formularz bezpłatnej wyceny</h3>
+          <p class="form-subtitle">Wypełnij formularz – skontaktujemy się z gotową wstępną kalkulacją.</p>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Imię i nazwisko / Firma *</label>
+              <input type="text" placeholder="Jan Kowalski" value="Michał Kowalski">
+            </div>
+            <div class="form-group">
+              <label>Telefon kontaktowy *</label>
+              <input type="tel" placeholder="+48 123 456 789" value="+48 572 533 862">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Rodzaj prac *</label>
+            <select>
+              <option selected>Elewacje klinkierowe i fasady</option>
+              <option>Brukarstwo i roboty ziemne</option>
+              <option>Wykończenie wnętrz / Remont lokalu</option>
+              <option>Obsługa sieci handlowej / B2B</option>
+            </select>
+          </div>
+
+          <!-- NOWY ELEMENT: WYBÓR TERMINU -->
+          <div class="form-group">
+            <label><i class="fa-regular fa-clock" style="color: var(--color-accent); margin-right: 4px;"></i> Preferowany termin realizacji / rozpoczęcia prac:</label>
+            
+            <div class="term-tiles-grid" id="c1-tiles">
+              <div class="term-tile active" data-term="Jak najszybciej (pilne)">
+                <div class="tile-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div>
+                  <span class="tile-title">Pilne / Od zaraz</span>
+                  <span class="tile-sub">W ciągu najbliższych 1-2 tygodni</span>
+                </div>
+              </div>
+
+              <div class="term-tile" data-term="W ciągu 1-2 miesięcy">
+                <div class="tile-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div>
+                  <span class="tile-title">W ciągu 1–2 miesięcy</span>
+                  <span class="tile-sub">Standardowy horyzont planowania</span>
+                </div>
+              </div>
+
+              <div class="term-tile" data-term="Wybór konkretnego miesiąca" data-open="c1-month-picker">
+                <div class="tile-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div>
+                  <span class="tile-title">Wskaż miesiąc / sezon</span>
+                  <span class="tile-sub">Wiosna / Lato / Konkretny miesiąc</span>
+                </div>
+              </div>
+
+              <div class="term-tile" data-term="Termin elastyczny (zależy od wyceny)">
+                <div class="tile-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <span class="tile-title">Elastyczny</span>
+                  <span class="tile-sub">Dostosuję się do wolnych terminów</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Podmoduł wyboru miesiąca (pokazuje się po kliknięciu 3. kafelka) -->
+            <div id="c1-month-picker" class="calendar-picker-box" style="display: none;">
+              <div style="font-size: 0.82rem; font-weight: 700; color: var(--color-primary); margin-bottom: 8px;">
+                Wybierz orientacyjny miesiąc rozpoczęcia prac (2026):
+              </div>
+              <div class="months-pill-grid">
+                <div class="month-pill" data-m="Kwiecień 2026">Kwiecień 2026</div>
+                <div class="month-pill active" data-m="Maj 2026">Maj 2026</div>
+                <div class="month-pill" data-m="Czerwiec 2026">Czerwiec 2026</div>
+                <div class="month-pill" data-m="Lipiec 2026">Lipiec 2026</div>
+                <div class="month-pill" data-m="Sierpień 2026">Sierpień 2026</div>
+                <div class="month-pill" data-m="Jesień 2026">Jesień 2026</div>
+              </div>
+            </div>
+
+            <input type="hidden" id="c1-final-term" value="Jak najszybciej (pilne)">
+          </div>
+
+          <div class="form-group">
+            <label>Lokalizacja i metraż</label>
+            <input type="text" placeholder="np. Poznań, ok. 150 m² elewacji">
+          </div>
+
+          <div class="form-group">
+            <label>Opis projektu / Pytania *</label>
+            <textarea rows="3" placeholder="Opisz krótko zakres prac..."></textarea>
+          </div>
+
+          <button type="button" class="btn-action">
+            <span>Wyślij zapytanie ofertowe</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+
+        <!-- Prawa kolumna: Co trafia do maila + dlaczego warto -->
+        <div class="preview-card">
+          <h3><i class="fa-solid fa-envelope-open-text" style="color: var(--color-cyan);"></i> Co zobaczy Muraven w mailu?</h3>
+          
+          <div class="preview-value-box">
+            <div class="preview-label">Pole w wiadomości e-mail:</div>
+            <div class="preview-term-text" id="c1-preview-text">Jak najszybciej (pilne)</div>
+            <div class="preview-term-sub" id="c1-preview-sub">Klient potrzebuje ekipy w ciągu 1-2 tygodni</div>
+          </div>
+
+          <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--color-primary);">Dlaczego ta koncepcja jest najlepsza?</h4>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Zero frustracji na telefonie:</strong> Klient klika 1 kafelkiem i nie musi szukać dni w kalendarzu.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Świetne dla Muraven:</strong> Od razu wiesz, czy to pilna robota na wczoraj, czy inwestycja do zaplanowania na maj/czerwiec.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Opcja miesiąca:</strong> Klienci budujący dom mogą wybrać np. „Czerwiec 2026”, kiedy skończą stan surowy.</li>
+          </ul>
+
+          <div style="background: rgba(18, 35, 48, 0.05); padding: 14px; border-radius: var(--radius-md); font-size: 0.82rem; color: var(--color-text-muted);">
+            <i class="fa-solid fa-circle-info" style="color: var(--color-cyan);"></i> <em>Wskazówka:</em> Wartość z kafelka przesyła się do FormSubmit pod kluczem <code>Preferowany termin</code> w tabeli zlecenia.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         KONCEPCJA 2: WIZUALNY KALENDARZ & BEZPŁATNY OBMIAR
+         ========================================================= -->
+    <section class="concept-panel" id="tab-2">
+      <div class="concept-header-bar">
+        <div>
+          <h2>Koncepcja 2: Wizualny kalendarz dni roboczych & termin bezpłatnego obmiaru</h2>
+          <p>Klient klika konkretny dzień w interaktywnym kalendarzu. Idealne, gdy chcesz od razu umówić wizję lokalną i pomiary na budowie.</p>
+        </div>
+        <div class="concept-tag" style="background: rgba(212, 35, 116, 0.1); color: var(--color-accent); border-color: rgba(212, 35, 116, 0.2);">
+          <i class="fa-solid fa-calendar-day"></i> Dokładna rezerwacja dnia
+        </div>
+      </div>
+
+      <div class="demo-grid">
+        <div class="form-box">
+          <h3 class="form-title">Wycena z bezpłatnym obmiarem</h3>
+          <p class="form-subtitle">Wybierz dogodny dzień na spotkanie na budowie lub planowany start robót.</p>
+
+          <div class="selector-pill-row">
+            <button class="selector-pill active" id="pill-mode-measure">
+              <i class="fa-solid fa-ruler-combined"></i> Bezpłatny obmiar na budowie
+            </button>
+            <button class="selector-pill" id="pill-mode-start">
+              <i class="fa-solid fa-hammer"></i> Orientacyjny start prac
+            </button>
+          </div>
+
+          <!-- INTERAKTYWNY MINI-KALENDARZ -->
+          <div class="calendar-picker-box">
+            <div class="cal-header">
+              <button class="cal-nav-btn" id="c2-prev-month"><i class="fa-solid fa-chevron-left"></i></button>
+              <div class="cal-month-name" id="c2-month-label">
+                <i class="fa-regular fa-calendar" style="color: var(--color-accent);"></i> Maj 2026
+              </div>
+              <button class="cal-nav-btn" id="c2-next-month"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="cal-days-grid">
+              <div class="cal-day-head">Pn</div>
+              <div class="cal-day-head">Wt</div>
+              <div class="cal-day-head">Śr</div>
+              <div class="cal-day-head">Cz</div>
+              <div class="cal-day-head">Pt</div>
+              <div class="cal-day-head">Sb</div>
+              <div class="cal-day-head" style="color: #f87171;">Nd</div>
+
+              <!-- Puste dni początkowe dla maja 2026 (1 maja to piątek) -->
+              <div class="cal-day empty"></div>
+              <div class="cal-day empty"></div>
+              <div class="cal-day empty"></div>
+              <div class="cal-day empty"></div>
+              
+              <!-- Dni maja -->
+              <div class="cal-day disabled">1</div>
+              <div class="cal-day disabled">2</div>
+              <div class="cal-day disabled">3</div>
+
+              <div class="cal-day" data-day="4 maja 2026">4<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="5 maja 2026">5<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="6 maja 2026">6<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="7 maja 2026">7<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="8 maja 2026">8<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="9 maja 2026">9<span class="dot-avail"></span></div>
+              <div class="cal-day disabled">10</div>
+
+              <div class="cal-day" data-day="11 maja 2026">11<span class="dot-avail"></span></div>
+              <div class="cal-day active" data-day="12 maja 2026">12<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="13 maja 2026">13<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="14 maja 2026">14<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="15 maja 2026">15<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="16 maja 2026">16<span class="dot-avail"></span></div>
+              <div class="cal-day disabled">17</div>
+
+              <div class="cal-day" data-day="18 maja 2026">18<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="19 maja 2026">19<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="20 maja 2026">20<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="21 maja 2026">21<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="22 maja 2026">22<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="23 maja 2026">23<span class="dot-avail"></span></div>
+              <div class="cal-day disabled">24</div>
+
+              <div class="cal-day" data-day="25 maja 2026">25<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="26 maja 2026">26<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="27 maja 2026">27<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="28 maja 2026">28<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="29 maja 2026">29<span class="dot-avail"></span></div>
+              <div class="cal-day" data-day="30 maja 2026">30<span class="dot-avail"></span></div>
+              <div class="cal-day disabled">31</div>
+            </div>
+
+            <div class="cal-legend">
+              <div class="cal-legend-item">
+                <span class="cal-legend-dot dot-cyan"></span> Dostępne terminy (Pn–Sb)
+              </div>
+              <div class="cal-legend-item">
+                <span class="cal-legend-dot dot-magenta"></span> Wybrana data
+              </div>
+            </div>
+          </div>
+
+          <!-- Wybór pory dnia -->
+          <div class="form-group" style="margin-top: 18px;">
+            <label>Preferowana pora spotkania / kontaktu:</label>
+            <div class="time-slot-grid" id="c2-time-slots">
+              <div class="time-slot active" data-time="Rano (8:00 – 12:00)">
+                <i class="fa-solid fa-sun"></i> Rano (8:00–12:00)
+              </div>
+              <div class="time-slot" data-time="Popołudnie (12:00 – 16:00)">
+                <i class="fa-solid fa-cloud-sun"></i> Popołudnie (12:00–16:00)
+              </div>
+              <div class="time-slot" data-time="Elastycznie (dowolna godzina)">
+                <i class="fa-solid fa-clock"></i> Dowolna pora
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Telefon *</label>
+              <input type="tel" value="+48 572 533 862">
+            </div>
+            <div class="form-group">
+              <label>Miejscowość inwestycji *</label>
+              <input type="text" value="Poznań i okolice">
+            </div>
+          </div>
+
+          <button type="button" class="btn-action">
+            <span>Zarezerwuj wstępny termin obmiaru</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="preview-card">
+          <h3><i class="fa-solid fa-calendar-check" style="color: var(--color-accent);"></i> Podsumowanie zgłoszenia</h3>
+          
+          <div class="preview-value-box">
+            <div class="preview-label">Wybrany termin:</div>
+            <div class="preview-term-text" id="c2-preview-day">12 maja 2026 (Wtorek)</div>
+            <div class="preview-term-sub" id="c2-preview-time">Pora: Rano (8:00 – 12:00)</div>
+            <div class="preview-term-sub" style="color: var(--color-cyan); font-weight: 700; margin-top: 4px;" id="c2-preview-type">
+              Typ: Bezpłatny obmiar na budowie
+            </div>
+          </div>
+
+          <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--color-primary);">Kiedy warto to wybrać?</h4>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Szybkie umawianie wizji:</strong> Idealne na lokalne zlecenia w Wielkopolsce, gdzie od razu jedziecie ocenić podłoże, elewację czy podjazd.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Poczucie profesjonalizmu:</strong> Klient widzi, że firma działa nowocześnie i szanuje jego czas.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Zastrzeżenie:</strong> Można dodać dopisek: <em>„Termin potwierdzamy telefonicznie w ciągu 24h”</em>, co daje 100% kontroli i elastyczności.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         KONCEPCJA 3: PEŁNY FORMULARZ STRONY MURAVEN Z TERMINEM
+         ========================================================= -->
+    <section class="concept-panel" id="tab-3">
+      <div class="concept-header-bar">
+        <div>
+          <h2>Koncepcja 3: Dokładny formularz z obecnej strony + kompaktowy selektor terminu</h2>
+          <p>Zobacz, jak obecny formularz ze strony (z Twojego zrzutu ekranu) wygląda po dodaniu eleganckiego, zintegrowanego selektora terminu w prawej kolumnie.</p>
+        </div>
+        <div class="concept-tag" style="background: rgba(18, 35, 48, 0.1); color: var(--color-primary);">
+          <i class="fa-solid fa-desktop"></i> Wierne odwzorowanie strony
+        </div>
+      </div>
+
+      <div class="demo-grid">
+        <div class="form-box" style="background: #fff; box-shadow: var(--shadow-md); border-radius: var(--radius-xl);">
+          <h3 class="form-title" style="font-size: 1.6rem;">Formularz bezpłatnej wyceny</h3>
+          <p class="form-subtitle">Wypełnij formularz – skontaktujemy się z gotową wstępną kalkulacją.</p>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Imię i nazwisko / Firma *</label>
+              <input type="text" placeholder="Jan Kowalski">
+            </div>
+            <div class="form-group">
+              <label>Telefon kontaktowy *</label>
+              <input type="tel" placeholder="+48 123 456 789">
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Adres e-mail</label>
+              <input type="email" placeholder="jan@example.com">
+            </div>
+            <div class="form-group">
+              <label>Rodzaj prac *</label>
+              <select>
+                <option disabled>Wybierz kategorię...</option>
+                <option selected>Elewacje klinkierowe i fasady</option>
+                <option>Brukarstwo i roboty ziemne</option>
+                <option>Wykończenie wnętrz / Remont lokalu</option>
+                <option>Obsługa sieci handlowej / B2B</option>
+                <option>Inne prace specjalistyczne</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- PŁASKA, KOMPAKTOWA INTEGRACJA W FORMULARZU -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Lokalizacja i orientacyjny metraż</label>
+              <input type="text" placeholder="np. Poznań, ok. 150 m² elewacji">
+            </div>
+
+            <div class="form-group">
+              <label><i class="fa-regular fa-calendar-check" style="color: var(--color-accent);"></i> Przybliżony termin realizacji</label>
+              <select id="c3-term-select" style="font-weight: 600; color: var(--color-primary);">
+                <option value="Jak najszybciej (pilne)">⚡ Jak najszybciej (pilne / od zaraz)</option>
+                <option value="W ciągu 1 miesiąca" selected>🗓️ W ciągu 1 miesiąca</option>
+                <option value="W ciągu 2-3 miesięcy">📅 Za 2-3 miesiące (Wiosna / Lato)</option>
+                <option value="Druga połowa roku">🍂 Druga połowa 2026 roku</option>
+                <option value="Termin elastyczny">🤝 Termin elastyczny / zależy od ceny</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Opis projektu / Pytania *</label>
+            <textarea rows="4" placeholder="Opisz krótko zakres prac, termin realizacji lub pytania..."></textarea>
+          </div>
+
+          <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 22px; font-size: 0.85rem; color: var(--color-text-muted);">
+            <input type="checkbox" checked style="accent-color: var(--color-accent); width: 16px; height: 16px;">
+            <span>Wyrażam zgodę na kontakt telefoniczny lub mailowy w celu przygotowania wyceny.</span>
+          </div>
+
+          <button type="button" class="btn-action" style="padding: 16px 24px; font-size: 1rem;">
+            <span>Wyślij zapytanie ofertowe</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+
+        <div class="preview-card">
+          <h3><i class="fa-solid fa-sliders" style="color: var(--color-primary);"></i> Podsumowanie tej opcji</h3>
+          
+          <div class="preview-value-box">
+            <div class="preview-label">Wybrany termin w select:</div>
+            <div class="preview-term-text" id="c3-preview-text">W ciągu 1 miesiąca</div>
+            <div class="preview-term-sub">Prosty, elegancki wybór w 1 polu bez powiększania formularza</div>
+          </div>
+
+          <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--color-primary);">Zalety tej wersji:</h4>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Zero zmian w wyglądzie sekcji:</strong> Formularz zachowuje dokładnie ten sam układ 2 kolumn co teraz.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Najniższy próg wejścia:</strong> Klient po prostu wybiera opcję z listy rozwijanej z emotikonami.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>100% responsywne:</strong> Działa idealnie na każdym smartfonie.</li>
+          </ul>
+
+          <div style="margin-top: 20px; padding: 16px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: var(--radius-md); font-size: 0.85rem; color: #065f46;">
+            <strong>Rekomendacja dla Muraven:</strong><br>
+            Połącz <strong>Koncepcję 1</strong> (kafelki) lub <strong>Koncepcję 3</strong> (elegancki select terminu) z obecnym formularzem. W budownictwie elastyczność czasowa daje najwyższy odsetek wysłanych zapytań!
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Obsługa zakładek (Tabs)
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const conceptPanels = document.querySelectorAll('.concept-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        conceptPanels.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetId = btn.getAttribute('data-tab');
+        const panel = document.getElementById(targetId);
+        if (panel) panel.classList.add('active');
+      });
+    });
+
+    // KONCEPCJA 1: Obsługa kafelków
+    const c1Tiles = document.querySelectorAll('#c1-tiles .term-tile');
+    const c1MonthPicker = document.getElementById('c1-month-picker');
+    const c1PreviewText = document.getElementById('c1-preview-text');
+    const c1PreviewSub = document.getElementById('c1-preview-sub');
+
+    c1Tiles.forEach(tile => {
+      tile.addEventListener('click', () => {
+        c1Tiles.forEach(t => t.classList.remove('active'));
+        tile.classList.add('active');
+
+        const term = tile.getAttribute('data-term');
+        const openTarget = tile.getAttribute('data-open');
+
+        if (openTarget === 'c1-month-picker') {
+          c1MonthPicker.style.display = 'block';
+          const activeMonth = c1MonthPicker.querySelector('.month-pill.active')?.getAttribute('data-m') || 'Maj 2026';
+          c1PreviewText.textContent = activeMonth;
+          c1PreviewSub.textContent = 'Klient wskazał orientacyjny miesiąc realizacji prac';
+        } else {
+          c1MonthPicker.style.display = 'none';
+          c1PreviewText.textContent = term;
+          if (term.includes('pilne')) {
+            c1PreviewSub.textContent = 'Klient potrzebuje ekipy w ciągu 1-2 tygodni';
+          } else if (term.includes('1-2')) {
+            c1PreviewSub.textContent = 'Standardowy horyzont planowania robót';
+          } else {
+            c1PreviewSub.textContent = 'Klient dostosuje się do wolnych mocy przerobowych';
+          }
+        }
+      });
+    });
+
+    // KONCEPCJA 1: Wybór miesiąca
+    const monthPills = document.querySelectorAll('.month-pill');
+    monthPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        monthPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const m = pill.getAttribute('data-m');
+        c1PreviewText.textContent = m;
+        c1PreviewSub.textContent = 'Wskazany miesiąc rozpoczęcia prac';
+      });
+    });
+
+    // KONCEPCJA 2: Kalendarz dni
+    const calDays = document.querySelectorAll('.cal-days-grid .cal-day:not(.disabled):not(.empty)');
+    const c2PreviewDay = document.getElementById('c2-preview-day');
+    calDays.forEach(day => {
+      day.addEventListener('click', () => {
+        calDays.forEach(d => d.classList.remove('active'));
+        day.classList.add('active');
+        const dText = day.getAttribute('data-day');
+        if (dText) c2PreviewDay.textContent = dText;
+      });
+    });
+
+    // KONCEPCJA 2: Godziny / Pora
+    const timeSlots = document.querySelectorAll('#c2-time-slots .time-slot');
+    const c2PreviewTime = document.getElementById('c2-preview-time');
+    timeSlots.forEach(slot => {
+      slot.addEventListener('click', () => {
+        timeSlots.forEach(s => s.classList.remove('active'));
+        slot.classList.add('active');
+        const time = slot.getAttribute('data-time');
+        c2PreviewTime.textContent = 'Pora: ' + time;
+      });
+    });
+
+    // KONCEPCJA 2: Przełącznik trybu (Obmiar / Start prac)
+    const pillMeasure = document.getElementById('pill-mode-measure');
+    const pillStart = document.getElementById('pill-mode-start');
+    const c2PreviewType = document.getElementById('c2-preview-type');
+
+    pillMeasure.addEventListener('click', () => {
+      pillMeasure.classList.add('active');
+      pillStart.classList.remove('active');
+      c2PreviewType.textContent = 'Typ: Bezpłatny obmiar na budowie';
+    });
+
+    pillStart.addEventListener('click', () => {
+      pillStart.classList.add('active');
+      pillMeasure.classList.remove('active');
+      c2PreviewType.textContent = 'Typ: Orientacyjny start prac budowlanych';
+    });
+
+    // KONCEPCJA 3: Select terminu
+    const c3Select = document.getElementById('c3-term-select');
+    const c3PreviewText = document.getElementById('c3-preview-text');
+    c3Select.addEventListener('change', () => {
+      c3PreviewText.textContent = c3Select.value;
+    });
+  </script>
+</body>
+</html>
