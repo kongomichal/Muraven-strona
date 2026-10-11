@@ -1,0 +1,225 @@
+/* ==========================================================================
+   MODAL DIALOG & RESPONSIVE MODAL STYLES
+   ========================================================================== */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 16px;
+}
+
+.project-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(11, 19, 43, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.modal-dialog {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  max-width: 760px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  padding: 36px 32px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f1f5f9;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 3;
+}
+
+.modal-close-btn:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.modal-header-info {
+  margin-bottom: 20px;
+  padding-right: 36px;
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin: 10px 0 12px;
+  color: var(--color-primary);
+}
+
+.modal-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.modal-meta-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modal-meta-row i {
+  color: var(--color-accent);
+}
+
+/* Modal Gallery */
+.modal-gallery {
+  margin-bottom: 24px;
+}
+
+.modal-main-image-wrap {
+  width: 100%;
+  height: 440px;
+  max-height: 55vh;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #0a0f1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.modal-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.modal-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.modal-thumb-btn {
+  flex: 0 0 85px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: #0f172a;
+  opacity: 0.65;
+  transition: all 0.2s ease;
+}
+
+.modal-thumb-btn.active,
+.modal-thumb-btn:hover {
+  opacity: 1;
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(212, 35, 116, 0.25);
+}
+
+.modal-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-scope-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  margin-bottom: 22px;
+}
+
+.modal-scope-box h4 {
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-scope-box h4 i {
+  color: var(--color-accent);
+}
+
+.modal-scope-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-scope-list li {
+  font-size: 0.92rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--color-text-main);
+  line-height: 1.45;
+}
+
+.modal-scope-list li i {
+  color: #10b981;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.modal-desc-box {
+  margin-bottom: 26px;
+}
+
+.modal-desc-box h4 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.modal-desc-box p {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.modal-actions-bar {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}

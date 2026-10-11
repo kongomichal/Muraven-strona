@@ -1,0 +1,59 @@
+/* ==========================================================================
+   STATS SECTION
+/* ==========================================================================
+   METRIC & STAT COUNTER STYLES
+   ========================================================================== */
+.stat-number {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.stat-suffix {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+}
+
+/* ==========================================================================
+   SECTION COMMON STYLES
+   ========================================================================== */
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  background-color: rgba(212, 35, 116, 0.08);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.section-heading {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.section-subtext {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+}

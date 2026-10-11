@@ -1,0 +1,497 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-inner .brand-col {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Smartphones & Portrait Tablets */
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 85px;
+  }
+
+  body {
+    padding-bottom: 72px; /* space for sticky mobile bottom bar */
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .mobile-sticky-bar {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-card-border);
+    color: var(--color-primary);
+    font-size: 1.35rem;
+  }
+
+  /* Mobile Slide Drawer */
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px 32px;
+    gap: 6px;
+    border-bottom: 1px solid var(--color-card-border);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-item {
+    padding: 13px 16px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+  }
+
+  .nav-item:hover,
+  .nav-item:active {
+    background-color: var(--color-bg-light);
+  }
+
+  .nav-item.active {
+    background-color: rgba(224, 86, 56, 0.08);
+    color: var(--color-accent);
+  }
+
+  .nav-item.active::after {
+    display: none;
+  }
+
+  .nav-btn-primary {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 20px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(212, 35, 116, 0.25);
+  }
+
+  .site-logo-img {
+    height: 42px;
+  }
+
+  .nav-mobile-contact {
+    display: flex;
+  }
+
+  /* Section Spacings & Typography */
+  section {
+    padding: 55px 0 !important;
+  }
+
+  .hero-section {
+    padding: 40px 0 55px !important;
+  }
+
+  .hero-title {
+    font-size: 2.05rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 26px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-card {
+    padding: 24px 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-mini-form input,
+  .hero-mini-form select,
+  .main-form input,
+  .main-form select,
+  .main-form textarea,
+  .portfolio-search-box input {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+    min-height: 46px;
+  }
+
+  .section-heading {
+    font-size: 1.85rem;
+  }
+
+  .section-header-center {
+    margin-bottom: 36px;
+  }
+
+  /* Partners Logo Cloud Mobile */
+  .partners-section {
+    padding: 32px 0 28px;
+  }
+
+  .logos-track {
+    gap: 16px 24px;
+  }
+
+  .partner-logo-item {
+    height: 38px;
+    padding: 2px 4px;
+  }
+
+  .partner-logo-item img {
+    max-height: 24px;
+    max-width: 95px;
+  }
+
+  .partner-logo-item img[alt="CityFit"] {
+    max-height: 28px;
+  }
+
+  .partner-logo-item img[alt="MAX Polska"] {
+    max-height: 20px;
+  }
+
+  .partner-logo-item img[alt="Deichmann"] {
+    max-height: 16px;
+    max-width: 95px;
+  }
+
+  /* Stats 2x2 Grid on Mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 22px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-suffix {
+    font-size: 1.7rem;
+  }
+
+  .stat-label {
+    font-size: 0.92rem;
+    margin-top: 6px;
+  }
+
+  .stat-sub {
+    font-size: 0.76rem;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 26px 20px;
+  }
+
+  /* Category Accordion on Mobile */
+  .portfolio-categories-container {
+    gap: 16px;
+  }
+
+  .category-trigger {
+    padding: 18px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .cat-left {
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .cat-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+
+  .cat-title {
+    font-size: 1.18rem;
+  }
+
+  .cat-description {
+    font-size: 0.84rem;
+  }
+
+  .cat-right {
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px dashed #f1f5f9;
+  }
+
+  .cat-btn-label {
+    padding: 8px 16px;
+    font-size: 0.84rem;
+  }
+
+  .category-drawer-inner {
+    padding: 18px 14px 24px;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card:active {
+    transform: scale(0.985);
+  }
+
+  .project-thumb {
+    height: 210px;
+  }
+
+  .project-body {
+    padding: 20px 18px;
+  }
+
+  .project-body::after {
+    content: 'Szczegóły realizacji →';
+    display: block;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid var(--color-card-border);
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-align: right;
+  }
+
+  .project-title {
+    font-size: 1.12rem;
+  }
+
+
+
+  /* Process Steps */
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .step-card {
+    padding: 24px 20px;
+  }
+
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .form-wrapper-card {
+    padding: 26px 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Modal on Mobile */
+  .project-modal {
+    padding: 12px;
+  }
+
+  .modal-dialog {
+    padding: 24px 18px;
+    border-radius: 18px;
+    max-height: 85vh;
+  }
+
+  .modal-close-btn {
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-main-image-wrap {
+    height: 280px;
+  }
+
+  .modal-actions-bar {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .modal-actions-bar .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 0 25px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 0;
+  }
+
+  .footer-inner .brand-col {
+    grid-column: auto;
+  }
+}
+
+/* Extra small smartphones (< 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 1.78rem;
+  }
+
+  .section-heading {
+    font-size: 1.62rem;
+  }
+
+  .brand-logo {
+    gap: 9px;
+  }
+
+  .logo-title {
+    font-size: 1.25rem;
+  }
+
+  .logo-sub {
+    font-size: 0.58rem;
+  }
+
+  .stats-grid {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 18px 10px;
+  }
+
+  .stat-number {
+    font-size: 1.95rem;
+  }
+
+  .stat-suffix {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .hero-card {
+    padding: 20px 15px;
+  }
+
+  .form-wrapper-card {
+    padding: 22px 15px;
+  }
+
+  .modal-dialog {
+    padding: 20px 14px;
+  }
+}

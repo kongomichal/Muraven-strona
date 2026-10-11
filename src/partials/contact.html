@@ -1,0 +1,114 @@
+<!-- ================= CONTACT & FAST ESTIMATE ================= -->
+<section class="contact-section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info-panel">
+      <div class="section-tag">SKONTAKTUJ SIĘ</div>
+      <h2 class="section-heading">Porozmawiajmy o Twojej inwestycji</h2>
+      <p class="lead-text">
+        Niezależnie od tego, czy planujesz elewację domu, utwardzenie placu, czy sieć obiektów komercyjnych – jesteśmy do Twojej dyspozycji.
+      </p>
+
+      <div class="contact-details-list">
+        <div class="contact-row">
+          <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <span class="c-label">Zadzwoń do nas</span>
+            <a href="tel:+48572533862" class="c-val">+48 572 533 862</a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <span class="c-label">Napisz e-mail</span>
+            <a href="mailto:kontakt@muraven.pl" class="c-val">kontakt@muraven.pl</a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <span class="c-label">Obszar działania</span>
+            <span class="c-val">Wielkopolska</span>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <span class="c-label">Godziny pracy</span>
+            <span class="c-val">Poniedziałek – Sobota: 7:00 – 18:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="b2b-notice-box">
+        <i class="fa-solid fa-handshake"></i>
+        <div>
+          <strong>Zapytania przetargowe i B2B</strong>
+          <p>Obsługujemy generalnych wykonawców i sieci handlowe. Zapewniamy szybkie fakturowanie i elastyczne formy rozliczeń.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Contact Form -->
+    <div class="contact-form-panel">
+      <div class="form-wrapper-card">
+        <h3>Formularz bezpłatnej wyceny</h3>
+        <p class="form-sub">Wypełnij formularz – skontaktujemy się z gotową wstępną kalkulacją.</p>
+
+        <form id="main-contact-form" class="main-form">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="contact-name">Imię i nazwisko / Firma *</label>
+              <input type="text" id="contact-name" name="name" placeholder="Jan Kowalski" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Telefon kontaktowy *</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="+48 123 456 789" maxlength="15" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="contact-email">Adres e-mail</label>
+              <input type="email" id="contact-email" name="email" placeholder="jan@example.com">
+            </div>
+            <div class="form-group">
+              <label for="contact-service">Rodzaj prac *</label>
+              <select id="contact-service" name="service" required>
+                <option value="" disabled selected>Wybierz kategorię...</option>
+                <option value="klinkier">Elewacje klinkierowe i fasady</option>
+                <option value="brukarstwo">Brukarstwo i roboty ziemne</option>
+                <option value="remont">Wykończenie wnętrz / Remont lokalu</option>
+                <option value="b2b">Obsługa sieci handlowej / B2B</option>
+                <option value="inne">Inne prace specjalistyczne</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-location">Lokalizacja inwestycji & Orientacyjny metraż</label>
+            <input type="text" id="contact-location" name="location" placeholder="np. Poznań, ok. 150 m² elewacji">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Opis projektu / Pytania *</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Opisz krótko zakres prac, termin realizacji lub pytania..." required></textarea>
+          </div>
+
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="contact-consent" required>
+            <label for="contact-consent">Wyrażam zgodę na kontakt telefoniczny lub mailowy w celu przygotowania wyceny.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+            <span>Wyślij zapytanie ofertowe</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <div id="form-feedback" class="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

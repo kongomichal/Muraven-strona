@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- PLIK GENEROWANY AUTOMATYCZNIE – nie edytuj ręcznie!
+     Edytuj pliki w folderze src/, a następnie uruchom: node build.js -->
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
@@ -14,8 +16,20 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS Stylesheets (kolejność ma znaczenie – responsive.css musi być ostatni) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/partners.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/process.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/mobile-bar.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -1188,7 +1202,12 @@
     </a>
   </aside>
 
-  <!-- JavaScript -->
-  <script src="main.js"></script>
+  <!-- JavaScript (projects-data.js musi być pierwszy) -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/counters.js"></script>
+  <script src="js/contact-form.js"></script>
 </body>
 </html>
