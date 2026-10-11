@@ -87,6 +87,61 @@
             </div>
           </div>
 
+          <!-- Wybór preferowanego terminu realizacji prac -->
+          <div class="form-group form-term-group">
+            <label class="term-label">
+              <i class="fa-regular fa-clock"></i> Preferowany termin realizacji / rozpoczęcia prac:
+            </label>
+            <div class="term-tiles-grid" id="term-tiles-grid">
+              <button type="button" class="term-tile active" data-term="Pilne / Od zaraz (1-2 tyg.)">
+                <div class="tile-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="tile-text">
+                  <span class="tile-title">Pilne / Od zaraz</span>
+                  <span class="tile-sub">W ciągu najbliższych 1-2 tygodni</span>
+                </div>
+              </button>
+
+              <button type="button" class="term-tile" data-term="W ciągu 1-2 miesięcy">
+                <div class="tile-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="tile-text">
+                  <span class="tile-title">W ciągu 1–2 miesięcy</span>
+                  <span class="tile-sub">Standardowy horyzont planowania</span>
+                </div>
+              </button>
+
+              <button type="button" class="term-tile" data-term="Wskaż miesiąc" data-toggle-months="true">
+                <div class="tile-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div class="tile-text">
+                  <span class="tile-title">Wskaż miesiąc / sezon</span>
+                  <span class="tile-sub">Wiosna / Lato / Konkretny miesiąc</span>
+                </div>
+              </button>
+
+              <button type="button" class="term-tile" data-term="Termin elastyczny (zależy od wyceny)">
+                <div class="tile-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="tile-text">
+                  <span class="tile-title">Elastyczny</span>
+                  <span class="tile-sub">Dostosuję się do wolnych terminów</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Rozwijana siatka miesięcy (dla opcji Wskaż miesiąc) -->
+            <div class="term-months-wrapper" id="term-months-wrapper" style="display: none;">
+              <span class="term-months-caption">Wybierz orientacyjny miesiąc rozpoczęcia prac (2026):</span>
+              <div class="months-pill-grid" id="months-pill-grid">
+                <button type="button" class="month-pill" data-month="Kwiecień 2026">Kwiecień 2026</button>
+                <button type="button" class="month-pill active" data-month="Maj 2026">Maj 2026</button>
+                <button type="button" class="month-pill" data-month="Czerwiec 2026">Czerwiec 2026</button>
+                <button type="button" class="month-pill" data-month="Lipiec 2026">Lipiec 2026</button>
+                <button type="button" class="month-pill" data-month="Sierpień 2026">Sierpień 2026</button>
+                <button type="button" class="month-pill" data-month="Jesień 2026">Jesień 2026</button>
+              </div>
+            </div>
+
+            <input type="hidden" id="contact-term" name="preferred_term" value="Pilne / Od zaraz (1-2 tyg.)">
+          </div>
+
           <div class="form-group">
             <label for="contact-location">Lokalizacja inwestycji & Orientacyjny metraż</label>
             <input type="text" id="contact-location" name="location" placeholder="np. Poznań, ok. 150 m² elewacji">

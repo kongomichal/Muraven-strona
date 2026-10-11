@@ -435,6 +435,16 @@
   .footer-inner .brand-col {
     grid-column: auto;
   }
+
+  /* Schedule Tiles Mobile */
+  .term-tiles-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .months-pill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Extra small smartphones (< 480px) */

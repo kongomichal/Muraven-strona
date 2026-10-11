@@ -84,6 +84,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ==========================================================================
+     SCHEDULE TILES INTERACTION (KONCEPCJA 1)
+     ========================================================================== */
+  const termTiles = document.querySelectorAll('.term-tile');
+  const termMonthsWrapper = document.getElementById('term-months-wrapper');
+  const monthPills = document.querySelectorAll('.month-pill');
+  const hiddenTermInput = document.getElementById('contact-term');
+
+  function updateTermValue(val) {
+    if (hiddenTermInput) {
+      hiddenTermInput.value = val;
+    }
+  }
+
+  termTiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+      termTiles.forEach(t => t.classList.remove('active'));
+      tile.classList.add('active');
+
+      const isMonthsToggle = tile.getAttribute('data-toggle-months') === 'true';
+      const termVal = tile.getAttribute('data-term');
+
+      if (isMonthsToggle) {
+        if (termMonthsWrapper) termMonthsWrapper.style.display = 'block';
+        const activeMonth = document.querySelector('.month-pill.active')?.getAttribute('data-month') || 'Maj 2026';
+        updateTermValue('Wskazany miesiąc: ' + activeMonth);
+      } else {
+        if (termMonthsWrapper) termMonthsWrapper.style.display = 'none';
+        updateTermValue(termVal);
+      }
+    });
+  });
+
+  monthPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      monthPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const mVal = pill.getAttribute('data-month');
+      updateTermValue('Wskazany miesiąc: ' + mVal);
+    });
+  });
+
   const mainForm = document.getElementById('main-contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
@@ -97,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('contact-email')?.value || 'Nie podano';
       const serviceSelect = document.getElementById('contact-service');
       const service = serviceSelect?.options[serviceSelect.selectedIndex]?.text || '';
+      const preferredTerm = hiddenTermInput?.value || 'Pilne / Od zaraz (1-2 tyg.)';
       const location = document.getElementById('contact-location')?.value || 'Nie podano';
       const message = document.getElementById('contact-message')?.value || '';
 
@@ -121,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Telefon kontaktowy': phone,
             'Adres e-mail': email,
             'Rodzaj prac': service,
+            'Preferowany termin': preferredTerm,
             'Lokalizacja i metraż': location,
             'Opis projektu': message,
             'email': email,
@@ -139,6 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
             formFeedback.style.display = 'block';
             formFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Dziękujemy! Twoje zapytanie zostało pomyślnie wysłane. Skontaktujemy się z Tobą w ciągu maksymalnie 24 godzin.';
             mainForm.reset();
+
+            // Zresetuj kafelki terminu do domyślnego
+            termTiles.forEach((t, i) => {
+              if (i === 0) t.classList.add('active');
+              else t.classList.remove('active');
+            });
+            if (termMonthsWrapper) termMonthsWrapper.style.display = 'none';
+            updateTermValue('Pilne / Od zaraz (1-2 tyg.)');
           }
         } else if (data.message && data.message.toLowerCase().includes('activation')) {
           if (formFeedback) {
